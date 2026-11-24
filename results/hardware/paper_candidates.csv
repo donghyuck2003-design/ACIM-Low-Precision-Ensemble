@@ -1,0 +1,10 @@
+technology,ensemble_size,weight_bits,source_file,sha256,paper_candidate,area_mm2,latency_us,dynamic_energy_uJ,leakage_energy_uJ,total_energy_uJ
+SRAM,1,4,HW_single/HW_single_SRAM/Inference_pytorch/summary/summary_Cell1_SynBit4_20260119.csv,1d79a9b7b557dd97bd1df0dcb4da2dfa9f973384afe74a85dd5a87725918c257,True,45.421927,153.074592,26.352769,0.112712,26.465480999999997
+SRAM,1,8,HW_single/HW_single_SRAM/Inference_pytorch/summary/summary_Cell1_SynBit8_20260119.csv,4054582c7a2df3a5e5117d948d7829b8a72deca27c4545d859fa71655686ce09,True,83.77108,145.984482,52.014469,0.213496,52.227965
+RRAM,1,4,HW_single/HW_single_RRAM/Inference_pytorch/summary/summary_Cell2_SynBit4_20260117.csv,4dd237530435a0b5ca854e44ec6f5acb0e4a956f27548bd567f9f3942d15a5e9,True,30.643081,179.397682,33.283008,0.063614,33.346622
+RRAM,1,8,HW_single/HW_single_RRAM/Inference_pytorch/summary/summary_Cell2_SynBit8_20260117.csv,44c4b34286a594a78c715dec130f5b1449e325e9dbf4eb32c96373a038faf52e,True,55.673077,170.266394,66.305839,0.123215,66.42905400000001
+FeFET,1,4,HW_single/HW_single_FeFET/Inference_pytorch/summary/summary_Cell3_SynBit4_20260117.csv,525cf739974a5d748dffc8f419d4f6c5b9bb1c439bedc2daef81845285ae2e40,True,30.640236,191.036623,20.972629,0.067738,21.040367
+FeFET,1,8,HW_single/HW_single_FeFET/Inference_pytorch/summary/summary_Cell3_SynBit8_20260117.csv,6b2192bb682c303070eee6ccebb954d2b9d61a35cda2d5159a4b2f5aa3c919aa,True,55.667747,181.312917,41.507191,0.131204,41.638394999999996
+SRAM,2,4,HW_ensemble/HW_ensemble_SRAM/Inference_pytorch/summary/summary_Cell1_SynBit4_20260118.csv,7a94899d8577eaddd603b05700a71214c73f881f853d8fcfc906e186ec5b3044,True,76.201761,189.802966,53.086943,0.26235,53.349292999999996
+RRAM,2,4,HW_ensemble/HW_ensemble_RRAM/Inference_pytorch/summary/summary_Cell2_SynBit4_20260118.csv,20763cc2c482cd3f3561bebdcb128b9a6f3df099c414b3e9277c5a1af9a6678d,True,50.142394,222.441959,66.875628,0.148672,67.02430000000001
+FeFET,2,4,HW_ensemble/HW_ensemble_FeFET/Inference_pytorch/summary/summary_Cell3_SynBit4_20260118.csv,331b157385329fcb2a4cf7ce5bb72a6c0589ca978a7d563102c8b94663f226a4,True,50.137411,236.873522,42.254854,0.158311,42.413165

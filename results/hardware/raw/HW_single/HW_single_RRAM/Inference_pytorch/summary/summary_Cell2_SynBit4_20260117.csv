@@ -1,0 +1,49 @@
+[Hardware Configuration]
+Technology Node (nm),22
+Memory Cell Type (1:SRAM 2:RRAM 3:FeFET),2
+Read Voltage (V),0.700000
+Access Voltage (V),0.700000
+Access Resistance (Ohm),2750.000000
+Write Voltage (V),0.800000
+numColMuxed,32
+IR Drop Tolerance,0.250000
+
+Metric,SynapseBit4
+ChipArea_(mm^2),30.643081
+ChipArea_CIMarray_(mm^2),1.814859
+ChipArea_IC_(mm^2),11.752560
+ChipArea_ADC_(mm^2),1.812401
+ChipArea_Accum_(mm^2),1.869610
+ChipArea_Other_(mm^2),8.627792
+ClockPeriod_(us),0.002055
+LBL_ReadLatency_(us),
+LBL_ReadDynamicEnergy_(uJ),
+LBL_LeakageEnergy_(uJ),
+LBL_LeakagePower_(uW),
+LBL_BufferLatency_(us),
+LBL_BufferReadDynamicEnergy_(uJ),
+LBL_IcLatency_(us),
+LBL_IcReadDynamicEnergy_(uJ),
+PIPE_ReadLatency_(us),179.397682
+PIPE_ReadDynamicEnergy_(uJ),33.283008
+PIPE_LeakageEnergy_(uJ),0.063614
+PIPE_LeakagePower_(uW),354.597962
+PIPE_BufferLatency_(us),138.495998
+PIPE_BufferReadDynamicEnergy_(uJ),0.120329
+PIPE_IcLatency_(us),9.565056
+PIPE_IcReadDynamicEnergy_(uJ),1.658842
+Breakdown_ADC_Latency_(us),29.589996
+Breakdown_Accum_Latency_(us),16.541630
+Breakdown_Other_Latency_(us),148.882999
+Breakdown_ADC_Energy_(uJ),19.961492
+Breakdown_Accum_Energy_(uJ),1.695250
+Breakdown_Other_Energy_(uJ),11.626266
+LBL_EnergyEfficiency_(TOPS/W),
+LBL_Throughput_(TOPS),
+LBL_Throughput_(FPS),
+LBL_ComputeEfficiency_(TOPS/mm^2),
+PIPE_EnergyEfficiency_(TOPS/W),30.278957
+PIPE_Throughput_(TOPS),6.866505
+PIPE_Throughput_(FPS),5574.208039
+PIPE_ComputeEfficiency_(TOPS/mm^2),0.224080
+Simulation_Runtime_(us),82000000.000000

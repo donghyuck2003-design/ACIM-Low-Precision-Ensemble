@@ -1,0 +1,2252 @@
+=================FLAGS==================
+dataset: cifar10
+model: ResNet20_CIFAR10
+mode: WAGE
+batch_size: 100
+epochs: 200
+grad_scale: 8
+seed: 117
+log_interval: 100
+test_interval: 1
+logdir: /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10_ver2/Inference_pytorch/log/default/ADCprecision=16/act_calib=1/act_calib_batches=50/act_calib_json=w8_act_alpha_p0.999_b100.json/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=100/cellBit=1/dataset=cifar10/decreasing_lr=140,180/detect=0/grad_scale=8/inference=1/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=./decay0_W8.pth/seed=117/subArray=128/t=0/target=0/v=0/vari=0.0/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8
+lr: 0.01
+decreasing_lr: 140,180
+wl_weight: 8
+wl_grad: 8
+wl_activate: 8
+wl_error: 8
+inference: 1
+subArray: 128
+parallelRead: 128
+ADCprecision: 16
+cellBit: 1
+onoffratio: 10
+vari: 0.0
+t: 0
+v: 0
+detect: 0
+target: 0
+act_calib: 1
+act_calib_batches: 50
+act_calib_p: 0.999
+act_calib_stride: 16
+act_calib_max_samples: 200000
+act_calib_json: w8_act_alpha_p0.999_b100.json
+pretrained: ./decay0_W8.pth
+========================================
+/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10_ver2/Inference_pytorch/inference_test.py:188: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(args.pretrained, map_location='cpu')
+[LOAD] ./decay0_W8.pth
+[LOAD] missing_keys=0 unexpected_keys=0
+[ACT-CALIB] enabled: p=0.999 batches=50 stride=16 max_samples=200000
+/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10_ver2/Inference_pytorch/log/default/ADCprecision=16/act_calib=1/act_calib_batches=50/act_calib_json=w8_act_alpha_p0.999_b100.json/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=100/cellBit=1/dataset=cifar10/decreasing_lr=140,180/detect=0/grad_scale=8/inference=1/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=./decay0_W8.pth/seed=117/subArray=128/t=0/target=0/v=0/vari=0.0/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8
+Building CIFAR-10 data loader with 1 workers
+Files already downloaded and verified
+Files already downloaded and verified
+fan_in     27, float_limit 0.333333, float std 0.272166, quant limit 0.9921875, scale 2.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in     16, float_limit 0.433013, float std 0.353553, quant limit 0.9921875, scale 2.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in     32, float_limit 0.306186, float std 0.250000, quant limit 0.9921875, scale 2.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in     64, float_limit 0.216506, float std 0.176777, quant limit 0.9921875, scale 4.0
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.825348377227783 sat_ratio 0.0 in_minmax 0.0 4.825348377227783
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.046821117401123 sat_ratio 0.0 in_minmax 0.0 4.046821117401123
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.8827362060546875 sat_ratio 0.0 in_minmax 0.0 6.8827362060546875
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.614781379699707 sat_ratio 0.0 in_minmax 0.0 3.614781379699707
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.907678604125977 sat_ratio 0.0 in_minmax 0.0 8.907678604125977
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.146631956100464 sat_ratio 0.0 in_minmax 0.0 3.146631956100464
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.857515335083008 sat_ratio 0.0 in_minmax 0.0 7.857515335083008
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.041378498077393 sat_ratio 0.0 in_minmax 0.0 4.041378498077393
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.857515335083008 sat_ratio 0.0 in_minmax 0.0 7.857515335083008
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.954672813415527 sat_ratio 0.0 in_minmax 0.0 6.954672813415527
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.9608218669891357 sat_ratio 0.0 in_minmax 0.0 2.9608218669891357
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.396530628204346 sat_ratio 0.0 in_minmax 0.0 7.396530628204346
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.582334280014038 sat_ratio 0.0 in_minmax 0.0 3.582334280014038
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 12.181327819824219 sat_ratio 0.0 in_minmax 0.0 12.181327819824219
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.095236301422119 sat_ratio 0.0 in_minmax 0.0 4.095236301422119
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 12.181327819824219 sat_ratio 0.0 in_minmax 0.0 12.181327819824219
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.933084487915039 sat_ratio 0.0 in_minmax 0.0 5.933084487915039
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.892056941986084 sat_ratio 0.0 in_minmax 0.0 3.892056941986084
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.197945594787598 sat_ratio 0.0 in_minmax 0.0 6.197945594787598
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.122154474258423 sat_ratio 0.0 in_minmax 0.0 3.122154474258423
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 6.050333023071289 sat_ratio 0.0 in_minmax 0.0008343082154169679 6.050333023071289
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.828437328338623 sat_ratio 0.0 in_minmax 0.0 4.828437328338623
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.8667843341827393 sat_ratio 0.0 in_minmax 0.0 3.8667843341827393
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.419158935546875 sat_ratio 0.0 in_minmax 0.0 7.419158935546875
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.249774217605591 sat_ratio 0.0 in_minmax 0.0 3.249774217605591
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.534952163696289 sat_ratio 0.0 in_minmax 0.0 9.534952163696289
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.6393773555755615 sat_ratio 0.0 in_minmax 0.0 3.6393773555755615
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.538204193115234 sat_ratio 0.0 in_minmax 0.0 7.538204193115234
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.9512946605682373 sat_ratio 0.0 in_minmax 0.0 3.9512946605682373
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.538204193115234 sat_ratio 0.0 in_minmax 0.0 7.538204193115234
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.440964698791504 sat_ratio 0.0 in_minmax 0.0 6.440964698791504
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.694410562515259 sat_ratio 0.0 in_minmax 0.0 2.694410562515259
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.364156723022461 sat_ratio 0.0 in_minmax 0.0 7.364156723022461
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.5286917686462402 sat_ratio 0.0 in_minmax 0.0 3.5286917686462402
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.739604949951172 sat_ratio 0.0 in_minmax 0.0 9.739604949951172
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.8098464012145996 sat_ratio 0.0 in_minmax 0.0 3.8098464012145996
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.739604949951172 sat_ratio 0.0 in_minmax 0.0 9.739604949951172
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.616886138916016 sat_ratio 0.0 in_minmax 0.0 5.616886138916016
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.012581825256348 sat_ratio 0.0 in_minmax 0.0 4.012581825256348
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.890702247619629 sat_ratio 0.0 in_minmax 0.0 6.890702247619629
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.7094104290008545 sat_ratio 0.0 in_minmax 0.0 3.7094104290008545
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.132657051086426 sat_ratio 0.0 in_minmax 0.0 5.132657051086426
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.781531810760498 sat_ratio 0.0 in_minmax 0.0 4.781531810760498
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.715754985809326 sat_ratio 0.0 in_minmax 0.0 3.715754985809326
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.785040855407715 sat_ratio 0.0 in_minmax 0.0 6.785040855407715
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.3521814346313477 sat_ratio 0.0 in_minmax 0.0 3.3521814346313477
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.70554256439209 sat_ratio 0.0 in_minmax 0.0 8.70554256439209
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.399867534637451 sat_ratio 0.0 in_minmax 0.0 3.399867534637451
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.266669273376465 sat_ratio 0.0 in_minmax 0.0 7.266669273376465
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.279473304748535 sat_ratio 0.0 in_minmax 0.0 4.279473304748535
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.266669273376465 sat_ratio 0.0 in_minmax 0.0 7.266669273376465
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.309784412384033 sat_ratio 0.0 in_minmax 0.0 6.309784412384033
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.2224373817443848 sat_ratio 0.0 in_minmax 0.0 2.2224373817443848
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.306573867797852 sat_ratio 0.0 in_minmax 0.0 7.306573867797852
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.561373233795166 sat_ratio 0.0 in_minmax 0.0 3.561373233795166
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.501178741455078 sat_ratio 0.0 in_minmax 0.0 11.501178741455078
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.430614471435547 sat_ratio 0.0 in_minmax 0.0 4.430614471435547
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.501178741455078 sat_ratio 0.0 in_minmax 0.0 11.501178741455078
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.117125511169434 sat_ratio 0.0 in_minmax 0.0 6.117125511169434
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.6328890323638916 sat_ratio 0.0 in_minmax 0.0 3.6328890323638916
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.942442893981934 sat_ratio 0.0 in_minmax 0.0 6.942442893981934
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.5486321449279785 sat_ratio 0.0 in_minmax 0.0 3.5486321449279785
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.395636558532715 sat_ratio 0.0 in_minmax 0.0 5.395636558532715
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.342957973480225 sat_ratio 0.0 in_minmax 0.0 5.342957973480225
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.239938259124756 sat_ratio 0.0 in_minmax 0.0 4.239938259124756
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.2310919761657715 sat_ratio 0.0 in_minmax 0.0 7.2310919761657715
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 4.027417182922363 sat_ratio 0.0 in_minmax 0.0 4.027417182922363
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.174114227294922 sat_ratio 0.0 in_minmax 0.0 9.174114227294922
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.3002493381500244 sat_ratio 0.0 in_minmax 0.0 3.3002493381500244
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.573248863220215 sat_ratio 0.0 in_minmax 0.0 7.573248863220215
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.078217506408691 sat_ratio 0.0 in_minmax 0.0 4.078217506408691
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.573248863220215 sat_ratio 0.0 in_minmax 0.0 7.573248863220215
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.3383049964904785 sat_ratio 0.0 in_minmax 0.0 6.3383049964904785
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.438749313354492 sat_ratio 0.0 in_minmax 0.0 2.438749313354492
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.546840667724609 sat_ratio 0.0 in_minmax 0.0 6.546840667724609
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.039271831512451 sat_ratio 0.0 in_minmax 0.0 3.039271831512451
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.715316772460938 sat_ratio 0.0 in_minmax 0.0 8.715316772460938
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.5583105087280273 sat_ratio 0.0 in_minmax 0.0 3.5583105087280273
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.715316772460938 sat_ratio 0.0 in_minmax 0.0 8.715316772460938
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.940412998199463 sat_ratio 0.0 in_minmax 0.0 4.940412998199463
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.874030113220215 sat_ratio 0.0 in_minmax 0.0 3.874030113220215
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.8887176513671875 sat_ratio 0.0 in_minmax 0.0 6.8887176513671875
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.230496644973755 sat_ratio 0.0 in_minmax 0.0 3.230496644973755
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.988802909851074 sat_ratio 0.0 in_minmax 0.0 4.988802909851074
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.029742240905762 sat_ratio 0.0 in_minmax 0.0 5.029742240905762
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.026445388793945 sat_ratio 0.0 in_minmax 0.0 4.026445388793945
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.855055809020996 sat_ratio 0.0 in_minmax 0.0 6.855055809020996
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.588628053665161 sat_ratio 0.0 in_minmax 0.0 3.588628053665161
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.677865982055664 sat_ratio 0.0 in_minmax 0.0 8.677865982055664
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.5894775390625 sat_ratio 0.0 in_minmax 0.0 3.5894775390625
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.236691951751709 sat_ratio 0.0 in_minmax 0.0 7.236691951751709
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.255614280700684 sat_ratio 0.0 in_minmax 0.0 4.255614280700684
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.236691951751709 sat_ratio 0.0 in_minmax 0.0 7.236691951751709
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.178131103515625 sat_ratio 0.0 in_minmax 0.0 6.178131103515625
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.5087833404541016 sat_ratio 0.0 in_minmax 0.0 2.5087833404541016
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.871748924255371 sat_ratio 0.0 in_minmax 0.0 6.871748924255371
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.9948227405548096 sat_ratio 0.0 in_minmax 0.0 3.9948227405548096
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 13.607215881347656 sat_ratio 0.0 in_minmax 0.0 13.607215881347656
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.017843246459961 sat_ratio 0.0 in_minmax 0.0 4.017843246459961
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 13.607215881347656 sat_ratio 0.0 in_minmax 0.0 13.607215881347656
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.430975914001465 sat_ratio 0.0 in_minmax 0.0 6.430975914001465
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.4789276123046875 sat_ratio 0.0 in_minmax 0.0 3.4789276123046875
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.331560134887695 sat_ratio 0.0 in_minmax 0.0 7.331560134887695
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.8383522033691406 sat_ratio 0.0 in_minmax 0.0 3.8383522033691406
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.376233100891113 sat_ratio 0.0 in_minmax 0.0 5.376233100891113
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.511651515960693 sat_ratio 0.0 in_minmax 0.0 5.511651515960693
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.962320566177368 sat_ratio 0.0 in_minmax 0.0 3.962320566177368
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.900230407714844 sat_ratio 0.0 in_minmax 0.0 6.900230407714844
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.3964908123016357 sat_ratio 0.0 in_minmax 0.0 3.3964908123016357
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.030141830444336 sat_ratio 0.0 in_minmax 0.0 9.030141830444336
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.2683048248291016 sat_ratio 0.0 in_minmax 0.0 3.2683048248291016
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.704190254211426 sat_ratio 0.0 in_minmax 0.0 7.704190254211426
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.021396160125732 sat_ratio 0.0 in_minmax 0.0 4.021396160125732
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.704190254211426 sat_ratio 0.0 in_minmax 0.0 7.704190254211426
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 5.8832783699035645 sat_ratio 0.0 in_minmax 0.0 5.8832783699035645
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 3.1542439460754395 sat_ratio 0.0 in_minmax 0.0 3.1542439460754395
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.310507774353027 sat_ratio 0.0 in_minmax 0.0 6.310507774353027
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.118350982666016 sat_ratio 0.0 in_minmax 0.0 4.118350982666016
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.79426383972168 sat_ratio 0.0 in_minmax 0.0 8.79426383972168
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.4694840908050537 sat_ratio 0.0 in_minmax 0.0 3.4694840908050537
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.79426383972168 sat_ratio 0.0 in_minmax 0.0 8.79426383972168
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.556804656982422 sat_ratio 0.0 in_minmax 0.0 4.556804656982422
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.349732875823975 sat_ratio 0.0 in_minmax 0.0 4.349732875823975
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.905003070831299 sat_ratio 0.0 in_minmax 0.0 6.905003070831299
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.3495569229125977 sat_ratio 0.0 in_minmax 0.0 3.3495569229125977
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.7236127853393555 sat_ratio 0.0 in_minmax 0.0 5.7236127853393555
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.808576583862305 sat_ratio 0.0 in_minmax 0.0 4.808576583862305
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.04490852355957 sat_ratio 0.0 in_minmax 0.0 4.04490852355957
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.655350685119629 sat_ratio 0.0 in_minmax 0.0 7.655350685119629
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.6660361289978027 sat_ratio 0.0 in_minmax 0.0 3.6660361289978027
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.920239448547363 sat_ratio 0.0 in_minmax 0.0 9.920239448547363
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.819817066192627 sat_ratio 0.0 in_minmax 0.0 3.819817066192627
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 8.429959297180176 sat_ratio 0.0 in_minmax 0.0 8.429959297180176
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.989881992340088 sat_ratio 0.0 in_minmax 0.0 3.989881992340088
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 8.429959297180176 sat_ratio 0.0 in_minmax 0.0 8.429959297180176
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 8.723173141479492 sat_ratio 0.0 in_minmax 0.0 8.723173141479492
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.552100419998169 sat_ratio 0.0 in_minmax 0.0 2.552100419998169
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 9.173992156982422 sat_ratio 0.0 in_minmax 0.0 9.173992156982422
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.092142581939697 sat_ratio 0.0 in_minmax 0.0 4.092142581939697
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 13.249393463134766 sat_ratio 0.0 in_minmax 0.0 13.249393463134766
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.102713108062744 sat_ratio 0.0 in_minmax 0.0 4.102713108062744
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 13.249393463134766 sat_ratio 0.0 in_minmax 0.0 13.249393463134766
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 7.080963134765625 sat_ratio 0.0 in_minmax 0.0 7.080963134765625
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.735135793685913 sat_ratio 0.0 in_minmax 0.0 3.735135793685913
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.417625904083252 sat_ratio 0.0 in_minmax 0.0 6.417625904083252
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.698744773864746 sat_ratio 0.0 in_minmax 0.0 3.698744773864746
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.877796173095703 sat_ratio 0.0 in_minmax 0.0 5.877796173095703
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.038145542144775 sat_ratio 0.0 in_minmax 0.0 5.038145542144775
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.964627504348755 sat_ratio 0.0 in_minmax 0.0 3.964627504348755
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.46862268447876 sat_ratio 0.0 in_minmax 0.0 6.46862268447876
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.5964889526367188 sat_ratio 0.0 in_minmax 0.0 3.5964889526367188
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.459572792053223 sat_ratio 0.0 in_minmax 0.0 8.459572792053223
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.459846258163452 sat_ratio 0.0 in_minmax 0.0 3.459846258163452
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 6.930185794830322 sat_ratio 0.0 in_minmax 0.0 6.930185794830322
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.5577011108398438 sat_ratio 0.0 in_minmax 0.0 3.5577011108398438
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 6.930185794830322 sat_ratio 0.0 in_minmax 0.0 6.930185794830322
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.4801459312438965 sat_ratio 0.0 in_minmax 0.0 6.4801459312438965
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.6289806365966797 sat_ratio 0.0 in_minmax 0.0 2.6289806365966797
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.761717796325684 sat_ratio 0.0 in_minmax 0.0 7.761717796325684
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.227628469467163 sat_ratio 0.0 in_minmax 0.0 3.227628469467163
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.662364959716797 sat_ratio 0.0 in_minmax 0.0 9.662364959716797
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.3513598442077637 sat_ratio 0.0 in_minmax 0.0 3.3513598442077637
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.662364959716797 sat_ratio 0.0 in_minmax 0.0 9.662364959716797
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.586427688598633 sat_ratio 0.0 in_minmax 0.0 5.586427688598633
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.9732651710510254 sat_ratio 0.0 in_minmax 0.0 3.9732651710510254
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.118513107299805 sat_ratio 0.0 in_minmax 0.0 7.118513107299805
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 2.9930238723754883 sat_ratio 0.0 in_minmax 0.0 2.9930238723754883
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.340941429138184 sat_ratio 0.0 in_minmax 0.0 5.340941429138184
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.816872596740723 sat_ratio 0.0 in_minmax 0.0 4.816872596740723
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.5402421951293945 sat_ratio 0.0 in_minmax 0.0 3.5402421951293945
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.148627281188965 sat_ratio 0.0 in_minmax 0.0 7.148627281188965
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.668221950531006 sat_ratio 0.0 in_minmax 0.0 3.668221950531006
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 10.076141357421875 sat_ratio 0.0 in_minmax 0.0 10.076141357421875
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.5277140140533447 sat_ratio 0.0 in_minmax 0.0 3.5277140140533447
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 9.643424987792969 sat_ratio 0.0 in_minmax 0.0 9.643424987792969
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.3827593326568604 sat_ratio 0.0 in_minmax 0.0 3.3827593326568604
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 9.643424987792969 sat_ratio 0.0 in_minmax 0.0 9.643424987792969
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.126434326171875 sat_ratio 0.0 in_minmax 0.0 6.126434326171875
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.584716796875 sat_ratio 0.0 in_minmax 0.0 2.584716796875
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.9149169921875 sat_ratio 0.0 in_minmax 0.0 7.9149169921875
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 2.984825372695923 sat_ratio 0.0 in_minmax 0.0 2.984825372695923
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 12.051783561706543 sat_ratio 0.0 in_minmax 0.0 12.051783561706543
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 5.003586292266846 sat_ratio 0.0 in_minmax 0.0 5.003586292266846
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 12.051783561706543 sat_ratio 0.0 in_minmax 0.0 12.051783561706543
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 8.05638313293457 sat_ratio 0.0 in_minmax 0.0 8.05638313293457
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.5638954639434814 sat_ratio 0.0 in_minmax 0.0 3.5638954639434814
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.627078533172607 sat_ratio 0.0 in_minmax 0.0 7.627078533172607
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.890155553817749 sat_ratio 0.0 in_minmax 0.0 3.890155553817749
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 6.340522766113281 sat_ratio 0.0 in_minmax 0.0 6.340522766113281
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.8737263679504395 sat_ratio 0.0 in_minmax 0.0 4.8737263679504395
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.054713249206543 sat_ratio 0.0 in_minmax 0.0 4.054713249206543
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.911235332489014 sat_ratio 0.0 in_minmax 0.0 7.911235332489014
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.834743022918701 sat_ratio 0.0 in_minmax 0.0 3.834743022918701
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.234884262084961 sat_ratio 0.0 in_minmax 0.0 9.234884262084961
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.1946370601654053 sat_ratio 0.0 in_minmax 0.0 3.1946370601654053
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 8.078789710998535 sat_ratio 0.0 in_minmax 0.0 8.078789710998535
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.174157619476318 sat_ratio 0.0 in_minmax 0.0 4.174157619476318
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 8.078789710998535 sat_ratio 0.0 in_minmax 0.0 8.078789710998535
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.860047340393066 sat_ratio 0.0 in_minmax 0.0 6.860047340393066
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.953073501586914 sat_ratio 0.0 in_minmax 0.0 2.953073501586914
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.723655700683594 sat_ratio 0.0 in_minmax 0.0 7.723655700683594
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.5761516094207764 sat_ratio 0.0 in_minmax 0.0 3.5761516094207764
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 12.096170425415039 sat_ratio 0.0 in_minmax 0.0 12.096170425415039
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.063539028167725 sat_ratio 0.0 in_minmax 0.0 4.063539028167725
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 12.096170425415039 sat_ratio 0.0 in_minmax 0.0 12.096170425415039
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.55755615234375 sat_ratio 0.0 in_minmax 0.0 6.55755615234375
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.4721426963806152 sat_ratio 0.0 in_minmax 0.0 3.4721426963806152
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.098092079162598 sat_ratio 0.0 in_minmax 0.0 6.098092079162598
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 4.403017997741699 sat_ratio 0.0 in_minmax 0.0 4.403017997741699
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 6.649771690368652 sat_ratio 0.0 in_minmax 0.0 6.649771690368652
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.032076835632324 sat_ratio 0.0 in_minmax 0.0 5.032076835632324
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.173651218414307 sat_ratio 0.0 in_minmax 0.0 4.173651218414307
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.385467529296875 sat_ratio 0.0 in_minmax 0.0 7.385467529296875
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.2296314239501953 sat_ratio 0.0 in_minmax 0.0 3.2296314239501953
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.680766105651855 sat_ratio 0.0 in_minmax 0.0 8.680766105651855
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.4698662757873535 sat_ratio 0.0 in_minmax 0.0 3.4698662757873535
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.43809700012207 sat_ratio 0.0 in_minmax 0.0 7.43809700012207
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.7827532291412354 sat_ratio 0.0 in_minmax 0.0 3.7827532291412354
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.43809700012207 sat_ratio 0.0 in_minmax 0.0 7.43809700012207
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.293503761291504 sat_ratio 0.0 in_minmax 0.0 6.293503761291504
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.7353873252868652 sat_ratio 0.0 in_minmax 0.0 2.7353873252868652
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.572125434875488 sat_ratio 0.0 in_minmax 0.0 6.572125434875488
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.025965452194214 sat_ratio 0.0 in_minmax 0.0 3.025965452194214
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.398458480834961 sat_ratio 0.0 in_minmax 0.0 11.398458480834961
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.8003408908843994 sat_ratio 0.0 in_minmax 0.0 3.8003408908843994
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.398458480834961 sat_ratio 0.0 in_minmax 0.0 11.398458480834961
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.0981574058532715 sat_ratio 0.0 in_minmax 0.0 5.0981574058532715
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.2232558727264404 sat_ratio 0.0 in_minmax 0.0 3.2232558727264404
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.3306708335876465 sat_ratio 0.0 in_minmax 0.0 7.3306708335876465
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.1380667686462402 sat_ratio 0.0 in_minmax 0.0 3.1380667686462402
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.109577178955078 sat_ratio 0.0 in_minmax 0.0 5.109577178955078
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.71580696105957 sat_ratio 0.0 in_minmax 0.0 4.71580696105957
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.586031913757324 sat_ratio 0.0 in_minmax 0.0 3.586031913757324
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.373436450958252 sat_ratio 0.0 in_minmax 0.0 7.373436450958252
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.82370662689209 sat_ratio 0.0 in_minmax 0.0 3.82370662689209
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.916502952575684 sat_ratio 0.0 in_minmax 0.0 8.916502952575684
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.251713991165161 sat_ratio 0.0 in_minmax 0.0 3.251713991165161
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.071028709411621 sat_ratio 0.0 in_minmax 0.0 7.071028709411621
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.375416278839111 sat_ratio 0.0 in_minmax 0.0 4.375416278839111
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.071028709411621 sat_ratio 0.0 in_minmax 0.0 7.071028709411621
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.572437286376953 sat_ratio 0.0 in_minmax 0.0 7.572437286376953
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.9154598712921143 sat_ratio 0.0 in_minmax 0.0 2.9154598712921143
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.833150863647461 sat_ratio 0.0 in_minmax 0.0 7.833150863647461
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.3643012046813965 sat_ratio 0.0 in_minmax 0.0 3.3643012046813965
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.758562088012695 sat_ratio 0.0 in_minmax 0.0 8.758562088012695
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.4164392948150635 sat_ratio 0.0 in_minmax 0.0 3.4164392948150635
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.758562088012695 sat_ratio 0.0 in_minmax 0.0 8.758562088012695
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.374814033508301 sat_ratio 0.0 in_minmax 0.0 4.374814033508301
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.5196895599365234 sat_ratio 0.0 in_minmax 0.0 3.5196895599365234
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.5794997215271 sat_ratio 0.0 in_minmax 0.0 6.5794997215271
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.1646151542663574 sat_ratio 0.0 in_minmax 0.0 3.1646151542663574
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.995950222015381 sat_ratio 0.0 in_minmax 0.0 4.995950222015381
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.910017967224121 sat_ratio 0.0 in_minmax 0.0 4.910017967224121
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.050851821899414 sat_ratio 0.0 in_minmax 0.0 4.050851821899414
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 8.191800117492676 sat_ratio 0.0 in_minmax 0.0 8.191800117492676
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 4.315242290496826 sat_ratio 0.0 in_minmax 0.0 4.315242290496826
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 11.240652084350586 sat_ratio 0.0 in_minmax 0.0 11.240652084350586
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.489506721496582 sat_ratio 0.0 in_minmax 0.0 3.489506721496582
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 9.842280387878418 sat_ratio 0.0 in_minmax 0.0 9.842280387878418
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.65610933303833 sat_ratio 0.0 in_minmax 0.0 4.65610933303833
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 9.842280387878418 sat_ratio 0.0 in_minmax 0.0 9.842280387878418
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.155764579772949 sat_ratio 0.0 in_minmax 0.0 7.155764579772949
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.4130544662475586 sat_ratio 0.0 in_minmax 0.0 2.4130544662475586
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.924022674560547 sat_ratio 0.0 in_minmax 0.0 7.924022674560547
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.242096424102783 sat_ratio 0.0 in_minmax 0.0 4.242096424102783
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 12.297643661499023 sat_ratio 0.0 in_minmax 0.0 12.297643661499023
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.7588374614715576 sat_ratio 0.0 in_minmax 0.0 3.7588374614715576
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 12.297643661499023 sat_ratio 0.0 in_minmax 0.0 12.297643661499023
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.1427083015441895 sat_ratio 0.0 in_minmax 0.0 6.1427083015441895
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.7377207279205322 sat_ratio 0.0 in_minmax 0.0 3.7377207279205322
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.413232803344727 sat_ratio 0.0 in_minmax 0.0 7.413232803344727
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.3501973152160645 sat_ratio 0.0 in_minmax 0.0 3.3501973152160645
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.018004417419434 sat_ratio 0.0 in_minmax 0.0 5.018004417419434
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.005334377288818 sat_ratio 0.0 in_minmax 0.0 5.005334377288818
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.7625339031219482 sat_ratio 0.0 in_minmax 0.0 3.7625339031219482
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.028420448303223 sat_ratio 0.0 in_minmax 0.0 7.028420448303223
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.6034374237060547 sat_ratio 0.0 in_minmax 0.0 3.6034374237060547
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.106060028076172 sat_ratio 0.0 in_minmax 0.0 8.106060028076172
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.5793190002441406 sat_ratio 0.0 in_minmax 0.0 3.5793190002441406
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 6.5847554206848145 sat_ratio 0.0 in_minmax 0.0 6.5847554206848145
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.58612060546875 sat_ratio 0.0 in_minmax 0.0 3.58612060546875
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 6.5847554206848145 sat_ratio 0.0 in_minmax 0.0 6.5847554206848145
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.119292736053467 sat_ratio 0.0 in_minmax 0.0 7.119292736053467
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.570560932159424 sat_ratio 0.0 in_minmax 0.0 2.570560932159424
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.661923408508301 sat_ratio 0.0 in_minmax 0.0 6.661923408508301
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.6933467388153076 sat_ratio 0.0 in_minmax 0.0 3.6933467388153076
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.862053871154785 sat_ratio 0.0 in_minmax 0.0 11.862053871154785
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.345735549926758 sat_ratio 0.0 in_minmax 0.0 4.345735549926758
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.862053871154785 sat_ratio 0.0 in_minmax 0.0 11.862053871154785
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.257164001464844 sat_ratio 0.0 in_minmax 0.0 6.257164001464844
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.961655855178833 sat_ratio 0.0 in_minmax 0.0 3.961655855178833
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.3458027839660645 sat_ratio 0.0 in_minmax 0.0 7.3458027839660645
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.1528613567352295 sat_ratio 0.0 in_minmax 0.0 3.1528613567352295
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.388933181762695 sat_ratio 0.0 in_minmax 0.0 5.388933181762695
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.927275657653809 sat_ratio 0.0 in_minmax 0.0 4.927275657653809
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.9084911346435547 sat_ratio 0.0 in_minmax 0.0 3.9084911346435547
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.568541526794434 sat_ratio 0.0 in_minmax 0.0 7.568541526794434
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.185854434967041 sat_ratio 0.0 in_minmax 0.0 3.185854434967041
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.769822120666504 sat_ratio 0.0 in_minmax 0.0 8.769822120666504
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.70259165763855 sat_ratio 0.0 in_minmax 0.0 3.70259165763855
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.847027778625488 sat_ratio 0.0 in_minmax 0.0 7.847027778625488
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.008848667144775 sat_ratio 0.0 in_minmax 0.0 4.008848667144775
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.847027778625488 sat_ratio 0.0 in_minmax 0.0 7.847027778625488
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 8.276107788085938 sat_ratio 0.0 in_minmax 0.0 8.276107788085938
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.8332722187042236 sat_ratio 0.0 in_minmax 0.0 2.8332722187042236
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 8.242156028747559 sat_ratio 0.0 in_minmax 0.0 8.242156028747559
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.9052746295928955 sat_ratio 0.0 in_minmax 0.0 3.9052746295928955
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.637968063354492 sat_ratio 0.0 in_minmax 0.0 9.637968063354492
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.3567564487457275 sat_ratio 0.0 in_minmax 0.0 3.3567564487457275
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.637968063354492 sat_ratio 0.0 in_minmax 0.0 9.637968063354492
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.251290321350098 sat_ratio 0.0 in_minmax 0.0 6.251290321350098
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.226947069168091 sat_ratio 0.0 in_minmax 0.0 3.226947069168091
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.286794662475586 sat_ratio 0.0 in_minmax 0.0 6.286794662475586
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 2.940945625305176 sat_ratio 0.0 in_minmax 0.0 2.940945625305176
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.848167419433594 sat_ratio 0.0 in_minmax 0.0 5.848167419433594
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.8208231925964355 sat_ratio 0.0 in_minmax 0.0 4.8208231925964355
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.9942378997802734 sat_ratio 0.0 in_minmax 0.0 3.9942378997802734
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.964317321777344 sat_ratio 0.0 in_minmax 0.0 6.964317321777344
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.572362184524536 sat_ratio 0.0 in_minmax 0.0 3.572362184524536
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.105550765991211 sat_ratio 0.0 in_minmax 0.0 9.105550765991211
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.312791109085083 sat_ratio 0.0 in_minmax 0.0 3.312791109085083
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.827998638153076 sat_ratio 0.0 in_minmax 0.0 7.827998638153076
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.0593695640563965 sat_ratio 0.0 in_minmax 0.0 4.0593695640563965
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.827998638153076 sat_ratio 0.0 in_minmax 0.0 7.827998638153076
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.263038158416748 sat_ratio 0.0 in_minmax 0.0 6.263038158416748
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.7708890438079834 sat_ratio 0.0 in_minmax 0.0 2.7708890438079834
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.007943153381348 sat_ratio 0.0 in_minmax 0.0 7.007943153381348
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.8636820316314697 sat_ratio 0.0 in_minmax 0.0 3.8636820316314697
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.27427864074707 sat_ratio 0.0 in_minmax 0.0 11.27427864074707
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.4938902854919434 sat_ratio 0.0 in_minmax 0.0 3.4938902854919434
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.27427864074707 sat_ratio 0.0 in_minmax 0.0 11.27427864074707
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.892040252685547 sat_ratio 0.0 in_minmax 0.0 5.892040252685547
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.242244243621826 sat_ratio 0.0 in_minmax 0.0 3.242244243621826
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.156821250915527 sat_ratio 0.0 in_minmax 0.0 7.156821250915527
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.8055503368377686 sat_ratio 0.0 in_minmax 0.0 3.8055503368377686
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 6.741688251495361 sat_ratio 0.0 in_minmax 0.0 6.741688251495361
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.581161975860596 sat_ratio 0.0 in_minmax 0.0 4.581161975860596
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.044731140136719 sat_ratio 0.0 in_minmax 0.0 4.044731140136719
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.474475383758545 sat_ratio 0.0 in_minmax 0.0 7.474475383758545
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.668015241622925 sat_ratio 0.0 in_minmax 0.0 3.668015241622925
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.477219581604004 sat_ratio 0.0 in_minmax 0.0 9.477219581604004
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.6931228637695312 sat_ratio 0.0 in_minmax 0.0 3.6931228637695312
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 6.813387870788574 sat_ratio 0.0 in_minmax 0.0 6.813387870788574
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.3775315284729004 sat_ratio 0.0 in_minmax 0.0 3.3775315284729004
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 6.813387870788574 sat_ratio 0.0 in_minmax 0.0 6.813387870788574
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.249852180480957 sat_ratio 0.0 in_minmax 0.0 6.249852180480957
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.5473828315734863 sat_ratio 0.0 in_minmax 0.0 2.5473828315734863
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.149722099304199 sat_ratio 0.0 in_minmax 0.0 7.149722099304199
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.4879117012023926 sat_ratio 0.0 in_minmax 0.0 3.4879117012023926
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.730981826782227 sat_ratio 0.0 in_minmax 0.0 10.730981826782227
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.391419887542725 sat_ratio 0.0 in_minmax 0.0 4.391419887542725
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.730981826782227 sat_ratio 0.0 in_minmax 0.0 10.730981826782227
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.442110061645508 sat_ratio 0.0 in_minmax 0.0 6.442110061645508
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.6409752368927 sat_ratio 0.0 in_minmax 0.0 3.6409752368927
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.264384746551514 sat_ratio 0.0 in_minmax 0.0 6.264384746551514
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 4.06361722946167 sat_ratio 0.0 in_minmax 0.0 4.06361722946167
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.434453964233398 sat_ratio 0.0 in_minmax 0.0 5.434453964233398
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.680430889129639 sat_ratio 0.0 in_minmax 0.0 4.680430889129639
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.004141807556152 sat_ratio 0.0 in_minmax 0.0 4.004141807556152
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.930965423583984 sat_ratio 0.0 in_minmax 0.0 6.930965423583984
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.1050102710723877 sat_ratio 0.0 in_minmax 0.0 3.1050102710723877
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.703255653381348 sat_ratio 0.0 in_minmax 0.0 8.703255653381348
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.598912000656128 sat_ratio 0.0 in_minmax 0.0 3.598912000656128
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.681681156158447 sat_ratio 0.0 in_minmax 0.0 7.681681156158447
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.292469501495361 sat_ratio 0.0 in_minmax 0.0 4.292469501495361
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.681681156158447 sat_ratio 0.0 in_minmax 0.0 7.681681156158447
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.919707298278809 sat_ratio 0.0 in_minmax 0.0 6.919707298278809
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.6268372535705566 sat_ratio 0.0 in_minmax 0.0 2.6268372535705566
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.868361473083496 sat_ratio 0.0 in_minmax 0.0 6.868361473083496
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.1800122261047363 sat_ratio 0.0 in_minmax 0.0 3.1800122261047363
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.204619407653809 sat_ratio 0.0 in_minmax 0.0 11.204619407653809
+[ACT-CALIB] collected batches: 20/50
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.246032953262329 sat_ratio 0.0 in_minmax 0.0 3.246032953262329
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.204619407653809 sat_ratio 0.0 in_minmax 0.0 11.204619407653809
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.073825836181641 sat_ratio 0.0 in_minmax 0.0 5.073825836181641
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.492670774459839 sat_ratio 0.0 in_minmax 0.0 3.492670774459839
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.532382011413574 sat_ratio 0.0 in_minmax 0.0 6.532382011413574
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.954968214035034 sat_ratio 0.0 in_minmax 0.0 3.954968214035034
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.623931884765625 sat_ratio 0.0 in_minmax 0.0 5.623931884765625
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.154070854187012 sat_ratio 0.0 in_minmax 0.0 5.154070854187012
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.7616286277770996 sat_ratio 0.0 in_minmax 0.0 3.7616286277770996
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.689968109130859 sat_ratio 0.0 in_minmax 0.0 6.689968109130859
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.6733152866363525 sat_ratio 0.0 in_minmax 0.0 3.6733152866363525
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 7.591446876525879 sat_ratio 0.0 in_minmax 0.0 7.591446876525879
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.076012134552002 sat_ratio 0.0 in_minmax 0.0 3.076012134552002
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.812741279602051 sat_ratio 0.0 in_minmax 0.0 7.812741279602051
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.4503931999206543 sat_ratio 0.0 in_minmax 0.0 3.4503931999206543
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.812741279602051 sat_ratio 0.0 in_minmax 0.0 7.812741279602051
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.325564384460449 sat_ratio 0.0 in_minmax 0.0 6.325564384460449
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.9160966873168945 sat_ratio 0.0 in_minmax 0.0 2.9160966873168945
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.7315592765808105 sat_ratio 0.0 in_minmax 0.0 6.7315592765808105
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.371816635131836 sat_ratio 0.0 in_minmax 0.0 3.371816635131836
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.449003219604492 sat_ratio 0.0 in_minmax 0.0 8.449003219604492
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.186668872833252 sat_ratio 0.0 in_minmax 0.0 3.186668872833252
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.449003219604492 sat_ratio 0.0 in_minmax 0.0 8.449003219604492
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.278395652770996 sat_ratio 0.0 in_minmax 0.0 4.278395652770996
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.834345579147339 sat_ratio 0.0 in_minmax 0.0 3.834345579147339
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.537583351135254 sat_ratio 0.0 in_minmax 0.0 7.537583351135254
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.6879618167877197 sat_ratio 0.0 in_minmax 0.0 3.6879618167877197
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.282695770263672 sat_ratio 0.0 in_minmax 0.0 5.282695770263672
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.690666675567627 sat_ratio 0.0 in_minmax 0.0 4.690666675567627
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.696682929992676 sat_ratio 0.0 in_minmax 0.0 3.696682929992676
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.434633255004883 sat_ratio 0.0 in_minmax 0.0 7.434633255004883
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.3086960315704346 sat_ratio 0.0 in_minmax 0.0 3.3086960315704346
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.940593719482422 sat_ratio 0.0 in_minmax 0.0 9.940593719482422
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.2049124240875244 sat_ratio 0.0 in_minmax 0.0 3.2049124240875244
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 8.682143211364746 sat_ratio 0.0 in_minmax 0.0 8.682143211364746
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.5223193168640137 sat_ratio 0.0 in_minmax 0.0 3.5223193168640137
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 8.682143211364746 sat_ratio 0.0 in_minmax 0.0 8.682143211364746
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.221099853515625 sat_ratio 0.0 in_minmax 0.0 7.221099853515625
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.3440890312194824 sat_ratio 0.0 in_minmax 0.0 2.3440890312194824
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.810738563537598 sat_ratio 0.0 in_minmax 0.0 7.810738563537598
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 2.5940804481506348 sat_ratio 0.0 in_minmax 0.0 2.5940804481506348
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.387051582336426 sat_ratio 0.0 in_minmax 0.0 9.387051582336426
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.4596900939941406 sat_ratio 0.0 in_minmax 0.0 3.4596900939941406
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.387051582336426 sat_ratio 0.0 in_minmax 0.0 9.387051582336426
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.239657402038574 sat_ratio 0.0 in_minmax 0.0 6.239657402038574
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.0495991706848145 sat_ratio 0.0 in_minmax 0.0 4.0495991706848145
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.355537414550781 sat_ratio 0.0 in_minmax 0.0 6.355537414550781
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 4.1371917724609375 sat_ratio 0.0 in_minmax 0.0 4.1371917724609375
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.517617225646973 sat_ratio 0.0 in_minmax 0.0 4.517617225646973
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.225051403045654 sat_ratio 0.0 in_minmax 0.0 5.225051403045654
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.025930404663086 sat_ratio 0.0 in_minmax 0.0 4.025930404663086
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.959693908691406 sat_ratio 0.0 in_minmax 0.0 7.959693908691406
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.602965831756592 sat_ratio 0.0 in_minmax 0.0 3.602965831756592
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.12923526763916 sat_ratio 0.0 in_minmax 0.0 9.12923526763916
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.464780807495117 sat_ratio 0.0 in_minmax 0.0 3.464780807495117
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 9.570595741271973 sat_ratio 0.0 in_minmax 0.0 9.570595741271973
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.146018028259277 sat_ratio 0.0 in_minmax 0.0 4.146018028259277
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 9.570595741271973 sat_ratio 0.0 in_minmax 0.0 9.570595741271973
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 8.052199363708496 sat_ratio 0.0 in_minmax 0.0 8.052199363708496
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.8247737884521484 sat_ratio 0.0 in_minmax 0.0 2.8247737884521484
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.981768608093262 sat_ratio 0.0 in_minmax 0.0 7.981768608093262
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.4314610958099365 sat_ratio 0.0 in_minmax 0.0 3.4314610958099365
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.580987930297852 sat_ratio 0.0 in_minmax 0.0 11.580987930297852
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.557397842407227 sat_ratio 0.0 in_minmax 0.0 4.557397842407227
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.580987930297852 sat_ratio 0.0 in_minmax 0.0 11.580987930297852
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 7.530058860778809 sat_ratio 0.0 in_minmax 0.0 7.530058860778809
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.137852430343628 sat_ratio 0.0 in_minmax 0.0 3.137852430343628
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.500725269317627 sat_ratio 0.0 in_minmax 0.0 6.500725269317627
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.8385751247406006 sat_ratio 0.0 in_minmax 0.0 3.8385751247406006
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.759622573852539 sat_ratio 0.0 in_minmax 0.0 4.759622573852539
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.009243488311768 sat_ratio 0.0 in_minmax 0.0 5.009243488311768
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.107542991638184 sat_ratio 0.0 in_minmax 0.0 4.107542991638184
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.6416168212890625 sat_ratio 0.0 in_minmax 0.0 6.6416168212890625
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.6096062660217285 sat_ratio 0.0 in_minmax 0.0 3.6096062660217285
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.375821113586426 sat_ratio 0.0 in_minmax 0.0 8.375821113586426
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.213759183883667 sat_ratio 0.0 in_minmax 0.0 3.213759183883667
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.849766731262207 sat_ratio 0.0 in_minmax 0.0 7.849766731262207
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.018545150756836 sat_ratio 0.0 in_minmax 0.0 4.018545150756836
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.849766731262207 sat_ratio 0.0 in_minmax 0.0 7.849766731262207
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.290343284606934 sat_ratio 0.0 in_minmax 0.0 6.290343284606934
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.573228597640991 sat_ratio 0.0 in_minmax 0.0 2.573228597640991
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.386383056640625 sat_ratio 0.0 in_minmax 0.0 6.386383056640625
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.029158353805542 sat_ratio 0.0 in_minmax 0.0 3.029158353805542
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.02691650390625 sat_ratio 0.0 in_minmax 0.0 9.02691650390625
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.5896477699279785 sat_ratio 0.0 in_minmax 0.0 3.5896477699279785
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.02691650390625 sat_ratio 0.0 in_minmax 0.0 9.02691650390625
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.082801818847656 sat_ratio 0.0 in_minmax 0.0 5.082801818847656
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.5326359272003174 sat_ratio 0.0 in_minmax 0.0 3.5326359272003174
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.585967063903809 sat_ratio 0.0 in_minmax 0.0 6.585967063903809
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.3178935050964355 sat_ratio 0.0 in_minmax 0.0 3.3178935050964355
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.622169017791748 sat_ratio 0.0 in_minmax 0.0 4.622169017791748
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.8208231925964355 sat_ratio 0.0 in_minmax 0.0 4.8208231925964355
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.7452468872070312 sat_ratio 0.0 in_minmax 0.0 3.7452468872070312
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.471657752990723 sat_ratio 0.0 in_minmax 0.0 6.471657752990723
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.7772910594940186 sat_ratio 0.0 in_minmax 0.0 3.7772910594940186
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.058847427368164 sat_ratio 0.0 in_minmax 0.0 9.058847427368164
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.299464464187622 sat_ratio 0.0 in_minmax 0.0 3.299464464187622
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 6.809752464294434 sat_ratio 0.0 in_minmax 0.0 6.809752464294434
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.482933282852173 sat_ratio 0.0 in_minmax 0.0 3.482933282852173
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 6.809752464294434 sat_ratio 0.0 in_minmax 0.0 6.809752464294434
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.585057258605957 sat_ratio 0.0 in_minmax 0.0 7.585057258605957
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.2693963050842285 sat_ratio 0.0 in_minmax 0.0 2.2693963050842285
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 8.240376472473145 sat_ratio 0.0 in_minmax 0.0 8.240376472473145
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 2.9452152252197266 sat_ratio 0.0 in_minmax 0.0 2.9452152252197266
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.188438415527344 sat_ratio 0.0 in_minmax 0.0 9.188438415527344
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.186950922012329 sat_ratio 0.0 in_minmax 0.0 3.186950922012329
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.188438415527344 sat_ratio 0.0 in_minmax 0.0 9.188438415527344
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.923073768615723 sat_ratio 0.0 in_minmax 0.0 4.923073768615723
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.9524009227752686 sat_ratio 0.0 in_minmax 0.0 3.9524009227752686
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.358513355255127 sat_ratio 0.0 in_minmax 0.0 7.358513355255127
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.6476988792419434 sat_ratio 0.0 in_minmax 0.0 3.6476988792419434
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.4391326904296875 sat_ratio 0.0 in_minmax 0.0 5.4391326904296875
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.813353538513184 sat_ratio 0.0 in_minmax 0.0 4.813353538513184
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.859797716140747 sat_ratio 0.0 in_minmax 0.0 3.859797716140747
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.887026309967041 sat_ratio 0.0 in_minmax 0.0 7.887026309967041
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.654630661010742 sat_ratio 0.0 in_minmax 0.0 3.654630661010742
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 10.478343963623047 sat_ratio 0.0 in_minmax 0.0 10.478343963623047
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.2582945823669434 sat_ratio 0.0 in_minmax 0.0 3.2582945823669434
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.494082450866699 sat_ratio 0.0 in_minmax 0.0 7.494082450866699
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.53106689453125 sat_ratio 0.0 in_minmax 0.0 3.53106689453125
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.494082450866699 sat_ratio 0.0 in_minmax 0.0 7.494082450866699
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.064800262451172 sat_ratio 0.0 in_minmax 0.0 6.064800262451172
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.6471316814422607 sat_ratio 0.0 in_minmax 0.0 2.6471316814422607
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.822897911071777 sat_ratio 0.0 in_minmax 0.0 6.822897911071777
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.2673730850219727 sat_ratio 0.0 in_minmax 0.0 3.2673730850219727
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.066448211669922 sat_ratio 0.0 in_minmax 0.0 10.066448211669922
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.9446606636047363 sat_ratio 0.0 in_minmax 0.0 3.9446606636047363
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.066448211669922 sat_ratio 0.0 in_minmax 0.0 10.066448211669922
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.955950736999512 sat_ratio 0.0 in_minmax 0.0 4.955950736999512
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.4215445518493652 sat_ratio 0.0 in_minmax 0.0 3.4215445518493652
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.383551120758057 sat_ratio 0.0 in_minmax 0.0 6.383551120758057
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.2937636375427246 sat_ratio 0.0 in_minmax 0.0 3.2937636375427246
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 6.200321674346924 sat_ratio 0.0 in_minmax 0.0 6.200321674346924
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.8360514640808105 sat_ratio 0.0 in_minmax 0.0 4.8360514640808105
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.7029120922088623 sat_ratio 0.0 in_minmax 0.0 3.7029120922088623
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.710744380950928 sat_ratio 0.0 in_minmax 0.0 7.710744380950928
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.4461612701416016 sat_ratio 0.0 in_minmax 0.0 3.4461612701416016
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 10.321611404418945 sat_ratio 0.0 in_minmax 0.0 10.321611404418945
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.6299803256988525 sat_ratio 0.0 in_minmax 0.0 3.6299803256988525
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.644324779510498 sat_ratio 0.0 in_minmax 0.0 7.644324779510498
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.731074333190918 sat_ratio 0.0 in_minmax 0.0 3.731074333190918
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.644324779510498 sat_ratio 0.0 in_minmax 0.0 7.644324779510498
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.48714542388916 sat_ratio 0.0 in_minmax 0.0 6.48714542388916
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.6988914012908936 sat_ratio 0.0 in_minmax 0.0 2.6988914012908936
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.519879341125488 sat_ratio 0.0 in_minmax 0.0 6.519879341125488
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 2.9299867153167725 sat_ratio 0.0 in_minmax 0.0 2.9299867153167725
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.083359718322754 sat_ratio 0.0 in_minmax 0.0 10.083359718322754
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.502216100692749 sat_ratio 0.0 in_minmax 0.0 3.502216100692749
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.083359718322754 sat_ratio 0.0 in_minmax 0.0 10.083359718322754
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.384146690368652 sat_ratio 0.0 in_minmax 0.0 5.384146690368652
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.624629259109497 sat_ratio 0.0 in_minmax 0.0 3.624629259109497
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.065805435180664 sat_ratio 0.0 in_minmax 0.0 6.065805435180664
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.730597972869873 sat_ratio 0.0 in_minmax 0.0 3.730597972869873
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.96505069732666 sat_ratio 0.0 in_minmax 0.0 4.96505069732666
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.785770416259766 sat_ratio 0.0 in_minmax 0.0 4.785770416259766
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.726226568222046 sat_ratio 0.0 in_minmax 0.0 3.726226568222046
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.454790115356445 sat_ratio 0.0 in_minmax 0.0 6.454790115356445
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.1456103324890137 sat_ratio 0.0 in_minmax 0.0 3.1456103324890137
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 7.851249694824219 sat_ratio 0.0 in_minmax 0.0 7.851249694824219
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.513376235961914 sat_ratio 0.0 in_minmax 0.0 3.513376235961914
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.14209508895874 sat_ratio 0.0 in_minmax 0.0 7.14209508895874
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.207616806030273 sat_ratio 0.0 in_minmax 0.0 4.207616806030273
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.14209508895874 sat_ratio 0.0 in_minmax 0.0 7.14209508895874
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.079784393310547 sat_ratio 0.0 in_minmax 0.0 6.079784393310547
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.709944248199463 sat_ratio 0.0 in_minmax 0.0 2.709944248199463
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.443583011627197 sat_ratio 0.0 in_minmax 0.0 7.443583011627197
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.5739049911499023 sat_ratio 0.0 in_minmax 0.0 3.5739049911499023
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.236113548278809 sat_ratio 0.0 in_minmax 0.0 11.236113548278809
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.897136688232422 sat_ratio 0.0 in_minmax 0.0 4.897136688232422
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.236113548278809 sat_ratio 0.0 in_minmax 0.0 11.236113548278809
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.82524299621582 sat_ratio 0.0 in_minmax 0.0 5.82524299621582
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.5632214546203613 sat_ratio 0.0 in_minmax 0.0 3.5632214546203613
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 5.981409072875977 sat_ratio 0.0 in_minmax 0.0 5.981409072875977
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 2.933928966522217 sat_ratio 0.0 in_minmax 0.0 2.933928966522217
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.148627281188965 sat_ratio 0.0 in_minmax 0.0 5.148627281188965
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.827467918395996 sat_ratio 0.0 in_minmax 0.0 4.827467918395996
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.992837905883789 sat_ratio 0.0 in_minmax 0.0 3.992837905883789
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.337622165679932 sat_ratio 0.0 in_minmax 0.0 6.337622165679932
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.178584337234497 sat_ratio 0.0 in_minmax 0.0 3.178584337234497
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.174043655395508 sat_ratio 0.0 in_minmax 0.0 8.174043655395508
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.527637004852295 sat_ratio 0.0 in_minmax 0.0 3.527637004852295
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 8.31153392791748 sat_ratio 0.0 in_minmax 0.0 8.31153392791748
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.826418876647949 sat_ratio 0.0 in_minmax 0.0 4.826418876647949
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 8.31153392791748 sat_ratio 0.0 in_minmax 0.0 8.31153392791748
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.880786895751953 sat_ratio 0.0 in_minmax 0.0 6.880786895751953
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.5809378623962402 sat_ratio 0.0 in_minmax 0.0 2.5809378623962402
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.620856285095215 sat_ratio 0.0 in_minmax 0.0 6.620856285095215
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.052608966827393 sat_ratio 0.0 in_minmax 0.0 4.052608966827393
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.160107612609863 sat_ratio 0.0 in_minmax 0.0 11.160107612609863
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.444615364074707 sat_ratio 0.0 in_minmax 0.0 3.444615364074707
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.160107612609863 sat_ratio 0.0 in_minmax 0.0 11.160107612609863
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.6730451583862305 sat_ratio 0.0 in_minmax 0.0 5.6730451583862305
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.104623794555664 sat_ratio 0.0 in_minmax 0.0 3.104623794555664
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 5.861606597900391 sat_ratio 0.0 in_minmax 0.0 5.861606597900391
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.300583839416504 sat_ratio 0.0 in_minmax 0.0 3.300583839416504
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.020627498626709 sat_ratio 0.0 in_minmax 0.0 5.020627498626709
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.045022964477539 sat_ratio 0.0 in_minmax 0.0 5.045022964477539
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.84244704246521 sat_ratio 0.0 in_minmax 0.0 3.84244704246521
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.26251220703125 sat_ratio 0.0 in_minmax 0.0 7.26251220703125
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.685053586959839 sat_ratio 0.0 in_minmax 0.0 3.685053586959839
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.465612411499023 sat_ratio 0.0 in_minmax 0.0 9.465612411499023
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.484586477279663 sat_ratio 0.0 in_minmax 0.0 3.484586477279663
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.746513843536377 sat_ratio 0.0 in_minmax 0.0 7.746513843536377
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.741581916809082 sat_ratio 0.0 in_minmax 0.0 3.741581916809082
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.746513843536377 sat_ratio 0.0 in_minmax 0.0 7.746513843536377
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.804379463195801 sat_ratio 0.0 in_minmax 0.0 6.804379463195801
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.434886932373047 sat_ratio 0.0 in_minmax 0.0 2.434886932373047
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.192705154418945 sat_ratio 0.0 in_minmax 0.0 7.192705154418945
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.792356967926025 sat_ratio 0.0 in_minmax 0.0 4.792356967926025
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 12.111368179321289 sat_ratio 0.0 in_minmax 0.0 12.111368179321289
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.211874008178711 sat_ratio 0.0 in_minmax 0.0 4.211874008178711
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 12.111368179321289 sat_ratio 0.0 in_minmax 0.0 12.111368179321289
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 8.499813079833984 sat_ratio 0.0 in_minmax 0.0 8.499813079833984
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.4711103439331055 sat_ratio 0.0 in_minmax 0.0 3.4711103439331055
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.708702087402344 sat_ratio 0.0 in_minmax 0.0 6.708702087402344
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.525184154510498 sat_ratio 0.0 in_minmax 0.0 3.525184154510498
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.667384147644043 sat_ratio 0.0 in_minmax 0.0 4.667384147644043
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.569093227386475 sat_ratio 0.0 in_minmax 0.0 4.569093227386475
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.6673707962036133 sat_ratio 0.0 in_minmax 0.0 3.6673707962036133
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.696287155151367 sat_ratio 0.0 in_minmax 0.0 6.696287155151367
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.238729476928711 sat_ratio 0.0 in_minmax 0.0 3.238729476928711
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 7.8637895584106445 sat_ratio 0.0 in_minmax 0.0 7.8637895584106445
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.2346785068511963 sat_ratio 0.0 in_minmax 0.0 3.2346785068511963
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.069450855255127 sat_ratio 0.0 in_minmax 0.0 7.069450855255127
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.018972873687744 sat_ratio 0.0 in_minmax 0.0 4.018972873687744
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.069450855255127 sat_ratio 0.0 in_minmax 0.0 7.069450855255127
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.311017036437988 sat_ratio 0.0 in_minmax 0.0 6.311017036437988
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.993760108947754 sat_ratio 0.0 in_minmax 0.0 2.993760108947754
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.3541998863220215 sat_ratio 0.0 in_minmax 0.0 6.3541998863220215
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.5265302658081055 sat_ratio 0.0 in_minmax 0.0 4.5265302658081055
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.711641311645508 sat_ratio 0.0 in_minmax 0.0 10.711641311645508
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.6467831134796143 sat_ratio 0.0 in_minmax 0.0 3.6467831134796143
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.711641311645508 sat_ratio 0.0 in_minmax 0.0 10.711641311645508
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.032292366027832 sat_ratio 0.0 in_minmax 0.0 6.032292366027832
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.155721664428711 sat_ratio 0.0 in_minmax 0.0 4.155721664428711
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.8292741775512695 sat_ratio 0.0 in_minmax 0.0 7.8292741775512695
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.613983631134033 sat_ratio 0.0 in_minmax 0.0 3.613983631134033
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 7.183049201965332 sat_ratio 0.0 in_minmax 0.0 7.183049201965332
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.351357936859131 sat_ratio 0.0 in_minmax 0.0 5.351357936859131
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.982804775238037 sat_ratio 0.0 in_minmax 0.0 3.982804775238037
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.8369832038879395 sat_ratio 0.0 in_minmax 0.0 6.8369832038879395
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.3854846954345703 sat_ratio 0.0 in_minmax 0.0 3.3854846954345703
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.691001892089844 sat_ratio 0.0 in_minmax 0.0 8.691001892089844
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.2108561992645264 sat_ratio 0.0 in_minmax 0.0 3.2108561992645264
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.197488784790039 sat_ratio 0.0 in_minmax 0.0 7.197488784790039
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.607375144958496 sat_ratio 0.0 in_minmax 0.0 4.607375144958496
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.197488784790039 sat_ratio 0.0 in_minmax 0.0 7.197488784790039
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.530483245849609 sat_ratio 0.0 in_minmax 0.0 6.530483245849609
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.7535226345062256 sat_ratio 0.0 in_minmax 0.0 2.7535226345062256
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.339996337890625 sat_ratio 0.0 in_minmax 0.0 6.339996337890625
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.1236846446990967 sat_ratio 0.0 in_minmax 0.0 3.1236846446990967
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.105072021484375 sat_ratio 0.0 in_minmax 0.0 8.105072021484375
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 2.9345645904541016 sat_ratio 0.0 in_minmax 0.0 2.9345645904541016
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.105072021484375 sat_ratio 0.0 in_minmax 0.0 8.105072021484375
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.733578681945801 sat_ratio 0.0 in_minmax 0.0 4.733578681945801
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.419739246368408 sat_ratio 0.0 in_minmax 0.0 3.419739246368408
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.109496116638184 sat_ratio 0.0 in_minmax 0.0 6.109496116638184
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.26861572265625 sat_ratio 0.0 in_minmax 0.0 3.26861572265625
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.076837539672852 sat_ratio 0.0 in_minmax 0.0 5.076837539672852
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.3587260246276855 sat_ratio 0.0 in_minmax 0.0 5.3587260246276855
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.9442973136901855 sat_ratio 0.0 in_minmax 0.0 3.9442973136901855
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.3129048347473145 sat_ratio 0.0 in_minmax 0.0 7.3129048347473145
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.2748055458068848 sat_ratio 0.0 in_minmax 0.0 3.2748055458068848
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.164294242858887 sat_ratio 0.0 in_minmax 0.0 9.164294242858887
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.757520914077759 sat_ratio 0.0 in_minmax 0.0 3.757520914077759
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.614414215087891 sat_ratio 0.0 in_minmax 0.0 7.614414215087891
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.568343162536621 sat_ratio 0.0 in_minmax 0.0 3.568343162536621
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.614414215087891 sat_ratio 0.0 in_minmax 0.0 7.614414215087891
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.907538414001465 sat_ratio 0.0 in_minmax 0.0 6.907538414001465
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.309755325317383 sat_ratio 0.0 in_minmax 0.0 2.309755325317383
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.073421478271484 sat_ratio 0.0 in_minmax 0.0 7.073421478271484
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.5354719161987305 sat_ratio 0.0 in_minmax 0.0 4.5354719161987305
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.769421577453613 sat_ratio 0.0 in_minmax 0.0 9.769421577453613
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.3718104362487793 sat_ratio 0.0 in_minmax 0.0 3.3718104362487793
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.769421577453613 sat_ratio 0.0 in_minmax 0.0 9.769421577453613
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.27477502822876 sat_ratio 0.0 in_minmax 0.0 5.27477502822876
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.380427122116089 sat_ratio 0.0 in_minmax 0.0 3.380427122116089
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.839214324951172 sat_ratio 0.0 in_minmax 0.0 6.839214324951172
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.0482687950134277 sat_ratio 0.0 in_minmax 0.0 3.0482687950134277
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 6.437361717224121 sat_ratio 0.0 in_minmax 0.0 6.437361717224121
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.029777526855469 sat_ratio 0.0 in_minmax 0.0 5.029777526855469
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.85007381439209 sat_ratio 0.0 in_minmax 0.0 3.85007381439209
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.459217071533203 sat_ratio 0.0 in_minmax 0.0 6.459217071533203
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.6991896629333496 sat_ratio 0.0 in_minmax 0.0 3.6991896629333496
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.361517906188965 sat_ratio 0.0 in_minmax 0.0 8.361517906188965
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.4608333110809326 sat_ratio 0.0 in_minmax 0.0 3.4608333110809326
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 6.721066951751709 sat_ratio 0.0 in_minmax 0.0 6.721066951751709
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.052415370941162 sat_ratio 0.0 in_minmax 0.0 4.052415370941162
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 6.721066951751709 sat_ratio 0.0 in_minmax 0.0 6.721066951751709
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.685244083404541 sat_ratio 0.0 in_minmax 0.0 6.685244083404541
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.4246535301208496 sat_ratio 0.0 in_minmax 0.0 2.4246535301208496
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.348808288574219 sat_ratio 0.0 in_minmax 0.0 7.348808288574219
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.3667988777160645 sat_ratio 0.0 in_minmax 0.0 3.3667988777160645
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.55406379699707 sat_ratio 0.0 in_minmax 0.0 10.55406379699707
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.579779863357544 sat_ratio 0.0 in_minmax 0.0 3.579779863357544
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.55406379699707 sat_ratio 0.0 in_minmax 0.0 10.55406379699707
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.0968546867370605 sat_ratio 0.0 in_minmax 0.0 5.0968546867370605
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.119593143463135 sat_ratio 0.0 in_minmax 0.0 4.119593143463135
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.184221267700195 sat_ratio 0.0 in_minmax 0.0 7.184221267700195
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 4.401084899902344 sat_ratio 0.0 in_minmax 0.0 4.401084899902344
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.793675422668457 sat_ratio 0.0 in_minmax 0.0 5.793675422668457
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.154008865356445 sat_ratio 0.0 in_minmax 0.0 5.154008865356445
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.6634998321533203 sat_ratio 0.0 in_minmax 0.0 3.6634998321533203
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.015914440155029 sat_ratio 0.0 in_minmax 0.0 6.015914440155029
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.733149766921997 sat_ratio 0.0 in_minmax 0.0 3.733149766921997
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 7.966559410095215 sat_ratio 0.0 in_minmax 0.0 7.966559410095215
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.5247037410736084 sat_ratio 0.0 in_minmax 0.0 3.5247037410736084
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 6.743366718292236 sat_ratio 0.0 in_minmax 0.0 6.743366718292236
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.277039527893066 sat_ratio 0.0 in_minmax 0.0 4.277039527893066
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 6.743366718292236 sat_ratio 0.0 in_minmax 0.0 6.743366718292236
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.230864524841309 sat_ratio 0.0 in_minmax 0.0 6.230864524841309
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.86604642868042 sat_ratio 0.0 in_minmax 0.0 2.86604642868042
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.390233993530273 sat_ratio 0.0 in_minmax 0.0 7.390233993530273
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.708892822265625 sat_ratio 0.0 in_minmax 0.0 3.708892822265625
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.067873001098633 sat_ratio 0.0 in_minmax 0.0 9.067873001098633
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.4240732192993164 sat_ratio 0.0 in_minmax 0.0 3.4240732192993164
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.067873001098633 sat_ratio 0.0 in_minmax 0.0 9.067873001098633
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.161656856536865 sat_ratio 0.0 in_minmax 0.0 5.161656856536865
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.6212615966796875 sat_ratio 0.0 in_minmax 0.0 3.6212615966796875
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.384128093719482 sat_ratio 0.0 in_minmax 0.0 6.384128093719482
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.192723512649536 sat_ratio 0.0 in_minmax 0.0 3.192723512649536
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.47191047668457 sat_ratio 0.0 in_minmax 0.0 5.47191047668457
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.061131954193115 sat_ratio 0.0 in_minmax 0.0 5.061131954193115
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.707754611968994 sat_ratio 0.0 in_minmax 0.0 3.707754611968994
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.016994476318359 sat_ratio 0.0 in_minmax 0.0 7.016994476318359
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.882889747619629 sat_ratio 0.0 in_minmax 0.0 3.882889747619629
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.511932373046875 sat_ratio 0.0 in_minmax 0.0 8.511932373046875
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.575157880783081 sat_ratio 0.0 in_minmax 0.0 3.575157880783081
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.71973991394043 sat_ratio 0.0 in_minmax 0.0 7.71973991394043
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.575757026672363 sat_ratio 0.0 in_minmax 0.0 4.575757026672363
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.71973991394043 sat_ratio 0.0 in_minmax 0.0 7.71973991394043
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.52814245223999 sat_ratio 0.0 in_minmax 0.0 7.52814245223999
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.550915002822876 sat_ratio 0.0 in_minmax 0.0 2.550915002822876
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.603153228759766 sat_ratio 0.0 in_minmax 0.0 7.603153228759766
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.403573989868164 sat_ratio 0.0 in_minmax 0.0 3.403573989868164
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.588822364807129 sat_ratio 0.0 in_minmax 0.0 8.588822364807129
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.3042004108428955 sat_ratio 0.0 in_minmax 0.0 3.3042004108428955
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.588822364807129 sat_ratio 0.0 in_minmax 0.0 8.588822364807129
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.9496049880981445 sat_ratio 0.0 in_minmax 0.0 4.9496049880981445
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.7288217544555664 sat_ratio 0.0 in_minmax 0.0 3.7288217544555664
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.2397685050964355 sat_ratio 0.0 in_minmax 0.0 7.2397685050964355
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.626560926437378 sat_ratio 0.0 in_minmax 0.0 3.626560926437378
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.7679266929626465 sat_ratio 0.0 in_minmax 0.0 4.7679266929626465
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 6.347417831420898 sat_ratio 0.0 in_minmax 0.0 6.347417831420898
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.6876204013824463 sat_ratio 0.0 in_minmax 0.0 3.6876204013824463
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 8.684213638305664 sat_ratio 0.0 in_minmax 0.0 8.684213638305664
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.4714763164520264 sat_ratio 0.0 in_minmax 0.0 3.4714763164520264
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.1953763961792 sat_ratio 0.0 in_minmax 0.0 9.1953763961792
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 4.032343864440918 sat_ratio 0.0 in_minmax 0.0 4.032343864440918
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 9.14460277557373 sat_ratio 0.0 in_minmax 0.0 9.14460277557373
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.671758651733398 sat_ratio 0.0 in_minmax 0.0 4.671758651733398
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 9.14460277557373 sat_ratio 0.0 in_minmax 0.0 9.14460277557373
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.825155735015869 sat_ratio 0.0 in_minmax 0.0 7.825155735015869
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.4919989109039307 sat_ratio 0.0 in_minmax 0.0 2.4919989109039307
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.693046569824219 sat_ratio 0.0 in_minmax 0.0 7.693046569824219
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.109420299530029 sat_ratio 0.0 in_minmax 0.0 4.109420299530029
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.679832458496094 sat_ratio 0.0 in_minmax 0.0 11.679832458496094
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.866431951522827 sat_ratio 0.0 in_minmax 0.0 3.866431951522827
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.679832458496094 sat_ratio 0.0 in_minmax 0.0 11.679832458496094
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.578750133514404 sat_ratio 0.0 in_minmax 0.0 6.578750133514404
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.529588460922241 sat_ratio 0.0 in_minmax 0.0 3.529588460922241
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.828893661499023 sat_ratio 0.0 in_minmax 0.0 6.828893661499023
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.8615541458129883 sat_ratio 0.0 in_minmax 0.0 3.8615541458129883
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.5676679611206055 sat_ratio 0.0 in_minmax 0.0 4.5676679611206055
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.914597511291504 sat_ratio 0.0 in_minmax 0.0 4.914597511291504
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.9335756301879883 sat_ratio 0.0 in_minmax 0.0 3.9335756301879883
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.061129570007324 sat_ratio 0.0 in_minmax 0.0 7.061129570007324
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.386430025100708 sat_ratio 0.0 in_minmax 0.0 3.386430025100708
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.281925201416016 sat_ratio 0.0 in_minmax 0.0 8.281925201416016
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.3730967044830322 sat_ratio 0.0 in_minmax 0.0 3.3730967044830322
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.167232513427734 sat_ratio 0.0 in_minmax 0.0 7.167232513427734
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.222233295440674 sat_ratio 0.0 in_minmax 0.0 4.222233295440674
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.167232513427734 sat_ratio 0.0 in_minmax 0.0 7.167232513427734
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.4420976638793945 sat_ratio 0.0 in_minmax 0.0 6.4420976638793945
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 3.032278537750244 sat_ratio 0.0 in_minmax 0.0 3.032278537750244
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.775884628295898 sat_ratio 0.0 in_minmax 0.0 6.775884628295898
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 2.8657920360565186 sat_ratio 0.0 in_minmax 0.0 2.8657920360565186
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.142875671386719 sat_ratio 0.0 in_minmax 0.0 9.142875671386719
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.757004976272583 sat_ratio 0.0 in_minmax 0.0 3.757004976272583
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.142875671386719 sat_ratio 0.0 in_minmax 0.0 9.142875671386719
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.55506706237793 sat_ratio 0.0 in_minmax 0.0 5.55506706237793
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.5499179363250732 sat_ratio 0.0 in_minmax 0.0 3.5499179363250732
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.2441301345825195 sat_ratio 0.0 in_minmax 0.0 7.2441301345825195
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.729377269744873 sat_ratio 0.0 in_minmax 0.0 3.729377269744873
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.108075141906738 sat_ratio 0.0 in_minmax 0.0 5.108075141906738
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.3607258796691895 sat_ratio 0.0 in_minmax 0.0 4.3607258796691895
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.008694171905518 sat_ratio 0.0 in_minmax 0.0 4.008694171905518
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.506539344787598 sat_ratio 0.0 in_minmax 0.0 7.506539344787598
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.292560338973999 sat_ratio 0.0 in_minmax 0.0 3.292560338973999
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 10.033570289611816 sat_ratio 0.0 in_minmax 0.0 10.033570289611816
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.2159907817840576 sat_ratio 0.0 in_minmax 0.0 3.2159907817840576
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 8.844862937927246 sat_ratio 0.0 in_minmax 0.0 8.844862937927246
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.9488768577575684 sat_ratio 0.0 in_minmax 0.0 3.9488768577575684
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 8.844862937927246 sat_ratio 0.0 in_minmax 0.0 8.844862937927246
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.860576152801514 sat_ratio 0.0 in_minmax 0.0 6.860576152801514
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 3.0979409217834473 sat_ratio 0.0 in_minmax 0.0 3.0979409217834473
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.479388236999512 sat_ratio 0.0 in_minmax 0.0 7.479388236999512
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.7055938243865967 sat_ratio 0.0 in_minmax 0.0 3.7055938243865967
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.011531829833984 sat_ratio 0.0 in_minmax 0.0 9.011531829833984
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.5407700538635254 sat_ratio 0.0 in_minmax 0.0 3.5407700538635254
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.011531829833984 sat_ratio 0.0 in_minmax 0.0 9.011531829833984
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.61577033996582 sat_ratio 0.0 in_minmax 0.0 5.61577033996582
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.6492788791656494 sat_ratio 0.0 in_minmax 0.0 3.6492788791656494
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.50980806350708 sat_ratio 0.0 in_minmax 0.0 6.50980806350708
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 2.8373537063598633 sat_ratio 0.0 in_minmax 0.0 2.8373537063598633
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.3537187576293945 sat_ratio 0.0 in_minmax 0.0 5.3537187576293945
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.910269260406494 sat_ratio 0.0 in_minmax 0.0 4.910269260406494
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.175426483154297 sat_ratio 0.0 in_minmax 0.0 4.175426483154297
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 8.026917457580566 sat_ratio 0.0 in_minmax 0.0 8.026917457580566
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.8899126052856445 sat_ratio 0.0 in_minmax 0.0 3.8899126052856445
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.485528945922852 sat_ratio 0.0 in_minmax 0.0 9.485528945922852
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.6630024909973145 sat_ratio 0.0 in_minmax 0.0 3.6630024909973145
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 9.804219245910645 sat_ratio 0.0 in_minmax 0.0 9.804219245910645
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.690227031707764 sat_ratio 0.0 in_minmax 0.0 4.690227031707764
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 9.804219245910645 sat_ratio 0.0 in_minmax 0.0 9.804219245910645
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.557241916656494 sat_ratio 0.0 in_minmax 0.0 6.557241916656494
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.5869555473327637 sat_ratio 0.0 in_minmax 0.0 2.5869555473327637
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.996292591094971 sat_ratio 0.0 in_minmax 0.0 6.996292591094971
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.258227825164795 sat_ratio 0.0 in_minmax 0.0 3.258227825164795
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.700834274291992 sat_ratio 0.0 in_minmax 0.0 10.700834274291992
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.7621073722839355 sat_ratio 0.0 in_minmax 0.0 3.7621073722839355
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.700834274291992 sat_ratio 0.0 in_minmax 0.0 10.700834274291992
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.336770534515381 sat_ratio 0.0 in_minmax 0.0 5.336770534515381
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 5.019832134246826 sat_ratio 0.0 in_minmax 0.0 5.019832134246826
+[WARN] [ACT-CALIB] collected batches: 40/50
+Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 5.922887325286865 sat_ratio 0.0 in_minmax 0.0 5.922887325286865
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 4.138329982757568 sat_ratio 0.0 in_minmax 0.0 4.138329982757568
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.867195129394531 sat_ratio 0.0 in_minmax 0.0 4.867195129394531
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.757576942443848 sat_ratio 0.0 in_minmax 0.0 4.757576942443848
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.9481112957000732 sat_ratio 0.0 in_minmax 0.0 3.9481112957000732
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.368785381317139 sat_ratio 0.0 in_minmax 0.0 6.368785381317139
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.3641858100891113 sat_ratio 0.0 in_minmax 0.0 3.3641858100891113
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.280323028564453 sat_ratio 0.0 in_minmax 0.0 8.280323028564453
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.504650115966797 sat_ratio 0.0 in_minmax 0.0 3.504650115966797
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.79721212387085 sat_ratio 0.0 in_minmax 0.0 7.79721212387085
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.9362382888793945 sat_ratio 0.0 in_minmax 0.0 3.9362382888793945
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.79721212387085 sat_ratio 0.0 in_minmax 0.0 7.79721212387085
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.521411418914795 sat_ratio 0.0 in_minmax 0.0 7.521411418914795
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.47143292427063 sat_ratio 0.0 in_minmax 0.0 2.47143292427063
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.744667053222656 sat_ratio 0.0 in_minmax 0.0 7.744667053222656
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.9646148681640625 sat_ratio 0.0 in_minmax 0.0 3.9646148681640625
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 12.018272399902344 sat_ratio 0.0 in_minmax 0.0 12.018272399902344
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.6038482189178467 sat_ratio 0.0 in_minmax 0.0 3.6038482189178467
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 12.018272399902344 sat_ratio 0.0 in_minmax 0.0 12.018272399902344
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.967319488525391 sat_ratio 0.0 in_minmax 0.0 5.967319488525391
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.8320319652557373 sat_ratio 0.0 in_minmax 0.0 3.8320319652557373
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.466325759887695 sat_ratio 0.0 in_minmax 0.0 6.466325759887695
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 4.070410251617432 sat_ratio 0.0 in_minmax 0.0 4.070410251617432
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.963301658630371 sat_ratio 0.0 in_minmax 0.0 5.963301658630371
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.994472980499268 sat_ratio 0.0 in_minmax 0.0 4.994472980499268
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.026561260223389 sat_ratio 0.0 in_minmax 0.0 4.026561260223389
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.850255966186523 sat_ratio 0.0 in_minmax 0.0 6.850255966186523
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.3916969299316406 sat_ratio 0.0 in_minmax 0.0 3.3916969299316406
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.968528747558594 sat_ratio 0.0 in_minmax 0.0 8.968528747558594
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.7693674564361572 sat_ratio 0.0 in_minmax 0.0 3.7693674564361572
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.406407356262207 sat_ratio 0.0 in_minmax 0.0 7.406407356262207
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.329289197921753 sat_ratio 0.0 in_minmax 0.0 3.329289197921753
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.406407356262207 sat_ratio 0.0 in_minmax 0.0 7.406407356262207
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.393045902252197 sat_ratio 0.0 in_minmax 0.0 6.393045902252197
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.6955292224884033 sat_ratio 0.0 in_minmax 0.0 2.6955292224884033
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.883510112762451 sat_ratio 0.0 in_minmax 0.0 6.883510112762451
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.1712028980255127 sat_ratio 0.0 in_minmax 0.0 3.1712028980255127
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.006977081298828 sat_ratio 0.0 in_minmax 0.0 11.006977081298828
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.4047322273254395 sat_ratio 0.0 in_minmax 0.0 3.4047322273254395
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.006977081298828 sat_ratio 0.0 in_minmax 0.0 11.006977081298828
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.064873695373535 sat_ratio 0.0 in_minmax 0.0 6.064873695373535
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.5637738704681396 sat_ratio 0.0 in_minmax 0.0 3.5637738704681396
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.051883697509766 sat_ratio 0.0 in_minmax 0.0 7.051883697509766
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.567716121673584 sat_ratio 0.0 in_minmax 0.0 3.567716121673584
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.920389175415039 sat_ratio 0.0 in_minmax 0.0 5.920389175415039
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.295621871948242 sat_ratio 0.0 in_minmax 0.0 5.295621871948242
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.003973960876465 sat_ratio 0.0 in_minmax 0.0 4.003973960876465
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.544299125671387 sat_ratio 0.0 in_minmax 0.0 6.544299125671387
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.9212725162506104 sat_ratio 0.0 in_minmax 0.0 3.9212725162506104
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.707681655883789 sat_ratio 0.0 in_minmax 0.0 8.707681655883789
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.293398380279541 sat_ratio 0.0 in_minmax 0.0 3.293398380279541
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.034311294555664 sat_ratio 0.0 in_minmax 0.0 7.034311294555664
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.113560199737549 sat_ratio 0.0 in_minmax 0.0 4.113560199737549
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.034311294555664 sat_ratio 0.0 in_minmax 0.0 7.034311294555664
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 5.969061851501465 sat_ratio 0.0 in_minmax 0.0 5.969061851501465
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.429349422454834 sat_ratio 0.0 in_minmax 0.0 2.429349422454834
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.328296661376953 sat_ratio 0.0 in_minmax 0.0 6.328296661376953
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.0950124263763428 sat_ratio 0.0 in_minmax 0.0 3.0950124263763428
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.348987579345703 sat_ratio 0.0 in_minmax 0.0 8.348987579345703
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 2.9129085540771484 sat_ratio 0.0 in_minmax 0.0 2.9129085540771484
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.348987579345703 sat_ratio 0.0 in_minmax 0.0 8.348987579345703
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.901057243347168 sat_ratio 0.0 in_minmax 0.0 4.901057243347168
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 2.921588659286499 sat_ratio 0.0 in_minmax 0.0 2.921588659286499
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.493086814880371 sat_ratio 0.0 in_minmax 0.0 6.493086814880371
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 2.953841209411621 sat_ratio 0.0 in_minmax 0.0 2.953841209411621
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.9010467529296875 sat_ratio 0.0 in_minmax 0.0 4.9010467529296875
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.782825946807861 sat_ratio 0.0 in_minmax 0.0 4.782825946807861
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.218778133392334 sat_ratio 0.0 in_minmax 0.0 4.218778133392334
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.649717807769775 sat_ratio 0.0 in_minmax 0.0 7.649717807769775
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.175506591796875 sat_ratio 0.0 in_minmax 0.0 3.175506591796875
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.265717506408691 sat_ratio 0.0 in_minmax 0.0 9.265717506408691
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.5122859477996826 sat_ratio 0.0 in_minmax 0.0 3.5122859477996826
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 6.781884670257568 sat_ratio 0.0 in_minmax 0.0 6.781884670257568
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.760181427001953 sat_ratio 0.0 in_minmax 0.0 4.760181427001953
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 6.781884670257568 sat_ratio 0.0 in_minmax 0.0 6.781884670257568
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.798858642578125 sat_ratio 0.0 in_minmax 0.0 7.798858642578125
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.413813591003418 sat_ratio 0.0 in_minmax 0.0 2.413813591003418
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.895749568939209 sat_ratio 0.0 in_minmax 0.0 7.895749568939209
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.3580901622772217 sat_ratio 0.0 in_minmax 0.0 3.3580901622772217
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.352689743041992 sat_ratio 0.0 in_minmax 0.0 9.352689743041992
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.321716547012329 sat_ratio 0.0 in_minmax 0.0 3.321716547012329
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.352689743041992 sat_ratio 0.0 in_minmax 0.0 9.352689743041992
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.1335296630859375 sat_ratio 0.0 in_minmax 0.0 6.1335296630859375
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.560537815093994 sat_ratio 0.0 in_minmax 0.0 3.560537815093994
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.541453838348389 sat_ratio 0.0 in_minmax 0.0 6.541453838348389
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.5550498962402344 sat_ratio 0.0 in_minmax 0.0 3.5550498962402344
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.223875045776367 sat_ratio 0.0 in_minmax 0.0 5.223875045776367
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.8208231925964355 sat_ratio 0.0 in_minmax 0.0 4.8208231925964355
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.355064392089844 sat_ratio 0.0 in_minmax 0.0 4.355064392089844
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.496981620788574 sat_ratio 0.0 in_minmax 0.0 7.496981620788574
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.2956676483154297 sat_ratio 0.0 in_minmax 0.0 3.2956676483154297
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.560338973999023 sat_ratio 0.0 in_minmax 0.0 8.560338973999023
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.189681053161621 sat_ratio 0.0 in_minmax 0.0 3.189681053161621
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 9.06979751586914 sat_ratio 0.0 in_minmax 0.0 9.06979751586914
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.7894208431243896 sat_ratio 0.0 in_minmax 0.0 3.7894208431243896
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 9.06979751586914 sat_ratio 0.0 in_minmax 0.0 9.06979751586914
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 8.460716247558594 sat_ratio 0.0 in_minmax 0.0 8.460716247558594
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 3.1877143383026123 sat_ratio 0.0 in_minmax 0.0 3.1877143383026123
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 8.354514122009277 sat_ratio 0.0 in_minmax 0.0 8.354514122009277
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.501321792602539 sat_ratio 0.0 in_minmax 0.0 3.501321792602539
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.668126106262207 sat_ratio 0.0 in_minmax 0.0 9.668126106262207
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 4.223785400390625 sat_ratio 0.0 in_minmax 0.0 4.223785400390625
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.668126106262207 sat_ratio 0.0 in_minmax 0.0 9.668126106262207
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.84687614440918 sat_ratio 0.0 in_minmax 0.0 4.84687614440918
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.181126594543457 sat_ratio 0.0 in_minmax 0.0 4.181126594543457
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.493101596832275 sat_ratio 0.0 in_minmax 0.0 7.493101596832275
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 4.180759906768799 sat_ratio 0.0 in_minmax 0.0 4.180759906768799
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.580824851989746 sat_ratio 0.0 in_minmax 0.0 4.580824851989746
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.7575764656066895 sat_ratio 0.0 in_minmax 0.0 4.7575764656066895
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.015768051147461 sat_ratio 0.0 in_minmax 0.0 4.015768051147461
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.2292022705078125 sat_ratio 0.0 in_minmax 0.0 7.2292022705078125
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.3748745918273926 sat_ratio 0.0 in_minmax 0.0 3.3748745918273926
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.524380683898926 sat_ratio 0.0 in_minmax 0.0 8.524380683898926
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.513288974761963 sat_ratio 0.0 in_minmax 0.0 3.513288974761963
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 8.146334648132324 sat_ratio 0.0 in_minmax 0.0 8.146334648132324
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.023031711578369 sat_ratio 0.0 in_minmax 0.0 4.023031711578369
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 8.146334648132324 sat_ratio 0.0 in_minmax 0.0 8.146334648132324
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.419822692871094 sat_ratio 0.0 in_minmax 0.0 7.419822692871094
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 3.1578423976898193 sat_ratio 0.0 in_minmax 0.0 3.1578423976898193
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.05609655380249 sat_ratio 0.0 in_minmax 0.0 7.05609655380249
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.449964761734009 sat_ratio 0.0 in_minmax 0.0 3.449964761734009
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.719663619995117 sat_ratio 0.0 in_minmax 0.0 10.719663619995117
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.919806480407715 sat_ratio 0.0 in_minmax 0.0 3.919806480407715
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.719663619995117 sat_ratio 0.0 in_minmax 0.0 10.719663619995117
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 5.802147388458252 sat_ratio 0.0 in_minmax 0.0 5.802147388458252
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.163947105407715 sat_ratio 0.0 in_minmax 0.0 4.163947105407715
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 5.984453201293945 sat_ratio 0.0 in_minmax 0.0 5.984453201293945
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.520886182785034 sat_ratio 0.0 in_minmax 0.0 3.520886182785034
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.095250129699707 sat_ratio 0.0 in_minmax 0.0 5.095250129699707
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.325119495391846 sat_ratio 0.0 in_minmax 0.0 5.325119495391846
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.730914831161499 sat_ratio 0.0 in_minmax 0.0 3.730914831161499
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.900820732116699 sat_ratio 0.0 in_minmax 0.0 6.900820732116699
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.289137363433838 sat_ratio 0.0 in_minmax 0.0 3.289137363433838
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.143320083618164 sat_ratio 0.0 in_minmax 0.0 8.143320083618164
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.330867052078247 sat_ratio 0.0 in_minmax 0.0 3.330867052078247
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.681180000305176 sat_ratio 0.0 in_minmax 0.0 7.681180000305176
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.8719606399536133 sat_ratio 0.0 in_minmax 0.0 3.8719606399536133
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.681180000305176 sat_ratio 0.0 in_minmax 0.0 7.681180000305176
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.842748641967773 sat_ratio 0.0 in_minmax 0.0 6.842748641967773
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.769148826599121 sat_ratio 0.0 in_minmax 0.0 2.769148826599121
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.949275970458984 sat_ratio 0.0 in_minmax 0.0 7.949275970458984
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.251781940460205 sat_ratio 0.0 in_minmax 0.0 3.251781940460205
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 8.92236042022705 sat_ratio 0.0 in_minmax 0.0 8.92236042022705
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.3680055141448975 sat_ratio 0.0 in_minmax 0.0 3.3680055141448975
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 8.92236042022705 sat_ratio 0.0 in_minmax 0.0 8.92236042022705
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.950076103210449 sat_ratio 0.0 in_minmax 0.0 4.950076103210449
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.5481905937194824 sat_ratio 0.0 in_minmax 0.0 3.5481905937194824
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.9938225746154785 sat_ratio 0.0 in_minmax 0.0 6.9938225746154785
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.124070167541504 sat_ratio 0.0 in_minmax 0.0 3.124070167541504
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.568154335021973 sat_ratio 0.0 in_minmax 0.0 4.568154335021973
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.816586494445801 sat_ratio 0.0 in_minmax 0.0 4.816586494445801
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.7308309078216553 sat_ratio 0.0 in_minmax 0.0 3.7308309078216553
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.065714359283447 sat_ratio 0.0 in_minmax 0.0 7.065714359283447
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.8176822662353516 sat_ratio 0.0 in_minmax 0.0 3.8176822662353516
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.711555480957031 sat_ratio 0.0 in_minmax 0.0 8.711555480957031
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.6347177028656006 sat_ratio 0.0 in_minmax 0.0 3.6347177028656006
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.5597028732299805 sat_ratio 0.0 in_minmax 0.0 7.5597028732299805
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.665182113647461 sat_ratio 0.0 in_minmax 0.0 3.665182113647461
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.5597028732299805 sat_ratio 0.0 in_minmax 0.0 7.5597028732299805
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 6.983394622802734 sat_ratio 0.0 in_minmax 0.0 6.983394622802734
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.725684881210327 sat_ratio 0.0 in_minmax 0.0 2.725684881210327
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 8.402070045471191 sat_ratio 0.0 in_minmax 0.0 8.402070045471191
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.874459266662598 sat_ratio 0.0 in_minmax 0.0 4.874459266662598
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 13.098236083984375 sat_ratio 0.0 in_minmax 0.0 13.098236083984375
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 5.162612438201904 sat_ratio 0.0 in_minmax 0.0 5.162612438201904
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 13.098236083984375 sat_ratio 0.0 in_minmax 0.0 13.098236083984375
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 8.572063446044922 sat_ratio 0.0 in_minmax 0.0 8.572063446044922
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.846909284591675 sat_ratio 0.0 in_minmax 0.0 3.846909284591675
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 6.641849517822266 sat_ratio 0.0 in_minmax 0.0 6.641849517822266
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.157695770263672 sat_ratio 0.0 in_minmax 0.0 3.157695770263672
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.302019119262695 sat_ratio 0.0 in_minmax 0.0 5.302019119262695
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.537273406982422 sat_ratio 0.0 in_minmax 0.0 5.537273406982422
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.9263224601745605 sat_ratio 0.0 in_minmax 0.0 3.9263224601745605
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.262474060058594 sat_ratio 0.0 in_minmax 0.0 7.262474060058594
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.795423746109009 sat_ratio 0.0 in_minmax 0.0 3.795423746109009
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 8.95848274230957 sat_ratio 0.0 in_minmax 0.0 8.95848274230957
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.5014424324035645 sat_ratio 0.0 in_minmax 0.0 3.5014424324035645
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.900283336639404 sat_ratio 0.0 in_minmax 0.0 7.900283336639404
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.935612201690674 sat_ratio 0.0 in_minmax 0.0 4.935612201690674
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.900283336639404 sat_ratio 0.0 in_minmax 0.0 7.900283336639404
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.464983940124512 sat_ratio 0.0 in_minmax 0.0 7.464983940124512
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.7641351222991943 sat_ratio 0.0 in_minmax 0.0 2.7641351222991943
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.9997148513793945 sat_ratio 0.0 in_minmax 0.0 6.9997148513793945
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 2.976625680923462 sat_ratio 0.0 in_minmax 0.0 2.976625680923462
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.84113883972168 sat_ratio 0.0 in_minmax 0.0 9.84113883972168
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.412821054458618 sat_ratio 0.0 in_minmax 0.0 3.412821054458618
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.84113883972168 sat_ratio 0.0 in_minmax 0.0 9.84113883972168
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.961230754852295 sat_ratio 0.0 in_minmax 0.0 4.961230754852295
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.574659824371338 sat_ratio 0.0 in_minmax 0.0 3.574659824371338
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 9.233240127563477 sat_ratio 0.0 in_minmax 0.0 9.233240127563477
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.4516963958740234 sat_ratio 0.0 in_minmax 0.0 3.4516963958740234
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 4.671095371246338 sat_ratio 0.0 in_minmax 0.0 4.671095371246338
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 5.196442127227783 sat_ratio 0.0 in_minmax 0.0 5.196442127227783
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 3.716381311416626 sat_ratio 0.0 in_minmax 0.0 3.716381311416626
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.187380790710449 sat_ratio 0.0 in_minmax 0.0 7.187380790710449
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.340860605239868 sat_ratio 0.0 in_minmax 0.0 3.340860605239868
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.145793914794922 sat_ratio 0.0 in_minmax 0.0 9.145793914794922
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.4779300689697266 sat_ratio 0.0 in_minmax 0.0 3.4779300689697266
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.788649082183838 sat_ratio 0.0 in_minmax 0.0 7.788649082183838
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 3.9052562713623047 sat_ratio 0.0 in_minmax 0.0 3.9052562713623047
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.788649082183838 sat_ratio 0.0 in_minmax 0.0 7.788649082183838
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.650078296661377 sat_ratio 0.0 in_minmax 0.0 7.650078296661377
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.9844837188720703 sat_ratio 0.0 in_minmax 0.0 2.9844837188720703
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.912452697753906 sat_ratio 0.0 in_minmax 0.0 7.912452697753906
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 4.291694164276123 sat_ratio 0.0 in_minmax 0.0 4.291694164276123
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 10.836969375610352 sat_ratio 0.0 in_minmax 0.0 10.836969375610352
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.428391695022583 sat_ratio 0.0 in_minmax 0.0 3.428391695022583
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 10.836969375610352 sat_ratio 0.0 in_minmax 0.0 10.836969375610352
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.258998870849609 sat_ratio 0.0 in_minmax 0.0 6.258998870849609
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 4.0999908447265625 sat_ratio 0.0 in_minmax 0.0 4.0999908447265625
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.182398796081543 sat_ratio 0.0 in_minmax 0.0 7.182398796081543
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 2.8210978507995605 sat_ratio 0.0 in_minmax 0.0 2.8210978507995605
+[WARN] FC_21_ [ACT-CALIB] saved 21 layer alphas to: w8_act_alpha_p0.999_b100.json
+[ACT] loaded alpha json: w8_act_alpha_p0.999_b100.json
+alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.297629356384277 sat_ratio 0.0 in_minmax 0.0 5.297629356384277
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.7685675621032715 sat_ratio 0.0 in_minmax 0.0 4.7685675621032715
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.028822898864746 sat_ratio 0.0 in_minmax 0.0 4.028822898864746
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 6.49813175201416 sat_ratio 0.0 in_minmax 0.0 6.49813175201416
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.7588725090026855 sat_ratio 0.0 in_minmax 0.0 3.7588725090026855
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 7.756663799285889 sat_ratio 0.0 in_minmax 0.0 7.756663799285889
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.703616142272949 sat_ratio 0.0 in_minmax 0.0 3.703616142272949
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.277107238769531 sat_ratio 0.0 in_minmax 0.0 7.277107238769531
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.150651454925537 sat_ratio 0.0 in_minmax 0.0 4.150651454925537
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.277107238769531 sat_ratio 0.0 in_minmax 0.0 7.277107238769531
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 5.924830436706543 sat_ratio 0.0 in_minmax 0.0 5.924830436706543
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.453054428100586 sat_ratio 0.0 in_minmax 0.0 2.453054428100586
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 6.6543660163879395 sat_ratio 0.0 in_minmax 0.0 6.6543660163879395
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 3.927168846130371 sat_ratio 0.0 in_minmax 0.0 3.927168846130371
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 9.77098274230957 sat_ratio 0.0 in_minmax 0.0 9.77098274230957
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.245692491531372 sat_ratio 0.0 in_minmax 0.0 3.245692491531372
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 9.77098274230957 sat_ratio 0.0 in_minmax 0.0 9.77098274230957
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 6.154726982116699 sat_ratio 0.0 in_minmax 0.0 6.154726982116699
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.8930962085723877 sat_ratio 0.0 in_minmax 0.0 3.8930962085723877
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 7.297924995422363 sat_ratio 0.0 in_minmax 0.0 7.297924995422363
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 3.0030603408813477 sat_ratio 0.0 in_minmax 0.0 3.0030603408813477
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 6.3353424072265625 sat_ratio 0.0 in_minmax 0.0 6.3353424072265625
+Conv_0_ in_minmax -1.0 1.0
+[WARN] Conv3x3_1_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_1_ alpha_in 4.844959259033203 sat_ratio 0.0 in_minmax 0.0 4.844959259033203
+[WARN] Conv3x3_2_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_2_ alpha_in 4.0220046043396 sat_ratio 0.0 in_minmax 0.0 4.0220046043396
+[WARN] Conv3x3_3_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_3_ alpha_in 7.316636085510254 sat_ratio 0.0 in_minmax 0.0 7.316636085510254
+[WARN] Conv3x3_4_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_4_ alpha_in 3.666811466217041 sat_ratio 0.0 in_minmax 0.0 3.666811466217041
+[WARN] Conv3x3_5_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_5_ alpha_in 9.230745315551758 sat_ratio 0.0 in_minmax 0.0 9.230745315551758
+[WARN] Conv3x3_6_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_6_ alpha_in 3.3325295448303223 sat_ratio 0.0 in_minmax 0.0 3.3325295448303223
+[WARN] Conv3x3_8_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_8_ alpha_in 7.262333393096924 sat_ratio 0.0 in_minmax 0.0 7.262333393096924
+[WARN] Conv3x3_9_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_9_ alpha_in 4.033811569213867 sat_ratio 0.0 in_minmax 0.0 4.033811569213867
+[WARN] Conv1x1_7_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_7_ alpha_in 7.262333393096924 sat_ratio 0.0 in_minmax 0.0 7.262333393096924
+[WARN] Conv3x3_10_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_10_ alpha_in 7.4095635414123535 sat_ratio 0.0 in_minmax 0.0 7.4095635414123535
+[WARN] Conv3x3_11_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_11_ alpha_in 2.496506452560425 sat_ratio 0.0 in_minmax 0.0 2.496506452560425
+[WARN] Conv3x3_12_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_12_ alpha_in 7.510013103485107 sat_ratio 0.0 in_minmax 0.0 7.510013103485107
+[WARN] Conv3x3_13_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_13_ alpha_in 2.7986326217651367 sat_ratio 0.0 in_minmax 0.0 2.7986326217651367
+[WARN] Conv3x3_15_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_15_ alpha_in 11.261241912841797 sat_ratio 0.0 in_minmax 0.0 11.261241912841797
+[WARN] Conv3x3_16_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_16_ alpha_in 3.0776662826538086 sat_ratio 0.0 in_minmax 0.0 3.0776662826538086
+[WARN] Conv1x1_14_ alpha_key is None (tag mismatch or act_q missing)
+Conv1x1_14_ alpha_in 11.261241912841797 sat_ratio 0.0 in_minmax 0.0 11.261241912841797
+[WARN] Conv3x3_17_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_17_ alpha_in 4.990962505340576 sat_ratio 0.0 in_minmax 0.0 4.990962505340576
+[WARN] Conv3x3_18_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_18_ alpha_in 3.8795268535614014 sat_ratio 0.0 in_minmax 0.0 3.8795268535614014
+[WARN] Conv3x3_19_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_19_ alpha_in 5.751530647277832 sat_ratio 0.0 in_minmax 0.0 5.751530647277832
+[WARN] Conv3x3_20_ alpha_key is None (tag mismatch or act_q missing)
+Conv3x3_20_ alpha_in 2.974604606628418 sat_ratio 0.0 in_minmax 0.0 2.974604606628418
+[WARN] FC_21_ alpha_key is None (tag mismatch or act_q missing)
+FC_21_ alpha_in 5.7722039222717285 sat_ratio 0.0 in_minmax 0.0 5.7722039222717285
+Test set: Average loss: 0.3449, Accuracy: 91/100 (91.00%)
+Conv_0_ in_minmax -1.0 1.0
+Conv3x3_1_ alpha_in 2.481090784072876 sat_ratio 0.00047363279736600816 in_minmax 0.0 5.213255405426025
+Conv3x3_2_ alpha_in 2.6235454082489014 sat_ratio 7.568359433207661e-05 in_minmax 0.0 3.3832929134368896
+Conv3x3_3_ alpha_in 3.9619832038879395 sat_ratio 0.0003717040817718953 in_minmax 0.0 7.039056777954102
+Conv3x3_4_ alpha_in 2.207235813140869 sat_ratio 6.469726213254035e-05 in_minmax 0.0 3.3612263202667236
+Conv3x3_5_ alpha_in 4.405018329620361 sat_ratio 0.0007849120884202421 in_minmax 0.0 7.94994592666626
+Conv3x3_6_ alpha_in 1.748019814491272 sat_ratio 0.0012548827799037099 in_minmax 0.0 3.4488959312438965
+Conv3x3_8_ alpha_in 4.121166229248047 sat_ratio 0.0011523436987772584 in_minmax 0.0 8.074992179870605
+Conv3x3_9_ alpha_in 1.5609486103057861 sat_ratio 0.0033850097097456455 in_minmax 0.0 3.9250972270965576
+Conv1x1_7_ alpha_in 4.121166229248047 sat_ratio 0.0011523436987772584 in_minmax 0.0 8.074992179870605
+Conv3x3_10_ alpha_in 3.0585923194885254 sat_ratio 0.0022790527436882257 in_minmax 0.0 6.709974765777588
+Conv3x3_11_ alpha_in 0.9757863283157349 sat_ratio 0.002777099609375 in_minmax 0.0 2.3239798545837402
+Conv3x3_12_ alpha_in 3.1236648559570312 sat_ratio 0.0031445312779396772 in_minmax 0.0 6.508278846740723
+Conv3x3_13_ alpha_in 1.0065793991088867 sat_ratio 0.0017895507626235485 in_minmax 0.0 2.583681344985962
+Conv3x3_15_ alpha_in 3.1676485538482666 sat_ratio 0.003909911960363388 in_minmax 0.0 7.864383697509766
+Conv3x3_16_ alpha_in 1.5830152034759521 sat_ratio 0.0012231444707140326 in_minmax 0.0 2.8981313705444336
+Conv1x1_14_ alpha_in 3.1676485538482666 sat_ratio 0.003909911960363388 in_minmax 0.0 7.864383697509766
+Conv3x3_17_ alpha_in 1.8184430599212646 sat_ratio 0.003054199041798711 in_minmax 0.0 3.7503881454467773
+Conv3x3_18_ alpha_in 1.0950818061828613 sat_ratio 0.0030786131974309683 in_minmax 0.0 3.3254587650299072
+Conv3x3_19_ alpha_in 1.8883135318756104 sat_ratio 0.0034545897506177425 in_minmax 0.0 4.704518795013428
+Conv3x3_20_ alpha_in 0.8181027770042419 sat_ratio 0.005610351450741291 in_minmax 0.0 3.008197784423828
+FC_21_ alpha_in 4.762594699859619 sat_ratio 0.0006249999860301614 in_minmax 0.00022503473155666143 6.069231986999512
+output shape: torch.Size([100, 10])
+data stats: -1.0 1.0 -0.05663195252418518 0.5095263719558716
+fc has bias param? False
+first logits (top5): torch.return_types.topk(
+values=tensor([12.1523,  0.9267, -2.1496, -2.6072, -3.8293]),
+indices=tensor([3, 5, 7, 4, 2]))
+target min/max: 0 9
+target first10: [3, 8, 8, 0, 6, 6, 1, 6, 3, 1]

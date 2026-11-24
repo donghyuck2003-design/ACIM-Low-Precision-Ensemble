@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this research artifact, please cite the associated paper."
+title: "ACIM Low-Precision Ensemble"
+authors:
+  - family-names: Lee
+    given-names: Donghyuck
+  - family-names: Kim
+    given-names: Tae-Hyeon
+preferred-citation:
+  type: article
+  title: "Exploiting Hardware Nonidealities for Robust Low-Precision Ensembles on ACIM"
+  authors:
+    - family-names: Lee
+      given-names: Donghyuck
+    - family-names: Kim
+      given-names: Tae-Hyeon
+  journal: "IEEE Transactions on Very Large Scale Integration (VLSI) Systems"
+  year: 2026
+  volume: 34
+  issue: 6
+  doi: 10.1109/TVLSI.2026.3666118

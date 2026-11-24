@@ -1,0 +1,2 @@
+nohup: ignoring input
+[Sat Feb  7 10:39:02 KST 2026] 실행: w=3, a=8, v=0

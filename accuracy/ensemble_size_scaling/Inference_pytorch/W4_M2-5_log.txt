@@ -1,0 +1,5 @@
+nohup: ignoring input
+[Fri Jan  9 07:44:49 KST 2026] 실행: w=4, a=8, v=0.25
+[Fri Jan  9 13:15:52 KST 2026] 완료: w=4, a=8, v=0.25
+[Fri Jan  9 13:15:52 KST 2026] 실행: w=4, a=8, v=0.10
+[Fri Jan  9 18:26:07 KST 2026] ERROR: Result CSV not found for w=4 a=8 v=0.10

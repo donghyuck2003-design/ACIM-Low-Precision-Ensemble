@@ -1,0 +1,6 @@
+cohort,directory,summary_rows
+vgg8_cifar10_paper_candidate,vgg8_cifar10/published_candidate,67
+vgg8_cifar10_later_unmatched,vgg8_cifar10/updated,66
+vgg8_cifar100_unmatched,vgg8_cifar100/updated,66
+resnet20_cifar10_partial,resnet20_cifar10/available,71
+vgg8_cifar10_scaling,ensemble_size_scaling/available,32

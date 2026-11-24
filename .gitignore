@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+*.o
+*.so
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.zip
+*.tar.gz
+.env*
+*.pem
+*.key
+
+# Local generated artifacts
+**/inference_log/
+**/layer_record/
+**/log/
+**/Result/
+**/dataset/
+**/datasets/
+*.pth.tar
+*.log
+
+# Pretrained checkpoint assets
+*.pth
+*.pth.tar
+*.pt
+*.ckpt
+.checkpoint_cache/
+
+# Local Python artifacts
+__pycache__/
+*.pyc

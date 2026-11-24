@@ -1,0 +1,1530 @@
+nohup: ignoring input
+[ACT] alpha json not found: /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/act_alpha_p0.999_b200.json (act_q may fallback / bypass)
+=================FLAGS==================
+dataset: cifar10
+model: ResNet20_CIFAR10
+mode: WAGE
+batch_size: 128
+epochs: 200
+grad_scale: 8
+seed: 117
+log_interval: 100
+test_interval: 1
+logdir: /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8
+lr: 0.01
+decreasing_lr: 60,120,160
+wl_weight: 8
+wl_grad: 8
+wl_activate: 8
+wl_error: 8
+inference: 0
+subArray: 128
+ADCprecision: 16
+cellBit: 4
+onoffratio: 10
+vari: 0
+t: 0
+v: 0
+detect: 0
+target: 0
+parallelRead: 128
+pretrained: None
+wage_start_epoch: 20
+act_calib: 0
+act_calib_batches: 200
+act_calib_p: 0.999
+act_calib_stride: 16
+act_calib_max_samples: 200000
+act_calib_json: 
+========================================
+Using cache found in /home/ssdl_neurosim1/.cache/torch/hub/chenyaofo_pytorch-cifar-models_master
+[LOAD] missing_keys=0 unexpected_keys=1
+[ACT] alpha json not loaded. path=
+decreasing_lr: [60, 120, 160]
+training phase
+/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8
+Building CIFAR-10 data loader with 4 workers
+Files already downloaded and verified
+Files already downloaded and verified
+fan_in     27, float_limit 0.333333, float std 0.272166, quant limit 0.9921875, scale 2.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in     16, float_limit 0.433013, float std 0.353553, quant limit 0.9921875, scale 2.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in     32, float_limit 0.306186, float std 0.250000, quant limit 0.9921875, scale 2.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in     64, float_limit 0.216506, float std 0.176777, quant limit 0.9921875, scale 4.0
+Model last layer out_features: 10
+/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/utee/wage_quantizer.py:16: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1729647382455/work/torch/csrc/tensor/python_tensor.cpp:78.)
+  r = torch.cuda.FloatTensor(*x.size()).uniform_()
+Train Epoch: 0 [12800/50000] Loss: 0.232625 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 0 [25600/50000] Loss: 0.341558 Acc: 0.8984 lr: 1.00e-02
+Train Epoch: 0 [38400/50000] Loss: 0.352283 Acc: 0.8359 lr: 1.00e-02
+Elapsed 104.78s, 104.78 s/epoch, 0.27 s/batch, ets 20851.73s
+validation phase
+	Epoch 0 Validation set: Average loss: 0.5891, Accuracy: 8166/10000 (82%)
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-0.pth
+training phase
+Train Epoch: 1 [12800/50000] Loss: 0.263342 Acc: 0.9062 lr: 1.00e-02
+Train Epoch: 1 [25600/50000] Loss: 0.250382 Acc: 0.9219 lr: 1.00e-02
+Train Epoch: 1 [38400/50000] Loss: 0.336808 Acc: 0.8750 lr: 1.00e-02
+Elapsed 162.40s, 81.20 s/epoch, 0.21 s/batch, ets 16077.56s
+validation phase
+	Epoch 1 Validation set: Average loss: 0.5713, Accuracy: 8217/10000 (82%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-0.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-1.pth
+training phase
+Train Epoch: 2 [12800/50000] Loss: 0.343268 Acc: 0.8672 lr: 1.00e-02
+Train Epoch: 2 [25600/50000] Loss: 0.517043 Acc: 0.8984 lr: 1.00e-02
+Train Epoch: 2 [38400/50000] Loss: 0.345171 Acc: 0.8672 lr: 1.00e-02
+Elapsed 274.45s, 91.48 s/epoch, 0.23 s/batch, ets 18022.28s
+validation phase
+	Epoch 2 Validation set: Average loss: 0.5074, Accuracy: 8494/10000 (85%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-1.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-2.pth
+training phase
+Train Epoch: 3 [12800/50000] Loss: 0.292243 Acc: 0.8750 lr: 1.00e-02
+Train Epoch: 3 [25600/50000] Loss: 0.212181 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 3 [38400/50000] Loss: 0.329626 Acc: 0.9219 lr: 1.00e-02
+Elapsed 396.09s, 99.02 s/epoch, 0.25 s/batch, ets 19408.17s
+validation phase
+	Epoch 3 Validation set: Average loss: 0.4976, Accuracy: 8432/10000 (84%)
+training phase
+Train Epoch: 4 [12800/50000] Loss: 0.232120 Acc: 0.9141 lr: 1.00e-02
+Train Epoch: 4 [25600/50000] Loss: 0.203931 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 4 [38400/50000] Loss: 0.214343 Acc: 0.9219 lr: 1.00e-02
+Elapsed 510.36s, 102.07 s/epoch, 0.26 s/batch, ets 19904.00s
+validation phase
+	Epoch 4 Validation set: Average loss: 0.3912, Accuracy: 8776/10000 (88%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-2.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-4.pth
+training phase
+Train Epoch: 5 [12800/50000] Loss: 0.255252 Acc: 0.8984 lr: 1.00e-02
+Train Epoch: 5 [25600/50000] Loss: 0.385750 Acc: 0.8672 lr: 1.00e-02
+Train Epoch: 5 [38400/50000] Loss: 0.263504 Acc: 0.9062 lr: 1.00e-02
+Elapsed 628.35s, 104.72 s/epoch, 0.27 s/batch, ets 20316.64s
+validation phase
+	Epoch 5 Validation set: Average loss: 0.4028, Accuracy: 8791/10000 (88%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-4.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-5.pth
+training phase
+Train Epoch: 6 [12800/50000] Loss: 0.194606 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 6 [25600/50000] Loss: 0.206239 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 6 [38400/50000] Loss: 0.225077 Acc: 0.9297 lr: 1.00e-02
+Elapsed 746.20s, 106.60 s/epoch, 0.27 s/batch, ets 20573.92s
+validation phase
+	Epoch 6 Validation set: Average loss: 0.3978, Accuracy: 8760/10000 (88%)
+training phase
+Train Epoch: 7 [12800/50000] Loss: 0.231554 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 7 [25600/50000] Loss: 0.197955 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 7 [38400/50000] Loss: 0.233031 Acc: 0.9219 lr: 1.00e-02
+Elapsed 859.01s, 107.38 s/epoch, 0.27 s/batch, ets 20616.27s
+validation phase
+	Epoch 7 Validation set: Average loss: 0.3844, Accuracy: 8795/10000 (88%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-5.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-7.pth
+training phase
+Train Epoch: 8 [12800/50000] Loss: 0.197246 Acc: 0.9062 lr: 1.00e-02
+Train Epoch: 8 [25600/50000] Loss: 0.251851 Acc: 0.9219 lr: 1.00e-02
+Train Epoch: 8 [38400/50000] Loss: 0.269832 Acc: 0.9062 lr: 1.00e-02
+Elapsed 979.74s, 108.86 s/epoch, 0.28 s/batch, ets 20792.32s
+validation phase
+	Epoch 8 Validation set: Average loss: 0.3882, Accuracy: 8770/10000 (88%)
+training phase
+Train Epoch: 9 [12800/50000] Loss: 0.245550 Acc: 0.9141 lr: 1.00e-02
+Train Epoch: 9 [25600/50000] Loss: 0.165914 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 9 [38400/50000] Loss: 0.270035 Acc: 0.9219 lr: 1.00e-02
+Elapsed 1091.77s, 109.18 s/epoch, 0.28 s/batch, ets 20743.54s
+validation phase
+	Epoch 9 Validation set: Average loss: 0.3617, Accuracy: 8870/10000 (89%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-7.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-9.pth
+training phase
+Train Epoch: 10 [12800/50000] Loss: 0.212524 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 10 [25600/50000] Loss: 0.172498 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 10 [38400/50000] Loss: 0.146664 Acc: 0.9062 lr: 1.00e-02
+Elapsed 1213.57s, 110.32 s/epoch, 0.28 s/batch, ets 20851.26s
+validation phase
+	Epoch 10 Validation set: Average loss: 0.4353, Accuracy: 8653/10000 (87%)
+training phase
+Train Epoch: 11 [12800/50000] Loss: 0.172547 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 11 [25600/50000] Loss: 0.194512 Acc: 0.9062 lr: 1.00e-02
+Train Epoch: 11 [38400/50000] Loss: 0.149197 Acc: 0.9453 lr: 1.00e-02
+Elapsed 1327.51s, 110.63 s/epoch, 0.28 s/batch, ets 20797.71s
+validation phase
+	Epoch 11 Validation set: Average loss: 0.4495, Accuracy: 8655/10000 (87%)
+training phase
+Train Epoch: 12 [12800/50000] Loss: 0.091492 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 12 [25600/50000] Loss: 0.126250 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 12 [38400/50000] Loss: 0.139929 Acc: 0.9453 lr: 1.00e-02
+Elapsed 1446.06s, 111.24 s/epoch, 0.28 s/batch, ets 20800.95s
+validation phase
+	Epoch 12 Validation set: Average loss: 0.3512, Accuracy: 8901/10000 (89%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-9.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-12.pth
+training phase
+Train Epoch: 13 [12800/50000] Loss: 0.269345 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 13 [25600/50000] Loss: 0.202984 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 13 [38400/50000] Loss: 0.153970 Acc: 0.9375 lr: 1.00e-02
+Elapsed 1563.16s, 111.65 s/epoch, 0.29 s/batch, ets 20767.71s
+validation phase
+	Epoch 13 Validation set: Average loss: 0.4612, Accuracy: 8645/10000 (86%)
+training phase
+Train Epoch: 14 [12800/50000] Loss: 0.158292 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 14 [25600/50000] Loss: 0.173101 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 14 [38400/50000] Loss: 0.134743 Acc: 0.9453 lr: 1.00e-02
+Elapsed 1613.34s, 107.56 s/epoch, 0.28 s/batch, ets 19897.89s
+validation phase
+	Epoch 14 Validation set: Average loss: 0.3822, Accuracy: 8818/10000 (88%)
+training phase
+Train Epoch: 15 [12800/50000] Loss: 0.194497 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 15 [25600/50000] Loss: 0.246881 Acc: 0.9062 lr: 1.00e-02
+Train Epoch: 15 [38400/50000] Loss: 0.201273 Acc: 0.9141 lr: 1.00e-02
+Elapsed 1735.50s, 108.47 s/epoch, 0.28 s/batch, ets 19958.28s
+validation phase
+	Epoch 15 Validation set: Average loss: 0.3662, Accuracy: 8884/10000 (89%)
+training phase
+Train Epoch: 16 [12800/50000] Loss: 0.135523 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 16 [25600/50000] Loss: 0.201048 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 16 [38400/50000] Loss: 0.144775 Acc: 0.9453 lr: 1.00e-02
+Elapsed 1849.13s, 108.77 s/epoch, 0.28 s/batch, ets 19905.31s
+validation phase
+	Epoch 16 Validation set: Average loss: 0.3914, Accuracy: 8859/10000 (89%)
+training phase
+Train Epoch: 17 [12800/50000] Loss: 0.106004 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 17 [25600/50000] Loss: 0.129458 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 17 [38400/50000] Loss: 0.158501 Acc: 0.9453 lr: 1.00e-02
+Elapsed 1969.42s, 109.41 s/epoch, 0.28 s/batch, ets 19913.05s
+validation phase
+	Epoch 17 Validation set: Average loss: 0.3440, Accuracy: 8917/10000 (89%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-12.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-17.pth
+training phase
+Train Epoch: 18 [12800/50000] Loss: 0.234971 Acc: 0.9141 lr: 1.00e-02
+Train Epoch: 18 [25600/50000] Loss: 0.215318 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 18 [38400/50000] Loss: 0.110808 Acc: 0.9688 lr: 1.00e-02
+Elapsed 2084.64s, 109.72 s/epoch, 0.28 s/batch, ets 19858.89s
+validation phase
+	Epoch 18 Validation set: Average loss: 0.3516, Accuracy: 8947/10000 (89%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-17.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-18.pth
+training phase
+Train Epoch: 19 [12800/50000] Loss: 0.222290 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 19 [25600/50000] Loss: 0.163752 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 19 [38400/50000] Loss: 0.066482 Acc: 0.9688 lr: 1.00e-02
+Elapsed 2199.86s, 109.99 s/epoch, 0.28 s/batch, ets 19798.70s
+validation phase
+	Epoch 19 Validation set: Average loss: 0.3713, Accuracy: 8839/10000 (88%)
+training phase
+Train Epoch: 20 [12800/50000] Loss: 0.126538 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 20 [25600/50000] Loss: 0.084889 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 20 [38400/50000] Loss: 0.228299 Acc: 0.9141 lr: 1.00e-02
+Elapsed 2318.82s, 110.42 s/epoch, 0.28 s/batch, ets 19765.21s
+validation phase
+	Epoch 20 Validation set: Average loss: 0.3896, Accuracy: 8854/10000 (89%)
+training phase
+Train Epoch: 21 [12800/50000] Loss: 0.099833 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 21 [25600/50000] Loss: 0.074251 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 21 [38400/50000] Loss: 0.114414 Acc: 0.9453 lr: 1.00e-02
+Elapsed 2429.51s, 110.43 s/epoch, 0.28 s/batch, ets 19656.97s
+validation phase
+	Epoch 21 Validation set: Average loss: 0.3592, Accuracy: 8975/10000 (90%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-18.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-21.pth
+training phase
+Train Epoch: 22 [12800/50000] Loss: 0.157396 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 22 [25600/50000] Loss: 0.209113 Acc: 0.9141 lr: 1.00e-02
+Train Epoch: 22 [38400/50000] Loss: 0.094572 Acc: 0.9688 lr: 1.00e-02
+Elapsed 2552.49s, 110.98 s/epoch, 0.28 s/batch, ets 19643.10s
+validation phase
+	Epoch 22 Validation set: Average loss: 0.3563, Accuracy: 8961/10000 (90%)
+training phase
+Train Epoch: 23 [12800/50000] Loss: 0.131648 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 23 [25600/50000] Loss: 0.173498 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 23 [38400/50000] Loss: 0.140484 Acc: 0.9609 lr: 1.00e-02
+Elapsed 2665.55s, 111.06 s/epoch, 0.28 s/batch, ets 19547.38s
+validation phase
+	Epoch 23 Validation set: Average loss: 0.3566, Accuracy: 8940/10000 (89%)
+training phase
+Train Epoch: 24 [12800/50000] Loss: 0.077394 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 24 [25600/50000] Loss: 0.143274 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 24 [38400/50000] Loss: 0.109631 Acc: 0.9609 lr: 1.00e-02
+Elapsed 2786.46s, 111.46 s/epoch, 0.29 s/batch, ets 19505.22s
+validation phase
+	Epoch 24 Validation set: Average loss: 0.3979, Accuracy: 8892/10000 (89%)
+training phase
+Train Epoch: 25 [12800/50000] Loss: 0.162583 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 25 [25600/50000] Loss: 0.066889 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 25 [38400/50000] Loss: 0.147983 Acc: 0.9531 lr: 1.00e-02
+Elapsed 2901.01s, 111.58 s/epoch, 0.29 s/batch, ets 19414.45s
+validation phase
+	Epoch 25 Validation set: Average loss: 0.3611, Accuracy: 8946/10000 (89%)
+training phase
+Train Epoch: 26 [12800/50000] Loss: 0.061032 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 26 [25600/50000] Loss: 0.120311 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 26 [38400/50000] Loss: 0.182912 Acc: 0.9453 lr: 1.00e-02
+Elapsed 3017.32s, 111.75 s/epoch, 0.29 s/batch, ets 19333.23s
+validation phase
+	Epoch 26 Validation set: Average loss: 0.3422, Accuracy: 8996/10000 (90%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-21.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-26.pth
+training phase
+Train Epoch: 27 [12800/50000] Loss: 0.116160 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 27 [25600/50000] Loss: 0.081142 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 27 [38400/50000] Loss: 0.056936 Acc: 0.9766 lr: 1.00e-02
+Elapsed 3101.54s, 110.77 s/epoch, 0.28 s/batch, ets 19052.33s
+validation phase
+	Epoch 27 Validation set: Average loss: 0.3685, Accuracy: 8960/10000 (90%)
+training phase
+Train Epoch: 28 [12800/50000] Loss: 0.138794 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 28 [25600/50000] Loss: 0.210302 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 28 [38400/50000] Loss: 0.166761 Acc: 0.9141 lr: 1.00e-02
+Elapsed 3192.34s, 110.08 s/epoch, 0.28 s/batch, ets 18823.79s
+validation phase
+	Epoch 28 Validation set: Average loss: 0.3485, Accuracy: 9066/10000 (91%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-26.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-28.pth
+training phase
+Train Epoch: 29 [12800/50000] Loss: 0.107029 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 29 [25600/50000] Loss: 0.131505 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 29 [38400/50000] Loss: 0.177039 Acc: 0.9531 lr: 1.00e-02
+Elapsed 3312.98s, 110.43 s/epoch, 0.28 s/batch, ets 18773.54s
+validation phase
+	Epoch 29 Validation set: Average loss: 0.3611, Accuracy: 8955/10000 (90%)
+training phase
+Train Epoch: 30 [12800/50000] Loss: 0.157605 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 30 [25600/50000] Loss: 0.121265 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 30 [38400/50000] Loss: 0.092946 Acc: 0.9609 lr: 1.00e-02
+Elapsed 3427.92s, 110.58 s/epoch, 0.28 s/batch, ets 18687.71s
+validation phase
+	Epoch 30 Validation set: Average loss: 0.3517, Accuracy: 9016/10000 (90%)
+training phase
+Train Epoch: 31 [12800/50000] Loss: 0.266964 Acc: 0.9219 lr: 1.00e-02
+Train Epoch: 31 [25600/50000] Loss: 0.146487 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 31 [38400/50000] Loss: 0.066062 Acc: 0.9766 lr: 1.00e-02
+Elapsed 3543.71s, 110.74 s/epoch, 0.28 s/batch, ets 18604.47s
+validation phase
+	Epoch 31 Validation set: Average loss: 0.3696, Accuracy: 8960/10000 (90%)
+training phase
+Train Epoch: 32 [12800/50000] Loss: 0.057233 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 32 [25600/50000] Loss: 0.204652 Acc: 0.9141 lr: 1.00e-02
+Train Epoch: 32 [38400/50000] Loss: 0.065310 Acc: 0.9766 lr: 1.00e-02
+Elapsed 3662.82s, 110.99 s/epoch, 0.28 s/batch, ets 18536.11s
+validation phase
+	Epoch 32 Validation set: Average loss: 0.3411, Accuracy: 9016/10000 (90%)
+training phase
+Train Epoch: 33 [12800/50000] Loss: 0.134327 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 33 [25600/50000] Loss: 0.128058 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 33 [38400/50000] Loss: 0.088497 Acc: 0.9766 lr: 1.00e-02
+Elapsed 3773.83s, 111.00 s/epoch, 0.28 s/batch, ets 18425.18s
+validation phase
+	Epoch 33 Validation set: Average loss: 0.3778, Accuracy: 8958/10000 (90%)
+training phase
+Train Epoch: 34 [12800/50000] Loss: 0.089451 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 34 [25600/50000] Loss: 0.165571 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 34 [38400/50000] Loss: 0.093352 Acc: 0.9766 lr: 1.00e-02
+Elapsed 3896.92s, 111.34 s/epoch, 0.28 s/batch, ets 18371.22s
+validation phase
+	Epoch 34 Validation set: Average loss: 0.3857, Accuracy: 8956/10000 (90%)
+training phase
+Train Epoch: 35 [12800/50000] Loss: 0.106168 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 35 [25600/50000] Loss: 0.101641 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 35 [38400/50000] Loss: 0.151954 Acc: 0.9609 lr: 1.00e-02
+Elapsed 4009.90s, 111.39 s/epoch, 0.28 s/batch, ets 18267.33s
+validation phase
+	Epoch 35 Validation set: Average loss: 0.3675, Accuracy: 9014/10000 (90%)
+training phase
+Train Epoch: 36 [12800/50000] Loss: 0.108121 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 36 [25600/50000] Loss: 0.112871 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 36 [38400/50000] Loss: 0.083883 Acc: 0.9688 lr: 1.00e-02
+Elapsed 4130.52s, 111.64 s/epoch, 0.29 s/batch, ets 18196.62s
+validation phase
+	Epoch 36 Validation set: Average loss: 0.3453, Accuracy: 9025/10000 (90%)
+training phase
+Train Epoch: 37 [12800/50000] Loss: 0.044702 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 37 [25600/50000] Loss: 0.055963 Acc: 0.9922 lr: 1.00e-02
+Train Epoch: 37 [38400/50000] Loss: 0.036664 Acc: 0.9844 lr: 1.00e-02
+Elapsed 4245.11s, 111.71 s/epoch, 0.29 s/batch, ets 18097.57s
+validation phase
+	Epoch 37 Validation set: Average loss: 0.3412, Accuracy: 9019/10000 (90%)
+training phase
+Train Epoch: 38 [12800/50000] Loss: 0.056260 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 38 [25600/50000] Loss: 0.115411 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 38 [38400/50000] Loss: 0.043812 Acc: 0.9844 lr: 1.00e-02
+Elapsed 4361.25s, 111.83 s/epoch, 0.29 s/batch, ets 18004.12s
+validation phase
+	Epoch 38 Validation set: Average loss: 0.3551, Accuracy: 9021/10000 (90%)
+training phase
+Train Epoch: 39 [12800/50000] Loss: 0.077935 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 39 [25600/50000] Loss: 0.051784 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 39 [38400/50000] Loss: 0.063923 Acc: 0.9844 lr: 1.00e-02
+Elapsed 4479.72s, 111.99 s/epoch, 0.29 s/batch, ets 17918.89s
+validation phase
+	Epoch 39 Validation set: Average loss: 0.3576, Accuracy: 8999/10000 (90%)
+training phase
+Train Epoch: 40 [12800/50000] Loss: 0.094248 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 40 [25600/50000] Loss: 0.155831 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 40 [38400/50000] Loss: 0.065140 Acc: 0.9766 lr: 1.00e-02
+Elapsed 4591.68s, 111.99 s/epoch, 0.29 s/batch, ets 17806.74s
+validation phase
+	Epoch 40 Validation set: Average loss: 0.3572, Accuracy: 9033/10000 (90%)
+training phase
+Train Epoch: 41 [12800/50000] Loss: 0.115934 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 41 [25600/50000] Loss: 0.058369 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 41 [38400/50000] Loss: 0.070607 Acc: 0.9609 lr: 1.00e-02
+Elapsed 4652.22s, 110.77 s/epoch, 0.28 s/batch, ets 17501.21s
+validation phase
+	Epoch 41 Validation set: Average loss: 0.3978, Accuracy: 8955/10000 (90%)
+training phase
+Train Epoch: 42 [12800/50000] Loss: 0.109132 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 42 [25600/50000] Loss: 0.099831 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 42 [38400/50000] Loss: 0.100823 Acc: 0.9766 lr: 1.00e-02
+Elapsed 4766.29s, 110.84 s/epoch, 0.28 s/batch, ets 17402.50s
+validation phase
+	Epoch 42 Validation set: Average loss: 0.3558, Accuracy: 9026/10000 (90%)
+training phase
+Train Epoch: 43 [12800/50000] Loss: 0.080199 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 43 [25600/50000] Loss: 0.111834 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 43 [38400/50000] Loss: 0.029756 Acc: 1.0000 lr: 1.00e-02
+Elapsed 4884.66s, 111.01 s/epoch, 0.28 s/batch, ets 17318.32s
+validation phase
+	Epoch 43 Validation set: Average loss: 0.3530, Accuracy: 9045/10000 (90%)
+training phase
+Train Epoch: 44 [12800/50000] Loss: 0.063892 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 44 [25600/50000] Loss: 0.151593 Acc: 0.9375 lr: 1.00e-02
+Train Epoch: 44 [38400/50000] Loss: 0.081958 Acc: 0.9766 lr: 1.00e-02
+Elapsed 5001.88s, 111.15 s/epoch, 0.28 s/batch, ets 17228.70s
+validation phase
+	Epoch 44 Validation set: Average loss: 0.3667, Accuracy: 9009/10000 (90%)
+training phase
+Train Epoch: 45 [12800/50000] Loss: 0.048046 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 45 [25600/50000] Loss: 0.050497 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 45 [38400/50000] Loss: 0.086130 Acc: 0.9688 lr: 1.00e-02
+Elapsed 5115.09s, 111.20 s/epoch, 0.28 s/batch, ets 17124.45s
+validation phase
+	Epoch 45 Validation set: Average loss: 0.3485, Accuracy: 9015/10000 (90%)
+training phase
+Train Epoch: 46 [12800/50000] Loss: 0.077137 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 46 [25600/50000] Loss: 0.117560 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 46 [38400/50000] Loss: 0.104578 Acc: 0.9531 lr: 1.00e-02
+Elapsed 5236.01s, 111.40 s/epoch, 0.28 s/batch, ets 17044.87s
+validation phase
+	Epoch 46 Validation set: Average loss: 0.3518, Accuracy: 9004/10000 (90%)
+training phase
+Train Epoch: 47 [12800/50000] Loss: 0.047778 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 47 [25600/50000] Loss: 0.210432 Acc: 0.9297 lr: 1.00e-02
+Train Epoch: 47 [38400/50000] Loss: 0.112024 Acc: 0.9609 lr: 1.00e-02
+Elapsed 5348.05s, 111.42 s/epoch, 0.28 s/batch, ets 16935.48s
+validation phase
+	Epoch 47 Validation set: Average loss: 0.4030, Accuracy: 8971/10000 (90%)
+training phase
+Train Epoch: 48 [12800/50000] Loss: 0.103023 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 48 [25600/50000] Loss: 0.115324 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 48 [38400/50000] Loss: 0.074147 Acc: 0.9766 lr: 1.00e-02
+Elapsed 5470.23s, 111.64 s/epoch, 0.29 s/batch, ets 16857.25s
+validation phase
+	Epoch 48 Validation set: Average loss: 0.3630, Accuracy: 9033/10000 (90%)
+training phase
+Train Epoch: 49 [12800/50000] Loss: 0.060620 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 49 [25600/50000] Loss: 0.055942 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 49 [38400/50000] Loss: 0.096002 Acc: 0.9609 lr: 1.00e-02
+Elapsed 5584.25s, 111.69 s/epoch, 0.29 s/batch, ets 16752.76s
+validation phase
+	Epoch 49 Validation set: Average loss: 0.3409, Accuracy: 9070/10000 (91%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-28.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-49.pth
+training phase
+Train Epoch: 50 [12800/50000] Loss: 0.064283 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 50 [25600/50000] Loss: 0.078396 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 50 [38400/50000] Loss: 0.080679 Acc: 0.9609 lr: 1.00e-02
+Elapsed 5702.99s, 111.82 s/epoch, 0.29 s/batch, ets 16661.66s
+validation phase
+	Epoch 50 Validation set: Average loss: 0.3538, Accuracy: 9045/10000 (90%)
+training phase
+Train Epoch: 51 [12800/50000] Loss: 0.028406 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 51 [25600/50000] Loss: 0.023709 Acc: 0.9922 lr: 1.00e-02
+Train Epoch: 51 [38400/50000] Loss: 0.091866 Acc: 0.9688 lr: 1.00e-02
+Elapsed 5820.17s, 111.93 s/epoch, 0.29 s/batch, ets 16565.11s
+validation phase
+	Epoch 51 Validation set: Average loss: 0.3957, Accuracy: 8972/10000 (90%)
+training phase
+Train Epoch: 52 [12800/50000] Loss: 0.105192 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 52 [25600/50000] Loss: 0.130998 Acc: 0.9453 lr: 1.00e-02
+Train Epoch: 52 [38400/50000] Loss: 0.081939 Acc: 0.9688 lr: 1.00e-02
+Elapsed 5933.70s, 111.96 s/epoch, 0.29 s/batch, ets 16457.62s
+validation phase
+	Epoch 52 Validation set: Average loss: 0.3744, Accuracy: 9030/10000 (90%)
+training phase
+Train Epoch: 53 [12800/50000] Loss: 0.060040 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 53 [25600/50000] Loss: 0.077920 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 53 [38400/50000] Loss: 0.077237 Acc: 0.9609 lr: 1.00e-02
+Elapsed 6054.79s, 112.13 s/epoch, 0.29 s/batch, ets 16370.35s
+validation phase
+	Epoch 53 Validation set: Average loss: 0.3665, Accuracy: 9032/10000 (90%)
+training phase
+Train Epoch: 54 [12800/50000] Loss: 0.061111 Acc: 0.9922 lr: 1.00e-02
+Train Epoch: 54 [25600/50000] Loss: 0.023714 Acc: 1.0000 lr: 1.00e-02
+Train Epoch: 54 [38400/50000] Loss: 0.107389 Acc: 0.9766 lr: 1.00e-02
+Elapsed 6106.26s, 111.02 s/epoch, 0.28 s/batch, ets 16098.33s
+validation phase
+	Epoch 54 Validation set: Average loss: 0.3688, Accuracy: 9061/10000 (91%)
+training phase
+Train Epoch: 55 [12800/50000] Loss: 0.136534 Acc: 0.9531 lr: 1.00e-02
+Train Epoch: 55 [25600/50000] Loss: 0.063452 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 55 [38400/50000] Loss: 0.097686 Acc: 0.9609 lr: 1.00e-02
+Elapsed 6226.60s, 111.19 s/epoch, 0.28 s/batch, ets 16011.27s
+validation phase
+	Epoch 55 Validation set: Average loss: 0.3784, Accuracy: 9045/10000 (90%)
+training phase
+Train Epoch: 56 [12800/50000] Loss: 0.084391 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 56 [25600/50000] Loss: 0.066106 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 56 [38400/50000] Loss: 0.029624 Acc: 0.9922 lr: 1.00e-02
+Elapsed 6342.98s, 111.28 s/epoch, 0.28 s/batch, ets 15913.08s
+validation phase
+	Epoch 56 Validation set: Average loss: 0.4016, Accuracy: 8996/10000 (90%)
+training phase
+Train Epoch: 57 [12800/50000] Loss: 0.055130 Acc: 0.9844 lr: 1.00e-02
+Train Epoch: 57 [25600/50000] Loss: 0.142332 Acc: 0.9609 lr: 1.00e-02
+Train Epoch: 57 [38400/50000] Loss: 0.039059 Acc: 0.9922 lr: 1.00e-02
+Elapsed 6457.42s, 111.33 s/epoch, 0.28 s/batch, ets 15809.56s
+validation phase
+	Epoch 57 Validation set: Average loss: 0.3760, Accuracy: 9033/10000 (90%)
+training phase
+Train Epoch: 58 [12800/50000] Loss: 0.071421 Acc: 0.9688 lr: 1.00e-02
+Train Epoch: 58 [25600/50000] Loss: 0.055407 Acc: 0.9922 lr: 1.00e-02
+Train Epoch: 58 [38400/50000] Loss: 0.107090 Acc: 0.9531 lr: 1.00e-02
+Elapsed 6576.71s, 111.47 s/epoch, 0.29 s/batch, ets 15717.21s
+validation phase
+	Epoch 58 Validation set: Average loss: 0.3576, Accuracy: 9018/10000 (90%)
+training phase
+Train Epoch: 59 [12800/50000] Loss: 0.053585 Acc: 0.9766 lr: 1.00e-02
+Train Epoch: 59 [25600/50000] Loss: 0.031212 Acc: 0.9922 lr: 1.00e-02
+Train Epoch: 59 [38400/50000] Loss: 0.114528 Acc: 0.9531 lr: 1.00e-02
+Elapsed 6688.97s, 111.48 s/epoch, 0.29 s/batch, ets 15607.60s
+validation phase
+	Epoch 59 Validation set: Average loss: 0.3738, Accuracy: 9019/10000 (90%)
+training phase
+Train Epoch: 60 [12800/50000] Loss: 0.058653 Acc: 0.9766 lr: 1.00e-03
+Train Epoch: 60 [25600/50000] Loss: 0.053730 Acc: 0.9609 lr: 1.00e-03
+Train Epoch: 60 [38400/50000] Loss: 0.073238 Acc: 0.9688 lr: 1.00e-03
+Elapsed 6812.41s, 111.68 s/epoch, 0.29 s/batch, ets 15523.36s
+validation phase
+	Epoch 60 Validation set: Average loss: 0.3101, Accuracy: 9178/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-49.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-60.pth
+training phase
+Train Epoch: 61 [12800/50000] Loss: 0.073456 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 61 [25600/50000] Loss: 0.033335 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 61 [38400/50000] Loss: 0.030139 Acc: 0.9844 lr: 1.00e-03
+Elapsed 6926.52s, 111.72 s/epoch, 0.29 s/batch, ets 15417.09s
+validation phase
+	Epoch 61 Validation set: Average loss: 0.3043, Accuracy: 9185/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-60.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-61.pth
+training phase
+Train Epoch: 62 [12800/50000] Loss: 0.033645 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 62 [25600/50000] Loss: 0.045139 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 62 [38400/50000] Loss: 0.014347 Acc: 1.0000 lr: 1.00e-03
+Elapsed 7045.91s, 111.84 s/epoch, 0.29 s/batch, ets 15322.05s
+validation phase
+	Epoch 62 Validation set: Average loss: 0.3025, Accuracy: 9186/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-61.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-62.pth
+training phase
+Train Epoch: 63 [12800/50000] Loss: 0.069661 Acc: 0.9688 lr: 1.00e-03
+Train Epoch: 63 [25600/50000] Loss: 0.029600 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 63 [38400/50000] Loss: 0.042380 Acc: 0.9844 lr: 1.00e-03
+Elapsed 7161.98s, 111.91 s/epoch, 0.29 s/batch, ets 15219.21s
+validation phase
+	Epoch 63 Validation set: Average loss: 0.2965, Accuracy: 9201/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-62.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-63.pth
+training phase
+Train Epoch: 64 [12800/50000] Loss: 0.083167 Acc: 0.9766 lr: 1.00e-03
+Train Epoch: 64 [25600/50000] Loss: 0.027721 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 64 [38400/50000] Loss: 0.017472 Acc: 0.9922 lr: 1.00e-03
+Elapsed 7276.44s, 111.95 s/epoch, 0.29 s/batch, ets 15112.60s
+validation phase
+	Epoch 64 Validation set: Average loss: 0.2973, Accuracy: 9203/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-63.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-64.pth
+training phase
+Train Epoch: 65 [12800/50000] Loss: 0.054432 Acc: 0.9688 lr: 1.00e-03
+Train Epoch: 65 [25600/50000] Loss: 0.045051 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 65 [38400/50000] Loss: 0.013537 Acc: 1.0000 lr: 1.00e-03
+Elapsed 7395.75s, 112.06 s/epoch, 0.29 s/batch, ets 15015.62s
+validation phase
+	Epoch 65 Validation set: Average loss: 0.2969, Accuracy: 9194/10000 (92%)
+training phase
+Train Epoch: 66 [12800/50000] Loss: 0.017212 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 66 [25600/50000] Loss: 0.019834 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 66 [38400/50000] Loss: 0.020989 Acc: 0.9922 lr: 1.00e-03
+Elapsed 7506.58s, 112.04 s/epoch, 0.29 s/batch, ets 14901.12s
+validation phase
+	Epoch 66 Validation set: Average loss: 0.2980, Accuracy: 9201/10000 (92%)
+training phase
+Train Epoch: 67 [12800/50000] Loss: 0.009164 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 67 [25600/50000] Loss: 0.063851 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 67 [38400/50000] Loss: 0.023866 Acc: 0.9922 lr: 1.00e-03
+Elapsed 7582.66s, 111.51 s/epoch, 0.29 s/batch, ets 14719.28s
+validation phase
+	Epoch 67 Validation set: Average loss: 0.3028, Accuracy: 9197/10000 (92%)
+training phase
+Train Epoch: 68 [12800/50000] Loss: 0.008457 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 68 [25600/50000] Loss: 0.028685 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 68 [38400/50000] Loss: 0.004853 Acc: 1.0000 lr: 1.00e-03
+Elapsed 7685.41s, 111.38 s/epoch, 0.28 s/batch, ets 14591.13s
+validation phase
+	Epoch 68 Validation set: Average loss: 0.2962, Accuracy: 9197/10000 (92%)
+training phase
+Train Epoch: 69 [12800/50000] Loss: 0.023918 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 69 [25600/50000] Loss: 0.056119 Acc: 0.9766 lr: 1.00e-03
+Train Epoch: 69 [38400/50000] Loss: 0.010922 Acc: 1.0000 lr: 1.00e-03
+Elapsed 7800.89s, 111.44 s/epoch, 0.29 s/batch, ets 14487.36s
+validation phase
+	Epoch 69 Validation set: Average loss: 0.2987, Accuracy: 9193/10000 (92%)
+training phase
+Train Epoch: 70 [12800/50000] Loss: 0.021100 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 70 [25600/50000] Loss: 0.013231 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 70 [38400/50000] Loss: 0.009267 Acc: 1.0000 lr: 1.00e-03
+Elapsed 7919.98s, 111.55 s/epoch, 0.29 s/batch, ets 14389.83s
+validation phase
+	Epoch 70 Validation set: Average loss: 0.2961, Accuracy: 9211/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-64.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-70.pth
+training phase
+Train Epoch: 71 [12800/50000] Loss: 0.028455 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 71 [25600/50000] Loss: 0.017785 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 71 [38400/50000] Loss: 0.026013 Acc: 0.9844 lr: 1.00e-03
+Elapsed 8030.96s, 111.54 s/epoch, 0.29 s/batch, ets 14277.26s
+validation phase
+	Epoch 71 Validation set: Average loss: 0.2948, Accuracy: 9214/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-70.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-71.pth
+training phase
+Train Epoch: 72 [12800/50000] Loss: 0.013228 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 72 [25600/50000] Loss: 0.024888 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 72 [38400/50000] Loss: 0.054285 Acc: 0.9688 lr: 1.00e-03
+Elapsed 8154.42s, 111.70 s/epoch, 0.29 s/batch, ets 14186.45s
+validation phase
+	Epoch 72 Validation set: Average loss: 0.2959, Accuracy: 9198/10000 (92%)
+training phase
+Train Epoch: 73 [12800/50000] Loss: 0.026734 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 73 [25600/50000] Loss: 0.028802 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 73 [38400/50000] Loss: 0.039602 Acc: 0.9844 lr: 1.00e-03
+Elapsed 8268.01s, 111.73 s/epoch, 0.29 s/batch, ets 14077.95s
+validation phase
+	Epoch 73 Validation set: Average loss: 0.2962, Accuracy: 9207/10000 (92%)
+training phase
+Train Epoch: 74 [12800/50000] Loss: 0.027809 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 74 [25600/50000] Loss: 0.049256 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 74 [38400/50000] Loss: 0.012200 Acc: 1.0000 lr: 1.00e-03
+Elapsed 8388.76s, 111.85 s/epoch, 0.29 s/batch, ets 13981.27s
+validation phase
+	Epoch 74 Validation set: Average loss: 0.2981, Accuracy: 9217/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-71.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-74.pth
+training phase
+Train Epoch: 75 [12800/50000] Loss: 0.043894 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 75 [25600/50000] Loss: 0.013035 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 75 [38400/50000] Loss: 0.034674 Acc: 0.9922 lr: 1.00e-03
+Elapsed 8503.87s, 111.89 s/epoch, 0.29 s/batch, ets 13874.74s
+validation phase
+	Epoch 75 Validation set: Average loss: 0.2982, Accuracy: 9206/10000 (92%)
+training phase
+Train Epoch: 76 [12800/50000] Loss: 0.012985 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 76 [25600/50000] Loss: 0.038359 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 76 [38400/50000] Loss: 0.012593 Acc: 1.0000 lr: 1.00e-03
+Elapsed 8619.60s, 111.94 s/epoch, 0.29 s/batch, ets 13768.98s
+validation phase
+	Epoch 76 Validation set: Average loss: 0.3015, Accuracy: 9215/10000 (92%)
+training phase
+Train Epoch: 77 [12800/50000] Loss: 0.026353 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 77 [25600/50000] Loss: 0.053616 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 77 [38400/50000] Loss: 0.019072 Acc: 0.9922 lr: 1.00e-03
+Elapsed 8738.75s, 112.04 s/epoch, 0.29 s/batch, ets 13668.30s
+validation phase
+	Epoch 77 Validation set: Average loss: 0.2991, Accuracy: 9225/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-74.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-77.pth
+training phase
+Train Epoch: 78 [12800/50000] Loss: 0.031008 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 78 [25600/50000] Loss: 0.034795 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 78 [38400/50000] Loss: 0.046367 Acc: 0.9844 lr: 1.00e-03
+Elapsed 8849.69s, 112.02 s/epoch, 0.29 s/batch, ets 13554.59s
+validation phase
+	Epoch 78 Validation set: Average loss: 0.2980, Accuracy: 9216/10000 (92%)
+training phase
+Train Epoch: 79 [12800/50000] Loss: 0.012555 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 79 [25600/50000] Loss: 0.036694 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 79 [38400/50000] Loss: 0.014227 Acc: 1.0000 lr: 1.00e-03
+Elapsed 8972.70s, 112.16 s/epoch, 0.29 s/batch, ets 13459.05s
+validation phase
+	Epoch 79 Validation set: Average loss: 0.2968, Accuracy: 9223/10000 (92%)
+training phase
+Train Epoch: 80 [12800/50000] Loss: 0.018199 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 80 [25600/50000] Loss: 0.016039 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 80 [38400/50000] Loss: 0.027704 Acc: 0.9922 lr: 1.00e-03
+Elapsed 9073.74s, 112.02 s/epoch, 0.29 s/batch, ets 13330.55s
+validation phase
+	Epoch 80 Validation set: Average loss: 0.2979, Accuracy: 9237/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-77.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-80.pth
+training phase
+Train Epoch: 81 [12800/50000] Loss: 0.018678 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 81 [25600/50000] Loss: 0.019560 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 81 [38400/50000] Loss: 0.022916 Acc: 1.0000 lr: 1.00e-03
+Elapsed 9141.73s, 111.48 s/epoch, 0.29 s/batch, ets 13155.17s
+validation phase
+	Epoch 81 Validation set: Average loss: 0.2983, Accuracy: 9236/10000 (92%)
+training phase
+Train Epoch: 82 [12800/50000] Loss: 0.015502 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 82 [25600/50000] Loss: 0.033111 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 82 [38400/50000] Loss: 0.058654 Acc: 0.9844 lr: 1.00e-03
+Elapsed 9258.91s, 111.55 s/epoch, 0.29 s/batch, ets 13051.72s
+validation phase
+	Epoch 82 Validation set: Average loss: 0.2995, Accuracy: 9236/10000 (92%)
+training phase
+Train Epoch: 83 [12800/50000] Loss: 0.036617 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 83 [25600/50000] Loss: 0.018858 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 83 [38400/50000] Loss: 0.006903 Acc: 1.0000 lr: 1.00e-03
+Elapsed 9372.36s, 111.58 s/epoch, 0.29 s/batch, ets 12942.79s
+validation phase
+	Epoch 83 Validation set: Average loss: 0.2975, Accuracy: 9234/10000 (92%)
+training phase
+Train Epoch: 84 [12800/50000] Loss: 0.036983 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 84 [25600/50000] Loss: 0.005190 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 84 [38400/50000] Loss: 0.023353 Acc: 0.9844 lr: 1.00e-03
+Elapsed 9493.29s, 111.69 s/epoch, 0.29 s/batch, ets 12843.87s
+validation phase
+	Epoch 84 Validation set: Average loss: 0.3001, Accuracy: 9227/10000 (92%)
+training phase
+Train Epoch: 85 [12800/50000] Loss: 0.023817 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 85 [25600/50000] Loss: 0.031311 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 85 [38400/50000] Loss: 0.031649 Acc: 0.9922 lr: 1.00e-03
+Elapsed 9605.03s, 111.69 s/epoch, 0.29 s/batch, ets 12732.25s
+validation phase
+	Epoch 85 Validation set: Average loss: 0.2986, Accuracy: 9247/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-80.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-85.pth
+training phase
+Train Epoch: 86 [12800/50000] Loss: 0.019372 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 86 [25600/50000] Loss: 0.019143 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 86 [38400/50000] Loss: 0.023037 Acc: 0.9922 lr: 1.00e-03
+Elapsed 9727.39s, 111.81 s/epoch, 0.29 s/batch, ets 12634.42s
+validation phase
+	Epoch 86 Validation set: Average loss: 0.3012, Accuracy: 9225/10000 (92%)
+training phase
+Train Epoch: 87 [12800/50000] Loss: 0.007420 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 87 [25600/50000] Loss: 0.021198 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 87 [38400/50000] Loss: 0.021984 Acc: 1.0000 lr: 1.00e-03
+Elapsed 9842.39s, 111.85 s/epoch, 0.29 s/batch, ets 12526.68s
+validation phase
+	Epoch 87 Validation set: Average loss: 0.3003, Accuracy: 9232/10000 (92%)
+training phase
+Train Epoch: 88 [12800/50000] Loss: 0.023841 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 88 [25600/50000] Loss: 0.006819 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 88 [38400/50000] Loss: 0.021960 Acc: 0.9844 lr: 1.00e-03
+Elapsed 9960.62s, 111.92 s/epoch, 0.29 s/batch, ets 12422.79s
+validation phase
+	Epoch 88 Validation set: Average loss: 0.2978, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 89 [12800/50000] Loss: 0.019076 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 89 [25600/50000] Loss: 0.016475 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 89 [38400/50000] Loss: 0.012798 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10078.30s, 111.98 s/epoch, 0.29 s/batch, ets 12317.92s
+validation phase
+	Epoch 89 Validation set: Average loss: 0.2994, Accuracy: 9231/10000 (92%)
+training phase
+Train Epoch: 90 [12800/50000] Loss: 0.052486 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 90 [25600/50000] Loss: 0.042146 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 90 [38400/50000] Loss: 0.014202 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10190.42s, 111.98 s/epoch, 0.29 s/batch, ets 12206.10s
+validation phase
+	Epoch 90 Validation set: Average loss: 0.3022, Accuracy: 9248/10000 (92%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-85.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-90.pth
+training phase
+Train Epoch: 91 [12800/50000] Loss: 0.025156 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 91 [25600/50000] Loss: 0.012125 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 91 [38400/50000] Loss: 0.008162 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10309.76s, 112.06 s/epoch, 0.29 s/batch, ets 12102.76s
+validation phase
+	Epoch 91 Validation set: Average loss: 0.3022, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 92 [12800/50000] Loss: 0.007871 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 92 [25600/50000] Loss: 0.007077 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 92 [38400/50000] Loss: 0.057204 Acc: 0.9688 lr: 1.00e-03
+Elapsed 10420.94s, 112.05 s/epoch, 0.29 s/batch, ets 11989.69s
+validation phase
+	Epoch 92 Validation set: Average loss: 0.3024, Accuracy: 9237/10000 (92%)
+training phase
+Train Epoch: 93 [12800/50000] Loss: 0.021914 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 93 [25600/50000] Loss: 0.026051 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 93 [38400/50000] Loss: 0.034374 Acc: 0.9844 lr: 1.00e-03
+Elapsed 10543.85s, 112.17 s/epoch, 0.29 s/batch, ets 11889.87s
+validation phase
+	Epoch 93 Validation set: Average loss: 0.3019, Accuracy: 9236/10000 (92%)
+training phase
+Train Epoch: 94 [12800/50000] Loss: 0.011053 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 94 [25600/50000] Loss: 0.022631 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 94 [38400/50000] Loss: 0.006990 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10572.80s, 111.29 s/epoch, 0.28 s/batch, ets 11685.72s
+validation phase
+	Epoch 94 Validation set: Average loss: 0.3022, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 95 [12800/50000] Loss: 0.031475 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 95 [25600/50000] Loss: 0.042279 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 95 [38400/50000] Loss: 0.012928 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10580.91s, 110.22 s/epoch, 0.28 s/batch, ets 11462.65s
+validation phase
+	Epoch 95 Validation set: Average loss: 0.3019, Accuracy: 9252/10000 (93%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-90.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-95.pth
+training phase
+Train Epoch: 96 [12800/50000] Loss: 0.012709 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 96 [25600/50000] Loss: 0.020506 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 96 [38400/50000] Loss: 0.006231 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10589.03s, 109.17 s/epoch, 0.28 s/batch, ets 11244.03s
+validation phase
+	Epoch 96 Validation set: Average loss: 0.3002, Accuracy: 9225/10000 (92%)
+training phase
+Train Epoch: 97 [12800/50000] Loss: 0.029532 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 97 [25600/50000] Loss: 0.041330 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 97 [38400/50000] Loss: 0.050728 Acc: 0.9766 lr: 1.00e-03
+Elapsed 10597.13s, 108.13 s/epoch, 0.28 s/batch, ets 11029.67s
+validation phase
+	Epoch 97 Validation set: Average loss: 0.3015, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 98 [12800/50000] Loss: 0.004356 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 98 [25600/50000] Loss: 0.027650 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 98 [38400/50000] Loss: 0.011643 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10605.23s, 107.12 s/epoch, 0.27 s/batch, ets 10819.48s
+validation phase
+	Epoch 98 Validation set: Average loss: 0.3027, Accuracy: 9249/10000 (92%)
+training phase
+Train Epoch: 99 [12800/50000] Loss: 0.028149 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 99 [25600/50000] Loss: 0.016603 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 99 [38400/50000] Loss: 0.006436 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10613.32s, 106.13 s/epoch, 0.27 s/batch, ets 10613.32s
+validation phase
+	Epoch 99 Validation set: Average loss: 0.3038, Accuracy: 9243/10000 (92%)
+training phase
+Train Epoch: 100 [12800/50000] Loss: 0.013549 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 100 [25600/50000] Loss: 0.017023 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 100 [38400/50000] Loss: 0.004734 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10621.43s, 105.16 s/epoch, 0.27 s/batch, ets 10411.10s
+validation phase
+	Epoch 100 Validation set: Average loss: 0.3045, Accuracy: 9251/10000 (93%)
+training phase
+Train Epoch: 101 [12800/50000] Loss: 0.033848 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 101 [25600/50000] Loss: 0.023298 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 101 [38400/50000] Loss: 0.036584 Acc: 0.9844 lr: 1.00e-03
+Elapsed 10629.50s, 104.21 s/epoch, 0.27 s/batch, ets 10212.65s
+validation phase
+	Epoch 101 Validation set: Average loss: 0.3013, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 102 [12800/50000] Loss: 0.013627 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 102 [25600/50000] Loss: 0.009988 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 102 [38400/50000] Loss: 0.016153 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10637.55s, 103.28 s/epoch, 0.26 s/batch, ets 10017.88s
+validation phase
+	Epoch 102 Validation set: Average loss: 0.3044, Accuracy: 9235/10000 (92%)
+training phase
+Train Epoch: 103 [12800/50000] Loss: 0.034118 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 103 [25600/50000] Loss: 0.048227 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 103 [38400/50000] Loss: 0.041259 Acc: 0.9766 lr: 1.00e-03
+Elapsed 10645.65s, 102.36 s/epoch, 0.26 s/batch, ets 9826.76s
+validation phase
+	Epoch 103 Validation set: Average loss: 0.3020, Accuracy: 9259/10000 (93%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-95.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-103.pth
+training phase
+Train Epoch: 104 [12800/50000] Loss: 0.010744 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 104 [25600/50000] Loss: 0.036172 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 104 [38400/50000] Loss: 0.005167 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10653.74s, 101.46 s/epoch, 0.26 s/batch, ets 9639.09s
+validation phase
+	Epoch 104 Validation set: Average loss: 0.3032, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 105 [12800/50000] Loss: 0.017012 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 105 [25600/50000] Loss: 0.018690 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 105 [38400/50000] Loss: 0.013851 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10661.83s, 100.58 s/epoch, 0.26 s/batch, ets 9454.83s
+validation phase
+	Epoch 105 Validation set: Average loss: 0.3050, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 106 [12800/50000] Loss: 0.033250 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 106 [25600/50000] Loss: 0.016071 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 106 [38400/50000] Loss: 0.021921 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10669.99s, 99.72 s/epoch, 0.26 s/batch, ets 9273.92s
+validation phase
+	Epoch 106 Validation set: Average loss: 0.3017, Accuracy: 9243/10000 (92%)
+training phase
+Train Epoch: 107 [12800/50000] Loss: 0.014314 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 107 [25600/50000] Loss: 0.028762 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 107 [38400/50000] Loss: 0.015082 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10678.23s, 98.87 s/epoch, 0.25 s/batch, ets 9096.27s
+validation phase
+	Epoch 107 Validation set: Average loss: 0.3019, Accuracy: 9238/10000 (92%)
+training phase
+Train Epoch: 108 [12800/50000] Loss: 0.021337 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 108 [25600/50000] Loss: 0.007295 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 108 [38400/50000] Loss: 0.022098 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10686.36s, 98.04 s/epoch, 0.25 s/batch, ets 8921.64s
+validation phase
+	Epoch 108 Validation set: Average loss: 0.3035, Accuracy: 9238/10000 (92%)
+training phase
+Train Epoch: 109 [12800/50000] Loss: 0.056660 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 109 [25600/50000] Loss: 0.026116 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 109 [38400/50000] Loss: 0.047535 Acc: 0.9844 lr: 1.00e-03
+Elapsed 10694.50s, 97.22 s/epoch, 0.25 s/batch, ets 8750.05s
+validation phase
+	Epoch 109 Validation set: Average loss: 0.3050, Accuracy: 9233/10000 (92%)
+training phase
+Train Epoch: 110 [12800/50000] Loss: 0.010455 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 110 [25600/50000] Loss: 0.009248 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 110 [38400/50000] Loss: 0.020256 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10702.59s, 96.42 s/epoch, 0.25 s/batch, ets 8581.36s
+validation phase
+	Epoch 110 Validation set: Average loss: 0.3057, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 111 [12800/50000] Loss: 0.033538 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 111 [25600/50000] Loss: 0.008495 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 111 [38400/50000] Loss: 0.029340 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10710.72s, 95.63 s/epoch, 0.24 s/batch, ets 8415.57s
+validation phase
+	Epoch 111 Validation set: Average loss: 0.3101, Accuracy: 9236/10000 (92%)
+training phase
+Train Epoch: 112 [12800/50000] Loss: 0.011332 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 112 [25600/50000] Loss: 0.005459 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 112 [38400/50000] Loss: 0.015567 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10718.85s, 94.86 s/epoch, 0.24 s/batch, ets 8252.56s
+validation phase
+	Epoch 112 Validation set: Average loss: 0.3075, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 113 [12800/50000] Loss: 0.014183 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 113 [25600/50000] Loss: 0.033876 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 113 [38400/50000] Loss: 0.020717 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10726.95s, 94.10 s/epoch, 0.24 s/batch, ets 8092.26s
+validation phase
+	Epoch 113 Validation set: Average loss: 0.3083, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 114 [12800/50000] Loss: 0.029473 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 114 [25600/50000] Loss: 0.028444 Acc: 0.9844 lr: 1.00e-03
+Train Epoch: 114 [38400/50000] Loss: 0.005676 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10735.09s, 93.35 s/epoch, 0.24 s/batch, ets 7934.63s
+validation phase
+	Epoch 114 Validation set: Average loss: 0.3039, Accuracy: 9263/10000 (93%)
+Removing old model /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-103.pth
+Saving model to /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-114.pth
+training phase
+Train Epoch: 115 [12800/50000] Loss: 0.020932 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 115 [25600/50000] Loss: 0.036574 Acc: 0.9922 lr: 1.00e-03
+Train Epoch: 115 [38400/50000] Loss: 0.038971 Acc: 0.9844 lr: 1.00e-03
+Elapsed 10743.20s, 92.61 s/epoch, 0.24 s/batch, ets 7779.56s
+validation phase
+	Epoch 115 Validation set: Average loss: 0.3060, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 116 [12800/50000] Loss: 0.004644 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 116 [25600/50000] Loss: 0.009629 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 116 [38400/50000] Loss: 0.012711 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10751.36s, 91.89 s/epoch, 0.24 s/batch, ets 7627.03s
+validation phase
+	Epoch 116 Validation set: Average loss: 0.3077, Accuracy: 9253/10000 (93%)
+training phase
+Train Epoch: 117 [12800/50000] Loss: 0.010717 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 117 [25600/50000] Loss: 0.008387 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 117 [38400/50000] Loss: 0.004384 Acc: 1.0000 lr: 1.00e-03
+Elapsed 10759.49s, 91.18 s/epoch, 0.23 s/batch, ets 7476.93s
+validation phase
+	Epoch 117 Validation set: Average loss: 0.3055, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 118 [12800/50000] Loss: 0.023879 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 118 [25600/50000] Loss: 0.006621 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 118 [38400/50000] Loss: 0.028611 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10767.94s, 90.49 s/epoch, 0.23 s/batch, ets 7329.44s
+validation phase
+	Epoch 118 Validation set: Average loss: 0.3067, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 119 [12800/50000] Loss: 0.011757 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 119 [25600/50000] Loss: 0.007630 Acc: 1.0000 lr: 1.00e-03
+Train Epoch: 119 [38400/50000] Loss: 0.011695 Acc: 0.9922 lr: 1.00e-03
+Elapsed 10776.14s, 89.80 s/epoch, 0.23 s/batch, ets 7184.09s
+validation phase
+	Epoch 119 Validation set: Average loss: 0.3077, Accuracy: 9252/10000 (93%)
+training phase
+Train Epoch: 120 [12800/50000] Loss: 0.013569 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 120 [25600/50000] Loss: 0.006478 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 120 [38400/50000] Loss: 0.006903 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10784.21s, 89.13 s/epoch, 0.23 s/batch, ets 7040.93s
+validation phase
+	Epoch 120 Validation set: Average loss: 0.3063, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 121 [12800/50000] Loss: 0.031919 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 121 [25600/50000] Loss: 0.013275 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 121 [38400/50000] Loss: 0.040735 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10792.37s, 88.46 s/epoch, 0.23 s/batch, ets 6900.04s
+validation phase
+	Epoch 121 Validation set: Average loss: 0.3081, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 122 [12800/50000] Loss: 0.039708 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 122 [25600/50000] Loss: 0.029310 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 122 [38400/50000] Loss: 0.031064 Acc: 0.9844 lr: 1.00e-04
+Elapsed 10800.48s, 87.81 s/epoch, 0.22 s/batch, ets 6761.27s
+validation phase
+	Epoch 122 Validation set: Average loss: 0.3075, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 123 [12800/50000] Loss: 0.011174 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 123 [25600/50000] Loss: 0.023181 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 123 [38400/50000] Loss: 0.016237 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10808.59s, 87.17 s/epoch, 0.22 s/batch, ets 6624.62s
+validation phase
+	Epoch 123 Validation set: Average loss: 0.3065, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 124 [12800/50000] Loss: 0.009560 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 124 [25600/50000] Loss: 0.005053 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 124 [38400/50000] Loss: 0.036429 Acc: 0.9844 lr: 1.00e-04
+Elapsed 10816.70s, 86.53 s/epoch, 0.22 s/batch, ets 6490.02s
+validation phase
+	Epoch 124 Validation set: Average loss: 0.3075, Accuracy: 9231/10000 (92%)
+training phase
+Train Epoch: 125 [12800/50000] Loss: 0.003227 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 125 [25600/50000] Loss: 0.045344 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 125 [38400/50000] Loss: 0.019734 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10824.84s, 85.91 s/epoch, 0.22 s/batch, ets 6357.44s
+validation phase
+	Epoch 125 Validation set: Average loss: 0.3080, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 126 [12800/50000] Loss: 0.003083 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 126 [25600/50000] Loss: 0.009015 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 126 [38400/50000] Loss: 0.029910 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10833.00s, 85.30 s/epoch, 0.22 s/batch, ets 6226.84s
+validation phase
+	Epoch 126 Validation set: Average loss: 0.3060, Accuracy: 9231/10000 (92%)
+training phase
+Train Epoch: 127 [12800/50000] Loss: 0.012122 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 127 [25600/50000] Loss: 0.013723 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 127 [38400/50000] Loss: 0.011217 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10841.14s, 84.70 s/epoch, 0.22 s/batch, ets 6098.14s
+validation phase
+	Epoch 127 Validation set: Average loss: 0.3074, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 128 [12800/50000] Loss: 0.006539 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 128 [25600/50000] Loss: 0.008256 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 128 [38400/50000] Loss: 0.030183 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10849.25s, 84.10 s/epoch, 0.22 s/batch, ets 5971.29s
+validation phase
+	Epoch 128 Validation set: Average loss: 0.3061, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 129 [12800/50000] Loss: 0.017748 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 129 [25600/50000] Loss: 0.021141 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 129 [38400/50000] Loss: 0.039980 Acc: 0.9844 lr: 1.00e-04
+Elapsed 10857.34s, 83.52 s/epoch, 0.21 s/batch, ets 5846.26s
+validation phase
+	Epoch 129 Validation set: Average loss: 0.3099, Accuracy: 9240/10000 (92%)
+training phase
+Train Epoch: 130 [12800/50000] Loss: 0.033256 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 130 [25600/50000] Loss: 0.007299 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 130 [38400/50000] Loss: 0.027172 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10865.42s, 82.94 s/epoch, 0.21 s/batch, ets 5723.01s
+validation phase
+	Epoch 130 Validation set: Average loss: 0.3081, Accuracy: 9228/10000 (92%)
+training phase
+Train Epoch: 131 [12800/50000] Loss: 0.011245 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 131 [25600/50000] Loss: 0.005206 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 131 [38400/50000] Loss: 0.011098 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10873.50s, 82.37 s/epoch, 0.21 s/batch, ets 5601.50s
+validation phase
+	Epoch 131 Validation set: Average loss: 0.3097, Accuracy: 9252/10000 (93%)
+training phase
+Train Epoch: 132 [12800/50000] Loss: 0.007742 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 132 [25600/50000] Loss: 0.009352 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 132 [38400/50000] Loss: 0.023753 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10881.65s, 81.82 s/epoch, 0.21 s/batch, ets 5481.74s
+validation phase
+	Epoch 132 Validation set: Average loss: 0.3077, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 133 [12800/50000] Loss: 0.087307 Acc: 0.9609 lr: 1.00e-04
+Train Epoch: 133 [25600/50000] Loss: 0.005370 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 133 [38400/50000] Loss: 0.021295 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10889.76s, 81.27 s/epoch, 0.21 s/batch, ets 5363.61s
+validation phase
+	Epoch 133 Validation set: Average loss: 0.3090, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 134 [12800/50000] Loss: 0.010308 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 134 [25600/50000] Loss: 0.008691 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 134 [38400/50000] Loss: 0.009628 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10897.83s, 80.72 s/epoch, 0.21 s/batch, ets 5247.10s
+validation phase
+	Epoch 134 Validation set: Average loss: 0.3039, Accuracy: 9243/10000 (92%)
+training phase
+Train Epoch: 135 [12800/50000] Loss: 0.010795 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 135 [25600/50000] Loss: 0.014039 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 135 [38400/50000] Loss: 0.019532 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10905.92s, 80.19 s/epoch, 0.21 s/batch, ets 5132.20s
+validation phase
+	Epoch 135 Validation set: Average loss: 0.3085, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 136 [12800/50000] Loss: 0.010185 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 136 [25600/50000] Loss: 0.033238 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 136 [38400/50000] Loss: 0.043229 Acc: 0.9844 lr: 1.00e-04
+Elapsed 10914.05s, 79.66 s/epoch, 0.20 s/batch, ets 5018.87s
+validation phase
+	Epoch 136 Validation set: Average loss: 0.3061, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 137 [12800/50000] Loss: 0.037044 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 137 [25600/50000] Loss: 0.011928 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 137 [38400/50000] Loss: 0.021784 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10922.16s, 79.15 s/epoch, 0.20 s/batch, ets 4907.06s
+validation phase
+	Epoch 137 Validation set: Average loss: 0.3102, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 138 [12800/50000] Loss: 0.012805 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 138 [25600/50000] Loss: 0.014005 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 138 [38400/50000] Loss: 0.007565 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10930.26s, 78.63 s/epoch, 0.20 s/batch, ets 4796.73s
+validation phase
+	Epoch 138 Validation set: Average loss: 0.3057, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 139 [12800/50000] Loss: 0.021766 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 139 [25600/50000] Loss: 0.027696 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 139 [38400/50000] Loss: 0.023456 Acc: 0.9844 lr: 1.00e-04
+Elapsed 10938.35s, 78.13 s/epoch, 0.20 s/batch, ets 4687.86s
+validation phase
+	Epoch 139 Validation set: Average loss: 0.3052, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 140 [12800/50000] Loss: 0.004681 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 140 [25600/50000] Loss: 0.037414 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 140 [38400/50000] Loss: 0.009451 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10946.44s, 77.63 s/epoch, 0.20 s/batch, ets 4580.43s
+validation phase
+	Epoch 140 Validation set: Average loss: 0.3109, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 141 [12800/50000] Loss: 0.021200 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 141 [25600/50000] Loss: 0.022588 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 141 [38400/50000] Loss: 0.021251 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10954.54s, 77.14 s/epoch, 0.20 s/batch, ets 4474.39s
+validation phase
+	Epoch 141 Validation set: Average loss: 0.3070, Accuracy: 9238/10000 (92%)
+training phase
+Train Epoch: 142 [12800/50000] Loss: 0.063016 Acc: 0.9766 lr: 1.00e-04
+Train Epoch: 142 [25600/50000] Loss: 0.017163 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 142 [38400/50000] Loss: 0.043371 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10962.63s, 76.66 s/epoch, 0.20 s/batch, ets 4369.72s
+validation phase
+	Epoch 142 Validation set: Average loss: 0.3058, Accuracy: 9238/10000 (92%)
+training phase
+Train Epoch: 143 [12800/50000] Loss: 0.006624 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 143 [25600/50000] Loss: 0.004263 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 143 [38400/50000] Loss: 0.007906 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10970.75s, 76.19 s/epoch, 0.19 s/batch, ets 4266.40s
+validation phase
+	Epoch 143 Validation set: Average loss: 0.3083, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 144 [12800/50000] Loss: 0.016757 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 144 [25600/50000] Loss: 0.014346 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 144 [38400/50000] Loss: 0.008943 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10978.92s, 75.72 s/epoch, 0.19 s/batch, ets 4164.42s
+validation phase
+	Epoch 144 Validation set: Average loss: 0.3069, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 145 [12800/50000] Loss: 0.011636 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 145 [25600/50000] Loss: 0.010568 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 145 [38400/50000] Loss: 0.011346 Acc: 1.0000 lr: 1.00e-04
+Elapsed 10987.09s, 75.25 s/epoch, 0.19 s/batch, ets 4063.72s
+validation phase
+	Epoch 145 Validation set: Average loss: 0.3036, Accuracy: 9240/10000 (92%)
+training phase
+Train Epoch: 146 [12800/50000] Loss: 0.008346 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 146 [25600/50000] Loss: 0.022381 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 146 [38400/50000] Loss: 0.011706 Acc: 0.9922 lr: 1.00e-04
+Elapsed 10995.19s, 74.80 s/epoch, 0.19 s/batch, ets 3964.25s
+validation phase
+	Epoch 146 Validation set: Average loss: 0.3058, Accuracy: 9249/10000 (92%)
+training phase
+Train Epoch: 147 [12800/50000] Loss: 0.003251 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 147 [25600/50000] Loss: 0.005290 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 147 [38400/50000] Loss: 0.005409 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11003.30s, 74.35 s/epoch, 0.19 s/batch, ets 3866.02s
+validation phase
+	Epoch 147 Validation set: Average loss: 0.3049, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 148 [12800/50000] Loss: 0.014175 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 148 [25600/50000] Loss: 0.018778 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 148 [38400/50000] Loss: 0.004385 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11011.75s, 73.90 s/epoch, 0.19 s/batch, ets 3769.12s
+validation phase
+	Epoch 148 Validation set: Average loss: 0.3084, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 149 [12800/50000] Loss: 0.046610 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 149 [25600/50000] Loss: 0.006024 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 149 [38400/50000] Loss: 0.006040 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11019.93s, 73.47 s/epoch, 0.19 s/batch, ets 3673.31s
+validation phase
+	Epoch 149 Validation set: Average loss: 0.3078, Accuracy: 9239/10000 (92%)
+training phase
+Train Epoch: 150 [12800/50000] Loss: 0.009231 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 150 [25600/50000] Loss: 0.034065 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 150 [38400/50000] Loss: 0.036863 Acc: 0.9844 lr: 1.00e-04
+Elapsed 11028.07s, 73.03 s/epoch, 0.19 s/batch, ets 3578.64s
+validation phase
+	Epoch 150 Validation set: Average loss: 0.3101, Accuracy: 9251/10000 (93%)
+training phase
+Train Epoch: 151 [12800/50000] Loss: 0.009035 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 151 [25600/50000] Loss: 0.022555 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 151 [38400/50000] Loss: 0.010441 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11036.16s, 72.61 s/epoch, 0.19 s/batch, ets 3485.10s
+validation phase
+	Epoch 151 Validation set: Average loss: 0.3055, Accuracy: 9252/10000 (93%)
+training phase
+Train Epoch: 152 [12800/50000] Loss: 0.010770 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 152 [25600/50000] Loss: 0.026616 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 152 [38400/50000] Loss: 0.008385 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11044.26s, 72.18 s/epoch, 0.18 s/batch, ets 3392.68s
+validation phase
+	Epoch 152 Validation set: Average loss: 0.3049, Accuracy: 9251/10000 (93%)
+training phase
+Train Epoch: 153 [12800/50000] Loss: 0.028089 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 153 [25600/50000] Loss: 0.017813 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 153 [38400/50000] Loss: 0.008017 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11052.39s, 71.77 s/epoch, 0.18 s/batch, ets 3301.36s
+validation phase
+	Epoch 153 Validation set: Average loss: 0.3052, Accuracy: 9255/10000 (93%)
+training phase
+Train Epoch: 154 [12800/50000] Loss: 0.016398 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 154 [25600/50000] Loss: 0.010238 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 154 [38400/50000] Loss: 0.018623 Acc: 0.9922 lr: 1.00e-04
+Elapsed 11060.47s, 71.36 s/epoch, 0.18 s/batch, ets 3211.10s
+validation phase
+	Epoch 154 Validation set: Average loss: 0.3050, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 155 [12800/50000] Loss: 0.038084 Acc: 0.9844 lr: 1.00e-04
+Train Epoch: 155 [25600/50000] Loss: 0.020159 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 155 [38400/50000] Loss: 0.017472 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11068.67s, 70.95 s/epoch, 0.18 s/batch, ets 3121.93s
+validation phase
+	Epoch 155 Validation set: Average loss: 0.3061, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 156 [12800/50000] Loss: 0.008709 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 156 [25600/50000] Loss: 0.013572 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 156 [38400/50000] Loss: 0.042841 Acc: 0.9766 lr: 1.00e-04
+Elapsed 11076.86s, 70.55 s/epoch, 0.18 s/batch, ets 3033.79s
+validation phase
+	Epoch 156 Validation set: Average loss: 0.3049, Accuracy: 9257/10000 (93%)
+training phase
+Train Epoch: 157 [12800/50000] Loss: 0.006631 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 157 [25600/50000] Loss: 0.032610 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 157 [38400/50000] Loss: 0.002077 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11085.12s, 70.16 s/epoch, 0.18 s/batch, ets 2946.68s
+validation phase
+	Epoch 157 Validation set: Average loss: 0.3054, Accuracy: 9238/10000 (92%)
+training phase
+Train Epoch: 158 [12800/50000] Loss: 0.006472 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 158 [25600/50000] Loss: 0.013177 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 158 [38400/50000] Loss: 0.004341 Acc: 1.0000 lr: 1.00e-04
+Elapsed 11093.44s, 69.77 s/epoch, 0.18 s/batch, ets 2860.57s
+validation phase
+	Epoch 158 Validation set: Average loss: 0.3065, Accuracy: 9251/10000 (93%)
+training phase
+Train Epoch: 159 [12800/50000] Loss: 0.019442 Acc: 1.0000 lr: 1.00e-04
+Train Epoch: 159 [25600/50000] Loss: 0.026763 Acc: 0.9922 lr: 1.00e-04
+Train Epoch: 159 [38400/50000] Loss: 0.020667 Acc: 0.9844 lr: 1.00e-04
+Elapsed 11102.14s, 69.39 s/epoch, 0.18 s/batch, ets 2775.54s
+validation phase
+	Epoch 159 Validation set: Average loss: 0.3076, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 160 [12800/50000] Loss: 0.004636 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 160 [25600/50000] Loss: 0.024447 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 160 [38400/50000] Loss: 0.013335 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11110.48s, 69.01 s/epoch, 0.18 s/batch, ets 2691.36s
+validation phase
+	Epoch 160 Validation set: Average loss: 0.3079, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 161 [12800/50000] Loss: 0.024222 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 161 [25600/50000] Loss: 0.018221 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 161 [38400/50000] Loss: 0.009933 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11118.59s, 68.63 s/epoch, 0.18 s/batch, ets 2608.06s
+validation phase
+	Epoch 161 Validation set: Average loss: 0.3058, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 162 [12800/50000] Loss: 0.012707 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 162 [25600/50000] Loss: 0.029272 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 162 [38400/50000] Loss: 0.007814 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11126.71s, 68.26 s/epoch, 0.17 s/batch, ets 2525.70s
+validation phase
+	Epoch 162 Validation set: Average loss: 0.3062, Accuracy: 9248/10000 (92%)
+training phase
+Train Epoch: 163 [12800/50000] Loss: 0.020228 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 163 [25600/50000] Loss: 0.007878 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 163 [38400/50000] Loss: 0.006811 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11134.85s, 67.90 s/epoch, 0.17 s/batch, ets 2444.24s
+validation phase
+	Epoch 163 Validation set: Average loss: 0.3064, Accuracy: 9248/10000 (92%)
+training phase
+Train Epoch: 164 [12800/50000] Loss: 0.015374 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 164 [25600/50000] Loss: 0.012050 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 164 [38400/50000] Loss: 0.027560 Acc: 0.9844 lr: 1.00e-05
+Elapsed 11142.99s, 67.53 s/epoch, 0.17 s/batch, ets 2363.67s
+validation phase
+	Epoch 164 Validation set: Average loss: 0.3077, Accuracy: 9243/10000 (92%)
+training phase
+Train Epoch: 165 [12800/50000] Loss: 0.015291 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 165 [25600/50000] Loss: 0.004878 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 165 [38400/50000] Loss: 0.008946 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11151.33s, 67.18 s/epoch, 0.17 s/batch, ets 2284.01s
+validation phase
+	Epoch 165 Validation set: Average loss: 0.3060, Accuracy: 9258/10000 (93%)
+training phase
+Train Epoch: 166 [12800/50000] Loss: 0.017362 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 166 [25600/50000] Loss: 0.011730 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 166 [38400/50000] Loss: 0.035743 Acc: 0.9844 lr: 1.00e-05
+Elapsed 11159.65s, 66.82 s/epoch, 0.17 s/batch, ets 2205.20s
+validation phase
+	Epoch 166 Validation set: Average loss: 0.3082, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 167 [12800/50000] Loss: 0.025937 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 167 [25600/50000] Loss: 0.033072 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 167 [38400/50000] Loss: 0.017241 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11167.83s, 66.48 s/epoch, 0.17 s/batch, ets 2127.20s
+validation phase
+	Epoch 167 Validation set: Average loss: 0.3089, Accuracy: 9239/10000 (92%)
+training phase
+Train Epoch: 168 [12800/50000] Loss: 0.026909 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 168 [25600/50000] Loss: 0.030636 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 168 [38400/50000] Loss: 0.003251 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11175.96s, 66.13 s/epoch, 0.17 s/batch, ets 2050.03s
+validation phase
+	Epoch 168 Validation set: Average loss: 0.3075, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 169 [12800/50000] Loss: 0.023307 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 169 [25600/50000] Loss: 0.013600 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 169 [38400/50000] Loss: 0.009816 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11184.07s, 65.79 s/epoch, 0.17 s/batch, ets 1973.66s
+validation phase
+	Epoch 169 Validation set: Average loss: 0.3079, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 170 [12800/50000] Loss: 0.015264 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 170 [25600/50000] Loss: 0.032546 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 170 [38400/50000] Loss: 0.011867 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11192.16s, 65.45 s/epoch, 0.17 s/batch, ets 1898.09s
+validation phase
+	Epoch 170 Validation set: Average loss: 0.3092, Accuracy: 9239/10000 (92%)
+training phase
+Train Epoch: 171 [12800/50000] Loss: 0.032985 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 171 [25600/50000] Loss: 0.013531 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 171 [38400/50000] Loss: 0.122859 Acc: 0.9688 lr: 1.00e-05
+Elapsed 11200.28s, 65.12 s/epoch, 0.17 s/batch, ets 1823.30s
+validation phase
+	Epoch 171 Validation set: Average loss: 0.3045, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 172 [12800/50000] Loss: 0.007854 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 172 [25600/50000] Loss: 0.024473 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 172 [38400/50000] Loss: 0.039602 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11208.39s, 64.79 s/epoch, 0.17 s/batch, ets 1749.29s
+validation phase
+	Epoch 172 Validation set: Average loss: 0.3070, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 173 [12800/50000] Loss: 0.006094 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 173 [25600/50000] Loss: 0.016363 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 173 [38400/50000] Loss: 0.003578 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11216.47s, 64.46 s/epoch, 0.16 s/batch, ets 1676.02s
+validation phase
+	Epoch 173 Validation set: Average loss: 0.3078, Accuracy: 9249/10000 (92%)
+training phase
+Train Epoch: 174 [12800/50000] Loss: 0.026729 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 174 [25600/50000] Loss: 0.019300 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 174 [38400/50000] Loss: 0.009971 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11224.59s, 64.14 s/epoch, 0.16 s/batch, ets 1603.51s
+validation phase
+	Epoch 174 Validation set: Average loss: 0.3044, Accuracy: 9259/10000 (93%)
+training phase
+Train Epoch: 175 [12800/50000] Loss: 0.018071 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 175 [25600/50000] Loss: 0.007222 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 175 [38400/50000] Loss: 0.005787 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11232.67s, 63.82 s/epoch, 0.16 s/batch, ets 1531.73s
+validation phase
+	Epoch 175 Validation set: Average loss: 0.3077, Accuracy: 9241/10000 (92%)
+training phase
+Train Epoch: 176 [12800/50000] Loss: 0.012571 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 176 [25600/50000] Loss: 0.011854 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 176 [38400/50000] Loss: 0.005673 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11240.76s, 63.51 s/epoch, 0.16 s/batch, ets 1460.66s
+validation phase
+	Epoch 176 Validation set: Average loss: 0.3077, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 177 [12800/50000] Loss: 0.006658 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 177 [25600/50000] Loss: 0.006724 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 177 [38400/50000] Loss: 0.017098 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11248.87s, 63.20 s/epoch, 0.16 s/batch, ets 1390.31s
+validation phase
+	Epoch 177 Validation set: Average loss: 0.3065, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 178 [12800/50000] Loss: 0.042760 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 178 [25600/50000] Loss: 0.039945 Acc: 0.9766 lr: 1.00e-05
+Train Epoch: 178 [38400/50000] Loss: 0.010582 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11256.99s, 62.89 s/epoch, 0.16 s/batch, ets 1320.65s
+validation phase
+	Epoch 178 Validation set: Average loss: 0.3077, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 179 [12800/50000] Loss: 0.035829 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 179 [25600/50000] Loss: 0.018062 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 179 [38400/50000] Loss: 0.018113 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11265.10s, 62.58 s/epoch, 0.16 s/batch, ets 1251.68s
+validation phase
+	Epoch 179 Validation set: Average loss: 0.3091, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 180 [12800/50000] Loss: 0.005967 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 180 [25600/50000] Loss: 0.007725 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 180 [38400/50000] Loss: 0.035680 Acc: 0.9844 lr: 1.00e-05
+Elapsed 11273.22s, 62.28 s/epoch, 0.16 s/batch, ets 1183.38s
+validation phase
+	Epoch 180 Validation set: Average loss: 0.3062, Accuracy: 9239/10000 (92%)
+training phase
+Train Epoch: 181 [12800/50000] Loss: 0.015505 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 181 [25600/50000] Loss: 0.006175 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 181 [38400/50000] Loss: 0.020477 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11281.31s, 61.99 s/epoch, 0.16 s/batch, ets 1115.73s
+validation phase
+	Epoch 181 Validation set: Average loss: 0.3056, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 182 [12800/50000] Loss: 0.013230 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 182 [25600/50000] Loss: 0.012164 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 182 [38400/50000] Loss: 0.005575 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11289.43s, 61.69 s/epoch, 0.16 s/batch, ets 1048.75s
+validation phase
+	Epoch 182 Validation set: Average loss: 0.3091, Accuracy: 9236/10000 (92%)
+training phase
+Train Epoch: 183 [12800/50000] Loss: 0.012491 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 183 [25600/50000] Loss: 0.020616 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 183 [38400/50000] Loss: 0.007335 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11297.60s, 61.40 s/epoch, 0.16 s/batch, ets 982.40s
+validation phase
+	Epoch 183 Validation set: Average loss: 0.3095, Accuracy: 9251/10000 (93%)
+training phase
+Train Epoch: 184 [12800/50000] Loss: 0.016676 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 184 [25600/50000] Loss: 0.006954 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 184 [38400/50000] Loss: 0.004939 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11305.97s, 61.11 s/epoch, 0.16 s/batch, ets 916.70s
+validation phase
+	Epoch 184 Validation set: Average loss: 0.3062, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 185 [12800/50000] Loss: 0.027393 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 185 [25600/50000] Loss: 0.023254 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 185 [38400/50000] Loss: 0.016668 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11314.21s, 60.83 s/epoch, 0.16 s/batch, ets 851.61s
+validation phase
+	Epoch 185 Validation set: Average loss: 0.3049, Accuracy: 9251/10000 (93%)
+training phase
+Train Epoch: 186 [12800/50000] Loss: 0.021148 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 186 [25600/50000] Loss: 0.013826 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 186 [38400/50000] Loss: 0.020325 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11322.30s, 60.55 s/epoch, 0.15 s/batch, ets 787.11s
+validation phase
+	Epoch 186 Validation set: Average loss: 0.3073, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 187 [12800/50000] Loss: 0.007044 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 187 [25600/50000] Loss: 0.018568 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 187 [38400/50000] Loss: 0.028951 Acc: 0.9844 lr: 1.00e-05
+Elapsed 11330.44s, 60.27 s/epoch, 0.15 s/batch, ets 723.22s
+validation phase
+	Epoch 187 Validation set: Average loss: 0.3062, Accuracy: 9249/10000 (92%)
+training phase
+Train Epoch: 188 [12800/50000] Loss: 0.030229 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 188 [25600/50000] Loss: 0.018044 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 188 [38400/50000] Loss: 0.005264 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11338.55s, 59.99 s/epoch, 0.15 s/batch, ets 659.92s
+validation phase
+	Epoch 188 Validation set: Average loss: 0.3077, Accuracy: 9238/10000 (92%)
+training phase
+Train Epoch: 189 [12800/50000] Loss: 0.023599 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 189 [25600/50000] Loss: 0.016740 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 189 [38400/50000] Loss: 0.044136 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11346.67s, 59.72 s/epoch, 0.15 s/batch, ets 597.19s
+validation phase
+	Epoch 189 Validation set: Average loss: 0.3081, Accuracy: 9256/10000 (93%)
+training phase
+Train Epoch: 190 [12800/50000] Loss: 0.012050 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 190 [25600/50000] Loss: 0.020148 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 190 [38400/50000] Loss: 0.012111 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11354.81s, 59.45 s/epoch, 0.15 s/batch, ets 535.04s
+validation phase
+	Epoch 190 Validation set: Average loss: 0.3075, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 191 [12800/50000] Loss: 0.010280 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 191 [25600/50000] Loss: 0.009799 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 191 [38400/50000] Loss: 0.013139 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11362.93s, 59.18 s/epoch, 0.15 s/batch, ets 473.46s
+validation phase
+	Epoch 191 Validation set: Average loss: 0.3073, Accuracy: 9232/10000 (92%)
+training phase
+Train Epoch: 192 [12800/50000] Loss: 0.005838 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 192 [25600/50000] Loss: 0.029714 Acc: 0.9766 lr: 1.00e-05
+Train Epoch: 192 [38400/50000] Loss: 0.006335 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11371.06s, 58.92 s/epoch, 0.15 s/batch, ets 412.42s
+validation phase
+	Epoch 192 Validation set: Average loss: 0.3074, Accuracy: 9246/10000 (92%)
+training phase
+Train Epoch: 193 [12800/50000] Loss: 0.052015 Acc: 0.9766 lr: 1.00e-05
+Train Epoch: 193 [25600/50000] Loss: 0.013437 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 193 [38400/50000] Loss: 0.028926 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11379.16s, 58.66 s/epoch, 0.15 s/batch, ets 351.93s
+validation phase
+	Epoch 193 Validation set: Average loss: 0.3092, Accuracy: 9245/10000 (92%)
+training phase
+Train Epoch: 194 [12800/50000] Loss: 0.011887 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 194 [25600/50000] Loss: 0.014163 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 194 [38400/50000] Loss: 0.012579 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11387.29s, 58.40 s/epoch, 0.15 s/batch, ets 291.98s
+validation phase
+	Epoch 194 Validation set: Average loss: 0.3066, Accuracy: 9242/10000 (92%)
+training phase
+Train Epoch: 195 [12800/50000] Loss: 0.007333 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 195 [25600/50000] Loss: 0.021601 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 195 [38400/50000] Loss: 0.011543 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11395.42s, 58.14 s/epoch, 0.15 s/batch, ets 232.56s
+validation phase
+	Epoch 195 Validation set: Average loss: 0.3077, Accuracy: 9247/10000 (92%)
+training phase
+Train Epoch: 196 [12800/50000] Loss: 0.005917 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 196 [25600/50000] Loss: 0.015468 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 196 [38400/50000] Loss: 0.027467 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11403.56s, 57.89 s/epoch, 0.15 s/batch, ets 173.66s
+validation phase
+	Epoch 196 Validation set: Average loss: 0.3068, Accuracy: 9244/10000 (92%)
+training phase
+Train Epoch: 197 [12800/50000] Loss: 0.016351 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 197 [25600/50000] Loss: 0.007213 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 197 [38400/50000] Loss: 0.023558 Acc: 0.9922 lr: 1.00e-05
+Elapsed 11411.68s, 57.63 s/epoch, 0.15 s/batch, ets 115.27s
+validation phase
+	Epoch 197 Validation set: Average loss: 0.3037, Accuracy: 9239/10000 (92%)
+training phase
+Train Epoch: 198 [12800/50000] Loss: 0.035889 Acc: 0.9844 lr: 1.00e-05
+Train Epoch: 198 [25600/50000] Loss: 0.004170 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 198 [38400/50000] Loss: 0.033887 Acc: 0.9844 lr: 1.00e-05
+Elapsed 11419.82s, 57.39 s/epoch, 0.15 s/batch, ets 57.39s
+validation phase
+	Epoch 198 Validation set: Average loss: 0.3043, Accuracy: 9243/10000 (92%)
+training phase
+Train Epoch: 199 [12800/50000] Loss: 0.009029 Acc: 1.0000 lr: 1.00e-05
+Train Epoch: 199 [25600/50000] Loss: 0.015950 Acc: 0.9922 lr: 1.00e-05
+Train Epoch: 199 [38400/50000] Loss: 0.017466 Acc: 1.0000 lr: 1.00e-05
+Elapsed 11427.91s, 57.14 s/epoch, 0.15 s/batch, ets 0.00s
+validation phase
+	Epoch 199 Validation set: Average loss: 0.3072, Accuracy: 9245/10000 (92%)
+Total Elapse: 11428.68, Best Result: 92.630%

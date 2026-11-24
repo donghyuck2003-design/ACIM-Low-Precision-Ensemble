@@ -1,0 +1,8 @@
+nohup: ignoring input
+[Thu Jan 15 22:40:02 KST 2026] 실행: w=8, a=8, v=0.05
+[Thu Jan 15 23:09:56 KST 2026] 실행: w=8, a=8, v=0.25
+[Thu Jan 15 23:39:53 KST 2026] 모든 inference 작업 완료
+Saved merged CSV: ./Result/merged_results_2026_01_15_23_39_53.csv (rows=32)
+Saved pivot  CSV: ./Result/pivot_by_wav_2026_01_15_23_39_53.csv (rows=32)
+Saved long   CSV: ./Result/pivot_by_wav_multi_2026_01_15_23_39_53.csv (rows=160)
+[Thu Jan 15 23:39:53 KST 2026] 결과 CSV 병합 완료

@@ -1,0 +1,99 @@
+nohup: ignoring input
+=================FLAGS==================
+dataset: cifar10
+model: ResNet20_CIFAR10
+mode: WAGE
+batch_size: 500
+epochs: 200
+grad_scale: 8
+seed: 117
+log_interval: 100
+test_interval: 1
+logdir: /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/default/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=ver4_act_alpha_p0.999_b200.json/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=500/cellBit=1/dataset=cifar10/decreasing_lr=140,180/detect=0/grad_scale=8/inference=1/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-114.pth/seed=117/subArray=128/t=0/target=0/v=0/vari=0.0/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8
+lr: 0.01
+decreasing_lr: 140,180
+wl_weight: 8
+wl_grad: 8
+wl_activate: 8
+wl_error: 8
+inference: 1
+subArray: 128
+parallelRead: 128
+ADCprecision: 16
+cellBit: 1
+onoffratio: 10
+vari: 0.0
+t: 0
+v: 0
+detect: 0
+target: 0
+act_calib: 0
+act_calib_batches: 200
+act_calib_p: 0.999
+act_calib_stride: 16
+act_calib_max_samples: 200000
+act_calib_json: ver4_act_alpha_p0.999_b200.json
+pretrained: /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-114.pth
+========================================
+/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/inference_test.py:188: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(args.pretrained, map_location='cpu')
+[LOAD] /home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-114.pth
+[LOAD] missing_keys=0 unexpected_keys=0
+[ACT] alpha json not found (or no loader). path=ver4_act_alpha_p0.999_b200.json. act quant may be bypassed if alpha missing.
+/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/default/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=ver4_act_alpha_p0.999_b200.json/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=500/cellBit=1/dataset=cifar10/decreasing_lr=140,180/detect=0/grad_scale=8/inference=1/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=/home/ssdl_neurosim1/All_Neurosim_Project/ResNet20t_CIFAR10/Inference_pytorch/log/resnet20_wage_resume_weights/ADCprecision=16/act_calib=0/act_calib_batches=200/act_calib_json=/act_calib_max_samples=200000/act_calib_p=0.999/act_calib_stride=16/batch_size=128/cellBit=4/dataset=cifar10/decreasing_lr=60,120,160/detect=0/grad_scale=8/inference=0/lr=0.01/mode=WAGE/model=ResNet20_CIFAR10/onoffratio=10/parallelRead=128/pretrained=None/seed=117/subArray=128/t=0/target=0/v=0/vari=0/wage_start_epoch=20/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8/best-114.pth/seed=117/subArray=128/t=0/target=0/v=0/vari=0.0/wl_activate=8/wl_error=8/wl_grad=8/wl_weight=8
+Building CIFAR-10 data loader with 1 workers
+Files already downloaded and verified
+Files already downloaded and verified
+fan_in     27, float_limit 0.333333, float std 0.272166, quant limit 0.9921875, scale 2.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in     16, float_limit 0.433013, float std 0.353553, quant limit 0.9921875, scale 2.0
+fan_in    144, float_limit 0.144338, float std 0.117851, quant limit 0.9921875, scale 4.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in     32, float_limit 0.306186, float std 0.250000, quant limit 0.9921875, scale 2.0
+fan_in    288, float_limit 0.102062, float std 0.083333, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in    576, float_limit 0.072169, float std 0.058926, quant limit 0.9921875, scale 8.0
+fan_in     64, float_limit 0.216506, float std 0.176777, quant limit 0.9921875, scale 4.0
+Test set: Average loss: 0.3110, Accuracy: 458/500 (91.60%)
+Conv_0_ in_minmax -1.0 1.0
+Conv3x3_1_ alpha_in 5.234414577484131 sat_ratio 0.0 in_minmax 0.0 5.234414577484131
+Conv3x3_2_ alpha_in 3.37416672706604 sat_ratio 0.0 in_minmax 0.0 3.37416672706604
+Conv3x3_3_ alpha_in 6.954009056091309 sat_ratio 0.0 in_minmax 0.0 6.954009056091309
+Conv3x3_4_ alpha_in 3.629262685775757 sat_ratio 0.0 in_minmax 0.0 3.629262685775757
+Conv3x3_5_ alpha_in 8.670790672302246 sat_ratio 0.0 in_minmax 0.0 8.670790672302246
+Conv3x3_6_ alpha_in 3.2014358043670654 sat_ratio 0.0 in_minmax 0.0 3.2014358043670654
+Conv3x3_8_ alpha_in 7.856492042541504 sat_ratio 0.0 in_minmax 0.0 7.856492042541504
+Conv3x3_9_ alpha_in 3.697106122970581 sat_ratio 0.0 in_minmax 0.0 3.697106122970581
+Conv1x1_7_ alpha_in 7.856492042541504 sat_ratio 0.0 in_minmax 0.0 7.856492042541504
+Conv3x3_10_ alpha_in 7.946807861328125 sat_ratio 0.0 in_minmax 0.0 7.946807861328125
+Conv3x3_11_ alpha_in 2.833881139755249 sat_ratio 0.0 in_minmax 0.0 2.833881139755249
+Conv3x3_12_ alpha_in 8.533907890319824 sat_ratio 0.0 in_minmax 0.0 8.533907890319824
+Conv3x3_13_ alpha_in 3.4921376705169678 sat_ratio 0.0 in_minmax 0.0 3.4921376705169678
+Conv3x3_15_ alpha_in 8.821747779846191 sat_ratio 0.0 in_minmax 0.0 8.821747779846191
+Conv3x3_16_ alpha_in 3.066318988800049 sat_ratio 0.0 in_minmax 0.0 3.066318988800049
+Conv1x1_14_ alpha_in 8.821747779846191 sat_ratio 0.0 in_minmax 0.0 8.821747779846191
+Conv3x3_17_ alpha_in 6.218301773071289 sat_ratio 0.0 in_minmax 0.0 6.218301773071289
+Conv3x3_18_ alpha_in 3.9835774898529053 sat_ratio 0.0 in_minmax 0.0 3.9835774898529053
+Conv3x3_19_ alpha_in 7.719207763671875 sat_ratio 0.0 in_minmax 0.0 7.719207763671875
+Conv3x3_20_ alpha_in 3.7463607788085938 sat_ratio 0.0 in_minmax 0.0 3.7463607788085938
+FC_21_ alpha_in 6.360010147094727 sat_ratio 0.0 in_minmax 0.0 6.360010147094727
+output shape: torch.Size([500, 10])
+data stats: -1.0 1.0 -0.03142580762505531 0.5084423422813416
+fc has bias param? False
+first logits (top5): torch.return_types.topk(
+values=tensor([19.4473,  1.0750, -1.5102, -2.0947, -3.5096]),
+indices=tensor([3, 5, 6, 2, 4]))
+target min/max: 0 9
+target first10: [3, 8, 8, 0, 6, 6, 1, 6, 3, 1]
