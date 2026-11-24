@@ -41,7 +41,13 @@ for row in rows:
     expected = row["sha256"]
 
     dst = ROOT / relative
-    name = dst.name
+    asset_names = {
+        "VGG8.pth": "vgg8_cifar10.pth",
+        "VGG_CIFAR100.pth": "vgg8_cifar100.pth",
+        "decay0_W8.pth": "resnet20_cifar10.pth",
+    }
+
+    name = asset_names.get(dst.name, dst.name)
     src = CACHE / name
 
     if name in verified and verified[name] != expected:

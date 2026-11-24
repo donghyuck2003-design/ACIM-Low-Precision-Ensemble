@@ -60,9 +60,9 @@ Three unique pretrained checkpoints are required:
 
 | Model | Checkpoint |
 |---|---|
-| VGG-8 / CIFAR-10 | VGG8.pth |
-| VGG-8 / CIFAR-100 | VGG_CIFAR100.pth |
-| ResNet-20 / CIFAR-10 | decay0_W8.pth |
+| VGG-8 / CIFAR-10 | vgg8_cifar10.pth |
+| VGG-8 / CIFAR-100 | vgg8_cifar100.pth |
+| ResNet-20 / CIFAR-10 | resnet20_cifar10.pth |
 
 The checkpoints are distributed separately through GitHub
 Releases, subject to redistribution permissions.
