@@ -1,5 +1,32 @@
 # ACIM Low-Precision Ensemble
 
+
+<!-- PAPER_METADATA_START -->
+
+[![Paper](https://img.shields.io/badge/Paper-IEEE%20TVLSI-00629B)](https://doi.org/10.1109/TVLSI.2026.3666118)
+![Publication](https://img.shields.io/badge/Publication-2026-green)
+![Framework](https://img.shields.io/badge/Framework-NeuroSim%20V1.4-blue)
+
+## Associated Publication
+
+**Exploiting Hardware Nonidealities for Robust
+Low-Precision Ensembles on ACIM**
+
+Donghyuck Lee and Tae-Hyeon Kim
+
+IEEE Transactions on Very Large Scale Integration
+(VLSI) Systems, Vol. 34, No. 6, June 2026.
+
+**Paper:** https://doi.org/10.1109/TVLSI.2026.3666118
+
+This repository provides the research implementation
+and available experimental results associated with
+the published article, including recovered historical
+results and subsequent evaluations.
+
+<!-- PAPER_METADATA_END -->
+
+
 Research artifact associated with [Exploiting Hardware Nonidealities for Robust Low-Precision Ensembles on ACIM](https://doi.org/10.1109/TVLSI.2026.3666118), IEEE TVLSI (2026).
 
 ## Method
